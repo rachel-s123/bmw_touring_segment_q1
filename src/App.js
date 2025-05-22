@@ -20,6 +20,7 @@ import ExecutiveSummary from './components/ExecutiveSummary';
 import MarketWRIScoreCards from './components/MarketWRIScoreCards';
 import WRIStrategicDirection from './components/WRIStrategicDirection';
 import AttributeResonanceDefinition from './components/AttributeResonanceDefinition';
+import MarketRecommendations from './components/MarketRecommendations';
 import bmwLogo from './assets/bmw-black.jpg';
 
 function TabPanel(props) {
@@ -136,6 +137,7 @@ function App() {
             <Tab label="Attribute Resonance" />
             <Tab label="Market Insights" />
             <Tab label="Competitor Analysis" />
+            <Tab label="Recommendations" />
           </Tabs>
         </Paper>
 
@@ -166,6 +168,10 @@ function App() {
 
         <TabPanel value={currentTab} index={4}>
           <CompetitorAnalysis selectedMarket={selectedMarket} />
+        </TabPanel>
+
+        <TabPanel value={currentTab} index={5}>
+          <MarketRecommendations selectedMarket={selectedMarket} />
         </TabPanel>
       </Container>
     </ThemeProvider>
