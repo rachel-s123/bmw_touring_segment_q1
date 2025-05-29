@@ -1,5 +1,5 @@
 export const marketData = {
-  markets: ['Switzerland', 'CS', 'Portugal', 'Belgium', 'Nordics', 'Spain', 'UK', 'France', 'Italy', 'Netherlands'],
+  markets: ['Market 1', 'Market 2'],
   attributes: [
     'Performance and Speed',
     'Battery Technology and Range',
@@ -25,104 +25,64 @@ export const marketData = {
   // Raw WRI scores
   scores: {
     'Performance and Speed': {
-      'Switzerland': 85.0, 'CS': 88.0, 'Portugal': 83.0, 'Belgium': 84.0, 
-      'Nordics': 82.5, 'Spain': 88.0, 'UK': 88.5, 'France': 88.0, 'Italy': 93.0,
-      'Netherlands': 86.5
+      'Market 1': 85.0, 'Market 2': 88.0
     },
     'Battery Technology and Range': {
-      'Switzerland': 95.0, 'CS': 95.0, 'Portugal': 95.0, 'Belgium': 92.0,
-      'Nordics': 95.0, 'Spain': 95.0, 'UK': 95.0, 'France': 95.0, 'Italy': 93.0,
-      'Netherlands': 94.0
+      'Market 1': 92.0, 'Market 2': 95.0
     },
     'Charging Infrastructure': {
-      'Switzerland': 85.0, 'CS': 88.5, 'Portugal': 87.0, 'Belgium': 82.0,
-      'Nordics': 85.0, 'Spain': 85.0, 'UK': 88.5, 'France': 88.5, 'Italy': 83.0,
-      'Netherlands': 89.5
+      'Market 1': 85.0, 'Market 2': 88.5
     },
     'Noise Reduction': {
-      'Switzerland': 45.0, 'CS': 56.5, 'Portugal': 42.5, 'Belgium': 48.5,
-      'Nordics': 50.5, 'Spain': 48.5, 'UK': 53.5, 'France': 56.5, 'Italy': 58.0,
-      'Netherlands': 52.0
+      'Market 1': 45.0, 'Market 2': 56.5
     },
     'Affordability and Cost of Ownership': {
-      'Switzerland': 90.0, 'CS': 95.0, 'Portugal': 93.0, 'Belgium': 91.0,
-      'Nordics': 91.5, 'Spain': 95.0, 'UK': 95.0, 'France': 95.0, 'Italy': 95.0,
-      'Netherlands': 93.5
+      'Market 1': 90.0, 'Market 2': 95.0
     },
     'Insurance and Financing Options': {
-      'Switzerland': 25.0, 'CS': 30.0, 'Portugal': 20.0, 'Belgium': 30.0,
-      'Nordics': 23.5, 'Spain': 31.0, 'UK': 36.0, 'France': 30.0, 'Italy': 30.0,
-      'Netherlands': 32.5
+      'Market 1': 25.0, 'Market 2': 30.0
     },
     'Resale Value and Longevity': {
-      'Switzerland': 55.0, 'CS': 63.0, 'Portugal': 64.5, 'Belgium': 59.5,
-      'Nordics': 59.5, 'Spain': 58.0, 'UK': 58.0, 'France': 63.0, 'Italy': 64.5,
-      'Netherlands': 61.0
+      'Market 1': 55.0, 'Market 2': 63.0
     },
     'Government Incentives and Regulations': {
-      'Switzerland': 65.0, 'CS': 62.0, 'Portugal': 87.0, 'Belgium': 70.5,
-      'Nordics': 78.0, 'Spain': 84.0, 'UK': 70.0, 'France': 72.0, 'Italy': 59.0,
-      'Netherlands': 82.5
+      'Market 1': 65.0, 'Market 2': 62.0
     },
     'Advanced Technology Integration': {
-      'Switzerland': 70.0, 'CS': 76.0, 'Portugal': 56.0, 'Belgium': 52.5,
-      'Nordics': 63.0, 'Spain': 71.5, 'UK': 74.0, 'France': 76.0, 'Italy': 78.5,
-      'Netherlands': 75.0
+      'Market 1': 70.0, 'Market 2': 76.0
     },
     'Connectivity and Smart Features': {
-      'Switzerland': 35.0, 'CS': 63.0, 'Portugal': 28.0, 'Belgium': 33.0,
-      'Nordics': 41.5, 'Spain': 52.0, 'UK': 56.0, 'France': 63.0, 'Italy': 68.5,
-      'Netherlands': 58.5
+      'Market 1': 35.0, 'Market 2': 63.0
     },
     'Safety Features': {
-      'Switzerland': 10.0, 'CS': 30.0, 'Portugal': 13.0, 'Belgium': 18.0,
-      'Nordics': 22.0, 'Spain': 23.5, 'UK': 28.5, 'France': 30.0, 'Italy': 30.0,
-      'Netherlands': 25.5
+      'Market 1': 10.0, 'Market 2': 30.0
     },
     'After-Sales Support and Service Network': {
-      'Switzerland': 65.0, 'CS': 60.0, 'Portugal': 62.5, 'Belgium': 81.5,
-      'Nordics': 72.5, 'Spain': 81.0, 'UK': 67.0, 'France': 60.0, 'Italy': 59.5,
-      'Netherlands': 71.0
+      'Market 1': 65.0, 'Market 2': 60.0
     },
     'Education and Awareness': {
-      'Switzerland': 50.0, 'CS': 52.0, 'Portugal': 67.5, 'Belgium': 58.5,
-      'Nordics': 52.0, 'Spain': 55.5, 'UK': 55.0, 'France': 52.0, 'Italy': 54.5,
-      'Netherlands': 56.5
+      'Market 1': 50.0, 'Market 2': 52.0
     },
     'Urban Mobility Solutions': {
-      'Switzerland': 85.0, 'CS': 91.5, 'Portugal': 74.5, 'Belgium': 74.0,
-      'Nordics': 70.5, 'Spain': 86.5, 'UK': 85.0, 'France': 91.5, 'Italy': 91.5,
-      'Netherlands': 88.0
+      'Market 1': 85.0, 'Market 2': 91.5
     },
     'Sustainability and Environmental Impact': {
-      'Switzerland': 45.0, 'CS': 50.0, 'Portugal': 42.5, 'Belgium': 45.0,
-      'Nordics': 63.0, 'Spain': 51.5, 'UK': 50.0, 'France': 49.0, 'Italy': 51.0,
-      'Netherlands': 64.5
+      'Market 1': 45.0, 'Market 2': 50.0
     },
     'Market Segmentation': {
-      'Switzerland': 70.0, 'CS': 74.0, 'Portugal': 78.0, 'Belgium': 80.0,
-      'Nordics': 75.0, 'Spain': 75.0, 'UK': 75.0, 'France': 74.0, 'Italy': 77.0,
-      'Netherlands': 76.5
+      'Market 1': 70.0, 'Market 2': 74.0
     },
     'Brand Heritage and Trust': {
-      'Switzerland': 70.0, 'CS': 72.0, 'Portugal': 75.0, 'Belgium': 73.0,
-      'Nordics': 74.0, 'Spain': 75.0, 'UK': 75.0, 'France': 74.0, 'Italy': 76.0,
-      'Netherlands': 75.0
+      'Market 1': 70.0, 'Market 2': 72.0
     },
     'Community and Culture': {
-      'Switzerland': 45.0, 'CS': 48.0, 'Portugal': 50.0, 'Belgium': 47.0,
-      'Nordics': 49.0, 'Spain': 50.0, 'UK': 50.0, 'France': 49.0, 'Italy': 51.0,
-      'Netherlands': 50.0
+      'Market 1': 45.0, 'Market 2': 48.0
     },
     'Customization and Personalization': {
-      'Switzerland': 20.0, 'CS': 22.0, 'Portugal': 25.0, 'Belgium': 23.0,
-      'Nordics': 24.0, 'Spain': 25.0, 'UK': 25.0, 'France': 24.0, 'Italy': 26.0,
-      'Netherlands': 25.0
+      'Market 1': 20.0, 'Market 2': 22.0
     },
     'Design Innovation': {
-      'Switzerland': 70.0, 'CS': 72.0, 'Portugal': 74.0, 'Belgium': 73.0,
-      'Nordics': 73.0, 'Spain': 74.0, 'UK': 74.0, 'France': 73.0, 'Italy': 75.0,
-      'Netherlands': 74.0
+      'Market 1': 70.0, 'Market 2': 72.0
     }
   },
   // Calculate deviations from the mean for each attribute-market combination
