@@ -1259,62 +1259,239 @@ export const marketSources = {
 
 export const getMarketSources = (market) => {
   const sources = {
-    'Market 1': {
+    belgium: {
       industryReports: [
         {
-          name: "Market 1 Industry Report",
-          url: "https://example.com/market1-report",
-          description: "Comprehensive analysis of Market 1's electric motorcycle industry"
+          name: "ReportLinker",
+          url: "https://www.reportlinker.com/dataset/006cc2f461d1059cfd5d729a88f9f888087ad601",
+          description: "Electric Motorcycle Registrations in Belgium dataset"
         },
         {
-          name: "Market 1 Statistics",
-          url: "https://example.com/market1-stats",
-          description: "Detailed market statistics and trends for Market 1"
+          name: "FEBIAC",
+          url: "https://www.febiac.be/fr/article/les-motos-electriques-sous-la-loupe",
+          description: "Industry reports on electric motorcycles in Belgium"
+        },
+        {
+          name: "Touring Magazine",
+          url: "https://www.touring.be/fr/articles/moto-electrique-quel-cout",
+          description: "Articles on electric motorcycle costs and infrastructure"
         }
       ],
       newsMedia: [
         {
-          name: "Market 1 News",
-          url: "https://example.com/market1-news",
-          description: "Latest news and updates from Market 1"
+          name: "The Pack",
+          url: "https://thepack.news",
+          description: "Electric motorcycle news and updates"
         },
         {
-          name: "Market 1 Reviews",
-          url: "https://example.com/market1-reviews",
-          description: "Product reviews and market analysis"
+          name: "CleanRider",
+          url: "https://www.cleanrider.com",
+          description: "Electric motorcycle news and reviews"
+        },
+        {
+          name: "MotoActus/MotorNieuws",
+          url: "https://motoactus.be",
+          description: "Belgian motorcycle news"
+        },
+        {
+          name: "Motoren & Toerisme",
+          url: "https://www.motoren-toerisme.be",
+          description: "Belgian motorcycle magazine"
+        },
+        {
+          name: "Top Gear",
+          url: "https://www.topgear.com",
+          description: "Automotive news and reviews"
+        },
+        {
+          name: "Electrek",
+          url: "https://electrek.co",
+          description: "Electric vehicle news"
+        },
+        {
+          name: "Adventure Rider",
+          url: "https://www.advrider.com",
+          description: "Motorcycle adventure and news"
+        }
+      ],
+      socialMedia: [
+        {
+          name: "Reddit r/motobe",
+          url: "https://www.reddit.com/r/motobe",
+          description: "Belgian motorcycle community"
+        },
+        {
+          name: "Reddit r/electricvehicles",
+          url: "https://www.reddit.com/r/electricvehicles",
+          description: "Electric vehicle community"
+        },
+        {
+          name: "Facebook BMW CE-04 & CE-02 Group",
+          url: "https://www.facebook.com/groups/3055680694646666",
+          description: "BMW electric scooter owner community"
+        },
+        {
+          name: "Electric Motorcycle Forum",
+          url: "https://www.electricmotorcycleforum.com",
+          description: "Electric motorcycle discussion forum"
+        }
+      ],
+      manufacturers: [
+        {
+          name: "Zero Motorcycles",
+          url: "https://zeromotorcycles.com/nl-be",
+          description: "Official Zero Motorcycles Belgium website"
+        },
+        {
+          name: "BMW Motorrad",
+          url: "https://www.bmw-motorrad.be",
+          description: "Official BMW Motorrad Belgium website"
         }
       ]
     },
-    'Market 2': {
+    uk: {
       industryReports: [
         {
-          name: "Market 2 Industry Report",
-          url: "https://example.com/market2-report",
-          description: "Comprehensive analysis of Market 2's electric motorcycle industry"
+          name: "Bennetts BikeSocial Electric Motorcycle Guide 2025",
+          url: "https://www.bennetts.co.uk/bikesocial/news-and-views/features/electric-motorcycles/guide",
+          description: "Comprehensive UK guide to electric motorcycles, including market trends, model reviews, owner experiences, and policy analysis. Frequently cited for range, cost, and charging infrastructure discussions."
         },
         {
-          name: "Market 2 Statistics",
-          url: "https://example.com/market2-stats",
-          description: "Detailed market statistics and trends for Market 2"
+          name: "IMARC Group UK Electric Motorcycles Market Report",
+          url: "https://www.imarcgroup.com/uk-electric-motorcycles-market",
+          description: "Market size and growth projections for UK electric motorcycles"
         }
       ],
       newsMedia: [
         {
-          name: "Market 2 News",
-          url: "https://example.com/market2-news",
-          description: "Latest news and updates from Market 2"
+          name: "Motorcycle News (MCN)",
+          url: "https://www.motorcyclenews.com/",
+          description: "Leading UK motorcycle news outlet with electric bike reviews"
         },
         {
-          name: "Market 2 Reviews",
-          url: "https://example.com/market2-reviews",
-          description: "Product reviews and market analysis"
+          name: "Bennetts BikeSocial",
+          url: "https://www.bennetts.co.uk/bikesocial/",
+          description: "Major UK motorcycle news and community platform"
+        },
+        {
+          name: "Lexham Insurance",
+          url: "https://www.lexhaminsurance.co.uk/blog/top-10-maxi-scooters/",
+          description: "UK insurance provider's blog with market analysis and reviews, including the BMW CE 04's position in the 2025 top 10 maxi scooters."
+        },
+        {
+          name: "The Pack News",
+          url: "https://thepack.news/",
+          description: "Specialized electric motorcycle news outlet"
+        }
+      ],
+      socialMedia: [
+        {
+          name: "Zero Motorcycles UK Group",
+          url: "https://www.facebook.com/groups/1561910270555365/",
+          description: "Active Facebook community for UK Zero Motorcycles owners"
+        },
+        {
+          name: "r/BMW",
+          url: "https://www.reddit.com/r/BMW/",
+          description: "Reddit community discussing BMW vehicles including electric models"
+        },
+        {
+          name: "r/ZeroMotorcycles",
+          url: "https://www.reddit.com/r/ZeroMotorcycles/",
+          description: "Reddit community for Zero Motorcycle owners and enthusiasts"
+        }
+      ],
+      manufacturers: [
+        {
+          name: "BMW Motorrad UK",
+          url: "https://www.bmw-motorrad.co.uk/",
+          description: "Official BMW Motorrad presence in the UK"
+        },
+        {
+          name: "Zero Motorcycles UK",
+          url: "https://www.zeromotorcycles.com/uk/",
+          description: "Zero Motorcycles' UK operations"
+        },
+        {
+          name: "LiveWire UK",
+          url: "https://www.livewire.com/uk/",
+          description: "LiveWire's UK presence and electric motorcycle offerings"
+        }
+      ],
+      forums: [
+        {
+          name: "Electric Motorcycle Forum",
+          url: "https://www.electricmotorcycleforum.com/",
+          description: "Dedicated forum for electric motorcycle discussions"
+        },
+        {
+          name: "The Motorbike Forum",
+          url: "https://themotorbikeforum.co.uk/",
+          description: "UK motorcycle forum with electric vehicle section"
+        }
+      ]
+    },
+    france: {
+      industryReports: [
+        {
+          name: "Frandroid Electric Vehicle Market Analysis",
+          url: "https://www.frandroid.com/survoltes/scooters-electriques/",
+          description: "French market analysis for electric two-wheelers"
+        },
+        {
+          name: "Moto Planete Market Statistics",
+          url: "https://www.motoplanete.com/actualite-moto/",
+          description: "French motorcycle market statistics and analysis"
+        }
+      ],
+      newsMedia: [
+        {
+          name: "Cleanrider",
+          url: "https://www.cleanrider.com/",
+          description: "Leading French electric mobility news outlet"
+        },
+        {
+          name: "Le Repaire des Motards",
+          url: "https://www.lerepairedesmotards.com/",
+          description: "Major French motorcycle news and community platform"
+        },
+        {
+          name: "Moto Magazine",
+          url: "https://www.motomag.com/",
+          description: "French motorcycle magazine with electric vehicle coverage"
+        }
+      ],
+      socialMedia: [
+        {
+          name: "Motards électriques",
+          url: "https://www.facebook.com/groups/440025293766974/",
+          description: "French electric motorcycle enthusiasts Facebook group"
+        },
+        {
+          name: "Automobile Propre Forum",
+          url: "https://forums.automobile-propre.com/",
+          description: "French forum discussing clean mobility including electric motorcycles"
+        }
+      ],
+      manufacturers: [
+        {
+          name: "BMW Motorrad France",
+          url: "https://www.bmw-motorrad.fr/",
+          description: "Official BMW Motorrad presence in France"
+        },
+        {
+          name: "Zero Motorcycles France",
+          url: "https://www.zeromotorcycles.com/fr/",
+          description: "Zero Motorcycles' French operations"
+        },
+        {
+          name: "Energica Motor Company",
+          url: "https://www.energicamotor.com/",
+          description: "Italian electric motorcycle manufacturer with French presence"
         }
       ]
     }
   };
 
-  return sources[market] || {
-    industryReports: [],
-    newsMedia: []
-  };
+  return sources[market] || [];
 }; 
