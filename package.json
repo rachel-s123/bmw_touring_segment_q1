@@ -21,7 +21,12 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "generate-data": "node scripts/buildData.js"
+    "generate-data": "node scripts/buildData.js",
+    "generate-market-recommendations": "node scripts/generate_marketRecommendations.js",
+    "generate-executive-summaries": "node scripts/generate_executiveSummaries.js",
+    "generate-conversation-data": "node scripts/generate_conversationData.js",
+    "generate-competitor-data": "node scripts/generate_competitorData.js",
+    "generate-wri-data": "node scripts/generate_wriData.js"
   },
   "eslintConfig": {
     "extends": [
