@@ -44,7 +44,7 @@ function TabPanel(props) {
 }
 
 function App() {
-  const [selectedMarket, setSelectedMarket] = useState('Switzerland');
+  const [selectedMarket, setSelectedMarket] = useState('France');
   const [currentTab, setCurrentTab] = useState(0);
 
   const handleTabChange = (event, newValue) => {
@@ -91,7 +91,7 @@ function App() {
                   mb: 0.5
                 }}
               >
-                Electric Segment Insights
+                Segment Insights
               </Typography>
               <Typography
                 variant="subtitle1"
@@ -102,7 +102,7 @@ function App() {
                   fontWeight: 400
                 }}
               >
-                Q1 2025 V2 Region Analysis
+                V2 Region Analysis
               </Typography>
             </Box>
           </Box>
