@@ -31,9 +31,9 @@ const StrategyCard = ({ title, content, icon }) => (
 
 const StrategicDirection = ({ selectedMarket }) => {
   const recommendations = useMemo(() => {
-    const marketData = marketInsights[selectedMarket];
+    const marketData = marketInsights[selectedMarket?.toLowerCase()];
     if (!marketData || !marketData.strategicRecommendations) {
-      return marketInsights['Switzerland'].strategicRecommendations; // fallback to Switzerland if no data
+      return [];
     }
     return marketData.strategicRecommendations;
   }, [selectedMarket]);

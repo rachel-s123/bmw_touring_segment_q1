@@ -1,5 +1,5 @@
-import React from 'react';
-import { Typography, Grid, Card, CardContent, Box, Divider, Paper, Tooltip as MuiTooltip, IconButton } from '@mui/material';
+import React, { useState, useEffect } from 'react';
+import { Typography, Grid, Card, CardContent, Box, Divider, Paper, Tooltip as MuiTooltip, IconButton, CircularProgress } from '@mui/material';
 import LightbulbIcon from '@mui/icons-material/Lightbulb';
 import CampaignIcon from '@mui/icons-material/Campaign';
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
@@ -8,7 +8,7 @@ import WarningIcon from '@mui/icons-material/Warning';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from 'recharts';
-import { getCompetitorData } from '../data/competitorData';
+import { getCompetitorData, getCompetitorColors } from '../data/competitorData';
 
 const ICONS = [
   <TrendingUpIcon color="primary" />, // 0
@@ -17,18 +17,8 @@ const ICONS = [
   <MessageIcon color="primary" />, // 3
 ];
 
-// Custom color palette: BMW blue, others in greys
-const SOV_COLORS = {
-  'BMW Motorrad': '#0066B1',
-  'Zero Motorcycles': '#757575',
-  'Energica': '#B0B0B0',
-  'LiveWire': '#D3D3D3',
-  'CAKE': '#E0E0E0',
-  'Others': '#F5F5F5'
-};
-
-const FRANCE_SOV_CONTEXT =
-  'Share of Voice is based on the proportion of online conversations mentioning each brand in Q1 2025. BMW Motorrad led with 40-50% share, followed by Zero Motorcycles (25-30%), Energica and LiveWire (each ~10% or less).';
+const SOV_CONTEXT = (market) =>
+  `Share of Voice is based on the proportion of online conversations mentioning each brand in Q1 2025 for ${market}. BMW Motorrad led with 40-50% share, followed by Zero Motorcycles (25-30%), Energica and LiveWire (each ~10% or less).`;
 
 // Custom label for pie slices
 const renderPieLabel = ({ cx, cy, midAngle, outerRadius, percent, name, value }) => {
@@ -81,9 +71,24 @@ const CustomTooltip = ({ active, payload }) => {
 };
 
 const CompetitorAnalysis = ({ selectedMarket }) => {
-  const data = getCompetitorData(selectedMarket);
-  const isFrance = selectedMarket === 'France';
-  const getCompetitorIcon = (idx) => ICONS[idx % ICONS.length];
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    if (selectedMarket) {
+      console.log('Loading data for market:', selectedMarket);
+      const competitorData = getCompetitorData(selectedMarket);
+      console.log('Loaded data:', competitorData);
+      setData(competitorData);
+    }
+  }, [selectedMarket]);
+
+  if (!data) {
+    console.log('No data available');
+    return null;
+  }
+
+  const competitorColors = getCompetitorColors(selectedMarket);
+  console.log('Using colors:', competitorColors);
 
   return (
     <Box sx={{ p: { xs: 1, md: 3 }, maxWidth: 1200, mx: 'auto' }}>
@@ -92,8 +97,8 @@ const CompetitorAnalysis = ({ selectedMarket }) => {
           <Typography variant="h5" fontWeight={700} color="primary.main" sx={{ mr: 1 }}>
             Share of Voice (Q1 2025)
           </Typography>
-          {isFrance && (
-            <MuiTooltip title={FRANCE_SOV_CONTEXT} arrow>
+          {selectedMarket && (
+            <MuiTooltip title={SOV_CONTEXT(selectedMarket)} arrow>
               <IconButton size="small" sx={{ color: 'primary.main' }}>
                 <InfoOutlinedIcon fontSize="small" />
               </IconButton>
@@ -117,7 +122,7 @@ const CompetitorAnalysis = ({ selectedMarket }) => {
                     isAnimationActive={true}
                   >
                     {data.shareOfVoice.map((entry, index) => (
-                      <Cell key={`cell-${index}`} fill={SOV_COLORS[entry.name] || '#B0B0B0'} />
+                      <Cell key={`cell-${index}`} fill={competitorColors[entry.name] || '#B0B0B0'} />
                     ))}
                   </Pie>
                   <Tooltip content={<CustomTooltip />} />
@@ -127,7 +132,7 @@ const CompetitorAnalysis = ({ selectedMarket }) => {
           </Grid>
           {/* Legend */}
           <Grid item xs={12} md={5}>
-            <CustomLegend payload={data.shareOfVoice.map((entry) => ({ value: entry.name, color: SOV_COLORS[entry.name] || '#B0B0B0' }))} />
+            <CustomLegend payload={data.shareOfVoice.map((entry) => ({ value: entry.name, color: competitorColors[entry.name] || '#B0B0B0' }))} />
           </Grid>
         </Grid>
       </Paper>
@@ -142,10 +147,10 @@ const CompetitorAnalysis = ({ selectedMarket }) => {
       <Grid container spacing={3}>
         {Object.entries(data.competitorStrengths).map(([competitor, strengths], idx) => (
           <Grid item xs={12} md={6} key={competitor}>
-            <Card elevation={2} sx={{ borderLeft: `6px solid ${competitor === 'BMW Motorrad' ? '#0066B1' : '#757575'}` }}>
+            <Card elevation={2} sx={{ borderLeft: `6px solid ${competitorColors[competitor] || '#757575'}` }}>
               <CardContent>
                 <Box display="flex" alignItems="center" mb={1}>
-                  <Box mr={1}>{getCompetitorIcon(idx)}</Box>
+                  <Box mr={1}>{ICONS[idx % ICONS.length]}</Box>
                   <Typography variant="h6" fontWeight={700} color={competitor === 'BMW Motorrad' ? '#0066B1' : 'text.primary'}>
                     {competitor}
                   </Typography>

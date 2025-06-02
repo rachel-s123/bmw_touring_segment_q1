@@ -21,7 +21,7 @@ import {
   Card
 } from '@mui/material';
 import { marketData } from '../data/wriData';
-import { marketInsights } from '../data/wriInsights';
+import { attributeResonance } from '../data/attributeResonance';
 import InfoIcon from '@mui/icons-material/Info';
 import CloseIcon from '@mui/icons-material/Close';
 
@@ -29,14 +29,14 @@ import CloseIcon from '@mui/icons-material/Close';
 const AttributeCommentary = ({ attribute, selectedMarket, onClose }) => {
   const theme = useTheme();
   
-  // Get attribute-specific insights from marketInsights attributesAnalysis
-  const insights = marketInsights[selectedMarket]?.attributesAnalysis[attribute];
+  // Get attribute-specific insights from attributeResonance attributeAnalysis
+  const insights = attributeResonance[selectedMarket]?.attributeAnalysis[attribute];
   
   // If no specific insights found, create a default insight using the scores
   const createDefaultInsight = () => {
     const scores = Object.values(marketData.scores[attribute]);
     const avgScore = scores.reduce((a, b) => a + b, 0) / scores.length;
-    const marketScore = marketData.scores[attribute][selectedMarket];
+    const marketScore = marketData.scores[attribute][selectedMarket.toLowerCase()];
     const deviation = marketScore - avgScore;
     
     const getDeviationStrength = (dev) => {
@@ -192,7 +192,7 @@ const AttributeHeatmap = ({ selectedMarket }) => {
     // Calculate averages
     const averages = {};
     attributes.forEach(attr => {
-      const scores = markets.map(market => marketData.scores[attr][market]);
+      const scores = markets.map(market => marketData.scores[attr][market.toLowerCase()]);
       averages[attr] = scores.reduce((a, b) => a + b, 0) / scores.length;
     });
 
@@ -201,7 +201,7 @@ const AttributeHeatmap = ({ selectedMarket }) => {
     attributes.forEach(attr => {
       allDeviations[attr] = {};
       markets.forEach(market => {
-        const score = marketData.scores[attr][market];
+        const score = marketData.scores[attr][market.toLowerCase()];
         allDeviations[attr][market] = score - averages[attr];
       });
     });
@@ -280,7 +280,7 @@ const AttributeHeatmap = ({ selectedMarket }) => {
       return a.localeCompare(b);
     }
     if (viewMode === 'wri') {
-      return marketData.scores[b][selectedMarket] - marketData.scores[a][selectedMarket];
+      return marketData.scores[b][selectedMarket.toLowerCase()] - marketData.scores[a][selectedMarket.toLowerCase()];
     }
     return Math.abs(allDeviations[b][selectedMarket]) - Math.abs(allDeviations[a][selectedMarket]);
   });
@@ -497,7 +497,7 @@ const AttributeHeatmap = ({ selectedMarket }) => {
                     {attribute}
                   </TableCell>
                   {orderedMarkets.map(market => {
-                    const score = marketData.scores[attribute][market];
+                    const score = marketData.scores[attribute][market.toLowerCase()];
                     const deviation = allDeviations[attribute][market];
                     const value = viewMode === 'wri' ? score : deviation;
                     const colors = getDeviationColor(deviation);

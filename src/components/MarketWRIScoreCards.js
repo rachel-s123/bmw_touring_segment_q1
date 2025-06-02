@@ -39,7 +39,7 @@ const MarketScoreCards = ({ selectedMarket }) => {
       return Object.entries(marketData.scores)
         .map(([attribute, markets]) => ({
           attribute,
-          score: markets[selectedMarket] || 0
+          score: markets[selectedMarket.toLowerCase()] || 0
         }))
         .sort((a, b) => b.score - a.score)
         .slice(0, 3);
@@ -58,10 +58,10 @@ const MarketScoreCards = ({ selectedMarket }) => {
       const devs = {};
       marketData.attributes.forEach(attr => {
         const scores = marketData.markets.map(market => 
-          marketData.scores[attr]?.[market] || 0
+          marketData.scores[attr]?.[market.toLowerCase()] || 0
         );
         const mean = scores.reduce((a, b) => a + b, 0) / scores.length;
-        devs[attr] = (marketData.scores[attr]?.[selectedMarket] || 0) - mean;
+        devs[attr] = (marketData.scores[attr]?.[selectedMarket.toLowerCase()] || 0) - mean;
       });
       
       const sortedDeviations = Object.entries(devs)
