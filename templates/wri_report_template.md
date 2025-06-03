@@ -50,20 +50,17 @@ This comparative analysis helps identify unique market characteristics and oppor
 - Recommendation: [Recommendation text]
 
 ### Strategic Recommendations
-Short Term:
 - [Recommendation 1]
 - [Recommendation 2]
 - [Recommendation 3]
-
-Long Term:
-- [Recommendation 1]
-- [Recommendation 2]
-- [Recommendation 3]
+- [Recommendation 4]
+- [Recommendation 5]
+- [Recommendation 6]
 
 Priorities:
 - [Priority 1]
 - [Priority 2]
 - [Priority 3]
-
-Methodology Notes:
-[Methodology details] 
+- [Priority 4]
+- [Priority 5]
+- [Priority 6]

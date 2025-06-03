@@ -7,3 +7,4 @@ set -e
 if [ -f package.json ]; then
   npm install --silent
 fi
+npm start

@@ -48,7 +48,7 @@ const methodologyData = [
   },
   {
     title: 'Weighted Resonance Index',
-    description: 'Evaluates 16 key market attributes, weights importance across sales data, social discussions, consumer reviews, and expert analysis, provides quantitative measure of attribute significance, and identifies critical market drivers and barriers.',
+    description: 'Evaluates 20 key market attributes, weights importance across sales data, social discussions, consumer reviews, and expert analysis, provides quantitative measure of attribute significance, and identifies critical market drivers and barriers.',
     icon: <TrendingUpIcon sx={{ fontSize: 40, color: 'secondary.main', mb: 1 }} />,
   }
 ];
@@ -85,37 +85,34 @@ const SourceItem = ({ source }) => (
   </Box>
 );
 
-const SourceSection = ({ title, sources }) => (
-  <Box sx={{ mb: 3 }}>
-    <Typography variant="h6" sx={{ mb: 2, fontSize: '1.1rem' }}>
-      {title}
-    </Typography>
-    {sources.map((source, index) => (
-      <SourceItem key={index} source={source} />
-    ))}
-  </Box>
-);
-
 const DashboardIntro = ({ selectedMarket }) => {
   const [tabValue, setTabValue] = useState(0);
   const marketData = getMarketIntroduction(selectedMarket);
-  // Get sources for the selected market (case-insensitive match)
-  const marketKey = Object.keys(marketSources).find(
-    key => key.toLowerCase() === (selectedMarket || '').toLowerCase()
-  );
-  const sources = marketKey ? marketSources[marketKey].sources : [];
-
-  // Group sources by type
-  const sourcesByType = sources.reduce((acc, src) => {
-    const type = src.type || 'Other';
-    if (!acc[type]) acc[type] = [];
-    acc[type].push(src);
-    return acc;
-  }, {});
+  
+  // Updated market key matching logic to handle all formats
+  const marketKey = Object.keys(marketSources).find(key => {
+    const normalizedKey = key.toLowerCase()
+      .replace(/bmw_motorrad_touring_segment___/g, '')
+      .replace(/bmw_motorrad_touring___/g, '')
+      .replace(/bmw_touring_segment___/g, '')
+      .replace(/bmw_touring___/g, '');
+    const normalizedMarket = (selectedMarket || '').toLowerCase();
+    return normalizedKey === normalizedMarket;
+  });
+  
+  const sources = marketKey && marketSources[marketKey]?.sources?.[''] || [];
 
   const handleTabChange = (event, newValue) => {
     setTabValue(newValue);
   };
+
+  // Enhanced console logging for debugging
+  console.log('DashboardIntro Debug:');
+  console.log('- Selected Market:', selectedMarket);
+  console.log('- Available Market Keys:', Object.keys(marketSources));
+  console.log('- Found Market Key:', marketKey);
+  console.log('- Sources Array:', sources);
+  console.log('- Tab Value:', tabValue);
 
   return (
     <Paper sx={{ p: 4, background: '#f8fafc' }}>
@@ -128,38 +125,23 @@ const DashboardIntro = ({ selectedMarket }) => {
 
       <TabPanel value={tabValue} index={0}>
         <Box sx={{ mb: 4 }}>
-          <Grid container spacing={3}>
-            {scopeData.map((scope, idx) => (
-              <Grid item xs={12} md={6} key={scope.title}>
-                <Card sx={{ height: '100%', boxShadow: 3, borderRadius: 2, display: 'flex', flexDirection: 'column', alignItems: 'center', p: 2 }}>
-                  <CardContent sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                    {scope.icon}
-                    <Typography variant="subtitle1" sx={{ fontWeight: 600, mb: 1, mt: 1, textAlign: 'center' }}>
-                      {scope.title}
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary" sx={{ textAlign: 'center' }}>
-                      {scope.description}
-                    </Typography>
-                  </CardContent>
-                </Card>
-              </Grid>
-            ))}
-            {usageData.map((usage, idx) => (
-              <Grid item xs={12} md={6} key={usage.title}>
-                <Card sx={{ height: '100%', boxShadow: 3, borderRadius: 2, display: 'flex', flexDirection: 'column', alignItems: 'center', p: 2 }}>
-                  <CardContent sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                    {usage.icon}
-                    <Typography variant="subtitle1" sx={{ fontWeight: 600, mb: 1, mt: 1, textAlign: 'center' }}>
-                      {usage.title}
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary" sx={{ textAlign: 'center' }}>
-                      {usage.description}
-                    </Typography>
-                  </CardContent>
-                </Card>
-              </Grid>
-            ))}
-          </Grid>
+          {/* Introduction and Strategic Applications from generated data */}
+          <Typography variant="h6" sx={{ fontWeight: 600, mb: 2 }}>
+            Introduction & Strategic Applications
+          </Typography>
+          <Typography variant="body1" color="text.secondary" sx={{ mb: 3 }}>
+            {marketData?.introduction || scopeData[0].description}
+          </Typography>
+        </Box>
+        <Divider sx={{ my: 4 }} />
+        <Box sx={{ mb: 4 }}>
+          {/* Methodology from generated data */}
+          <Typography variant="h6" sx={{ fontWeight: 600, mb: 2 }}>
+            Methodology
+          </Typography>
+          <Typography variant="body1" color="text.secondary" sx={{ mb: 3 }}>
+            {marketData?.methodology || methodologyData.map(m => `${m.title}: ${m.description}`).join('\n')}
+          </Typography>
         </Box>
         <Divider sx={{ my: 4 }} />
         <Box sx={{ mb: 4 }}>
@@ -191,47 +173,16 @@ const DashboardIntro = ({ selectedMarket }) => {
             ))}
           </Grid>
         </Box>
-        <Divider sx={{ my: 4 }} />
-        <Box sx={{ mb: 4 }}>
-          <Typography 
-            variant="h6" 
-            sx={{ 
-              fontSize: '1.1rem',
-              fontWeight: 500,
-              mb: 3 
-            }}
-          >
-            Methodology
-          </Typography>
-          <Grid container spacing={3}>
-            {methodologyData.map((method, idx) => (
-              <Grid item xs={12} md={6} key={method.title}>
-                <Card sx={{ height: '100%', boxShadow: 3, borderRadius: 2, display: 'flex', flexDirection: 'column', alignItems: 'center', p: 2 }}>
-                  <CardContent sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                    {method.icon}
-                    <Typography variant="subtitle1" sx={{ fontWeight: 600, mb: 1, mt: 1, textAlign: 'center' }}>
-                      {method.title}
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary" sx={{ textAlign: 'center' }}>
-                      {method.description}
-                    </Typography>
-                  </CardContent>
-                </Card>
-              </Grid>
-            ))}
-          </Grid>
-        </Box>
       </TabPanel>
 
       <TabPanel value={tabValue} index={1}>
         {selectedMarket && sources.length > 0 ? (
           <Box>
-            {Object.entries(sourcesByType).map(([type, typeSources]) => (
-              <SourceSection 
-                key={type}
-                title={type}
-                sources={typeSources}
-              />
+            <Typography variant="h6" sx={{ mb: 3 }}>
+              Data Sources for {selectedMarket}
+            </Typography>
+            {sources.map((source, index) => (
+              <SourceItem key={index} source={source} />
             ))}
           </Box>
         ) : (
