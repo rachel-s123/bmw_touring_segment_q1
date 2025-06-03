@@ -432,14 +432,14 @@ const AttributeHeatmap = ({ selectedMarket }) => {
         )}
       </Paper>
 
-      <TableContainer component={Paper}>
+      <TableContainer component={Paper} sx={{ width: '100%', minWidth: 1200 }}>
         <Table size="small" sx={{ tableLayout: 'fixed' }}>
           <TableHead>
             <TableRow>
               <TableCell 
                 sx={{ 
-                  width: '25%',
-                  minWidth: 200,
+                  width: '30%',
+                  minWidth: 300,
                   fontFamily: 'BMW Motorrad',
                   fontWeight: 'bold',
                   backgroundColor: theme.palette.background.default
@@ -452,8 +452,8 @@ const AttributeHeatmap = ({ selectedMarket }) => {
                   key={market}
                   align="center"
                   sx={{ 
-                    width: `${75 / orderedMarkets.length}%`,
-                    minWidth: 80,
+                    width: `${70 / orderedMarkets.length}%`,
+                    minWidth: 100,
                     fontFamily: 'BMW Motorrad',
                     fontWeight: market === selectedMarket ? 'bold' : 'normal',
                     backgroundColor: market === selectedMarket ? 
@@ -486,8 +486,8 @@ const AttributeHeatmap = ({ selectedMarket }) => {
                     component="th" 
                     scope="row"
                     sx={{ 
-                      width: '25%',
-                      minWidth: 200,
+                      width: '30%',
+                      minWidth: 300,
                       fontFamily: 'BMW Motorrad',
                       fontWeight: 'bold',
                       whiteSpace: 'nowrap',
@@ -511,8 +511,8 @@ const AttributeHeatmap = ({ selectedMarket }) => {
                         <TableCell 
                           align="center"
                           sx={{ 
-                            width: `${75 / orderedMarkets.length}%`,
-                            minWidth: 80,
+                            width: `${70 / orderedMarkets.length}%`,
+                            minWidth: 100,
                             fontFamily: 'BMW Motorrad',
                             fontWeight: market === selectedMarket ? 'bold' : 'normal',
                             backgroundColor: colors.bg,
