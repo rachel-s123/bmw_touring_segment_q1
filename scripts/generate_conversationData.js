@@ -95,17 +95,24 @@ function parseSentimentInsights(content) {
     const sentiment = lines[0].replace('Sentiment', '').trim();
 
     if (insights[sentiment]) {
-      const quote = lines.find(line => line.includes('Quote:'))?.split('Quote:')[1].trim().replace(/"/g, '');
-      const explanation = lines.find(line => line.includes('Explanation:'))?.split('Explanation:')[1].trim();
-      const source = lines.find(line => line.includes('Source:'))?.split('Source:')[1].trim();
+      const quoteBlocks = section.split('- Quote').filter(block => block.trim());
+      
+      quoteBlocks.forEach(block => {
+        const lines = block.split('\n').map(line => line.trim()).filter(line => line);
+        if (lines.length >= 3) {
+          const quote = lines[0].replace(/^[0-9]+:/, '').trim();
+          const explanation = lines.find(line => line.startsWith('- Explanation:'))?.split('Explanation:')[1].trim();
+          const source = lines.find(line => line.startsWith('- Source:'))?.split('Source:')[1].trim();
 
-      if (quote && explanation && source) {
-        insights[sentiment].push({
-          quote,
-          context: explanation,
-          source
-        });
-      }
+          if (quote && explanation && source) {
+            insights[sentiment].push({
+              quote,
+              context: explanation,
+              source
+            });
+          }
+        }
+      });
     }
   });
 

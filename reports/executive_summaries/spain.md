@@ -1,24 +1,22 @@
 # Executive Summary: Spain
 
 ## Attribute Resonance
-- Comfort & protection lead with exceptional scores (WRI: 92.5/90.5), confirming Spanish riders' non-negotiable touring priorities
-- Technology resonates strongly (WRI: 84.0) despite reliability concerns, indicating appetite for innovation when properly executed
-- Design & value show critical weaknesses (WRI: 35.5/35.0), with 50% negative sentiment threatening conversion of high market interest
+- Core touring attributes dominate: Overall Comfort (WRI: 92.5), Wind Protection (WRI: 90.5), and Ergonomics (WRI: 89.5) remain non-negotiable expectations
+- Technology features show strong resonance (WRI: 84.0) but generate reliability concerns among traditionalists
+- Critical weaknesses in Design & Aesthetics (WRI: 35.5) and Value for Money (WRI: 35.0) create significant purchase barriers
 
 ## Market Insights
-- BMW R1300RT achieved 60-70% Share of Voice in touring segment, demonstrating market leadership despite mixed sentiment
-- Touring remains niche (~hundreds of units annually) but strategically vital for brand image and per-unit profitability
-- Market dominated by BMW-Honda duopoly after competitors' exit, creating both opportunity and responsibility to sustain segment
-- Demographic challenge: Core buyers 40-60 years old with concerns about attracting younger riders to heavy tourers
+- R1300RT captured 60-70% share of voice in touring discussions, demonstrating strong market interest despite mixed sentiment
+- Sentiment analysis reveals 50% negative, 30% positive, 20% neutral responses, driven primarily by design and price concerns
+- Spanish touring segment remains small but stable within growing motorcycle market, with BMW and Honda maintaining duopoly
 
 ## Competitor Analysis
-- BMW and Honda are sole remaining dedicated touring manufacturers in 2025
-- Honda Gold Wing positioned as ultimate comfort but hampered by weight (380kg) and price (€29k+)
-- Emerging threat from crossover models like Honda NT1100 offering 80% capability at 60% price
-- Adventure bikes continue to cannibalize traditional touring segment
+- BMW dominates conversation with 65% share of voice versus Honda Gold Wing's 20%
+- Honda Gold Wing offers superior comfort but lacks agility; NT1100 provides value alternative at €15,000
+- Sport-tourers from Kawasaki/Suzuki offer performance value but lack touring comfort and features
 
 ## Strategic Recommendations
-- **Strategic Positioning:** Technology leader balancing innovation with touring heritage, addressing design concerns through customization
-- **Content & Messaging:** Emphasize comfort supremacy, demonstrate technology benefits, justify value through total ownership experience
-- **Audience Targeting:** Affluent 40-60 riders, tech-savvy early adopters, former FJR/GTR owners, corporate fleet managers
-- **Key Opportunity:** Capture orphaned riders from discontinued models while building trust through reliability guarantees and financing packages
+- **Strategic Positioning:** Technology leader respecting touring tradition while advancing the segment
+- **Content & Messaging:** "Uncompromising comfort meets cutting-edge technology" addressing both innovation and heritage
+- **Audience Targeting:** Focus on upgrading R1250RT owners and orphaned riders from discontinued models
+- **Key Opportunity:** Leverage BMW Select financing and customization options to overcome price and design barriers

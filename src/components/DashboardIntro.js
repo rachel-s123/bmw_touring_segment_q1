@@ -124,55 +124,92 @@ const DashboardIntro = ({ selectedMarket }) => {
       </Box>
 
       <TabPanel value={tabValue} index={0}>
-        <Box sx={{ mb: 4 }}>
-          {/* Introduction and Strategic Applications from generated data */}
-          <Typography variant="h6" sx={{ fontWeight: 600, mb: 2 }}>
-            Introduction & Strategic Applications
-          </Typography>
-          <Typography variant="body1" color="text.secondary" sx={{ mb: 3 }}>
-            {marketData?.introduction || scopeData[0].description}
-          </Typography>
-        </Box>
-        <Divider sx={{ my: 4 }} />
-        <Box sx={{ mb: 4 }}>
-          {/* Methodology from generated data */}
-          <Typography variant="h6" sx={{ fontWeight: 600, mb: 2 }}>
-            Methodology
-          </Typography>
-          <Typography variant="body1" color="text.secondary" sx={{ mb: 3 }}>
-            {marketData?.methodology || methodologyData.map(m => `${m.title}: ${m.description}`).join('\n')}
-          </Typography>
-        </Box>
-        <Divider sx={{ my: 4 }} />
-        <Box sx={{ mb: 4 }}>
-          <Typography 
-            variant="h6" 
-            sx={{ 
-              fontSize: '1.1rem',
-              fontWeight: 500,
-              mb: 3 
-            }}
-          >
-            Dashboard Sections
-          </Typography>
-          <Grid container spacing={3}>
-            {sectionData.map((section, idx) => (
-              <Grid item xs={12} sm={6} md={3} key={section.title}>
-                <Card sx={{ height: '100%', boxShadow: 3, borderRadius: 2, display: 'flex', flexDirection: 'column', alignItems: 'center', p: 2 }}>
-                  <CardContent sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                    {section.icon}
-                    <Typography variant="subtitle1" sx={{ fontWeight: 600, mb: 1, mt: 1, textAlign: 'center' }}>
-                      {section.title}
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary" sx={{ textAlign: 'center' }}>
-                      {section.description}
-                    </Typography>
-                  </CardContent>
-                </Card>
-              </Grid>
-            ))}
+        {/* Top: Dashboard Scope & Strategic Applications */}
+        <Grid container spacing={3} sx={{ mb: 4 }}>
+          <Grid item xs={12} md={6}>
+            <Card sx={{ height: '100%', boxShadow: 2, borderRadius: 2, display: 'flex', flexDirection: 'column', alignItems: 'center', p: 2 }}>
+              <CardContent sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                {scopeData[0].icon}
+                <Typography variant="subtitle1" sx={{ fontWeight: 600, mb: 1, mt: 1, textAlign: 'center' }}>
+                  {scopeData[0].title}
+                </Typography>
+                <Typography variant="body2" color="text.secondary" sx={{ textAlign: 'center' }}>
+                  {scopeData[0].description}
+                </Typography>
+              </CardContent>
+            </Card>
           </Grid>
-        </Box>
+          <Grid item xs={12} md={6}>
+            <Card sx={{ height: '100%', boxShadow: 2, borderRadius: 2, display: 'flex', flexDirection: 'column', alignItems: 'center', p: 2 }}>
+              <CardContent sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                {usageData[0].icon}
+                <Typography variant="subtitle1" sx={{ fontWeight: 600, mb: 1, mt: 1, textAlign: 'center' }}>
+                  {usageData[0].title}
+                </Typography>
+                <Typography variant="body2" color="text.secondary" sx={{ textAlign: 'center' }}>
+                  {usageData[0].description}
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+        </Grid>
+        {/* Dashboard Sections */}
+        <Typography 
+          variant="h6" 
+          sx={{ 
+            fontSize: '1.1rem',
+            fontWeight: 500,
+            mb: 3 
+          }}
+        >
+          Dashboard Sections
+        </Typography>
+        <Grid container spacing={3} sx={{ mb: 4 }}>
+          {sectionData.map((section, idx) => (
+            <Grid item xs={12} sm={6} md={3} key={section.title}>
+              <Card sx={{ height: '100%', boxShadow: 3, borderRadius: 2, display: 'flex', flexDirection: 'column', alignItems: 'center', p: 2 }}>
+                <CardContent sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                  {section.icon}
+                  <Typography variant="subtitle1" sx={{ fontWeight: 600, mb: 1, mt: 1, textAlign: 'center' }}>
+                    {section.title}
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary" sx={{ textAlign: 'center' }}>
+                    {section.description}
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Grid>
+          ))}
+        </Grid>
+        {/* Methodology Header */}
+        <Typography 
+          variant="h6" 
+          sx={{ 
+            fontSize: '1.1rem',
+            fontWeight: 500,
+            mb: 3 
+          }}
+        >
+          Methodology
+        </Typography>
+        {/* Methodology Section in two boxes */}
+        <Grid container spacing={3} sx={{ mb: 4 }}>
+          {methodologyData.map((m, idx) => (
+            <Grid item xs={12} md={6} key={m.title}>
+              <Card sx={{ height: '100%', boxShadow: 2, borderRadius: 2, display: 'flex', flexDirection: 'column', alignItems: 'center', p: 2 }}>
+                <CardContent sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                  {m.icon}
+                  <Typography variant="subtitle1" sx={{ fontWeight: 600, mb: 1, mt: 1, textAlign: 'center' }}>
+                    {m.title}
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary" sx={{ textAlign: 'center' }}>
+                    {m.description}
+                  </Typography>
+                </CardContent>
+              </Card>
+            </Grid>
+          ))}
+        </Grid>
       </TabPanel>
 
       <TabPanel value={tabValue} index={1}>

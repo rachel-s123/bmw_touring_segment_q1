@@ -6,10 +6,10 @@
 
 The Weighted Resonance Index (WRI) measures how strongly different product attributes resonate with consumers in each market. This comprehensive score analyzes 20 key attributes across four dimensions:
 
-- **Social Discussion Importance (40%)**: Volume and sentiment of social media conversations and online forums
-- **Sales & Market Factor Importance (30%)**: Impact on purchase decisions and market performance
-- **Consumer Review Focus (20%)**: Frequency and emphasis in customer reviews and feedback
-- **Expert Analysis Emphasis (10%)**: Prominence in professional reviews and industry analysis
+- **Social Discussion Importance (30%)**: Volume and sentiment of social media conversations and online forums
+- **Sales & Market Factor Importance (25%)**: Impact on purchase decisions and market performance
+- **Consumer Review Focus (25%)**: Frequency and emphasis in customer reviews and feedback
+- **Expert Analysis Emphasis (20%)**: Prominence in professional reviews and industry analysis
 
 Each attribute receives a score from 0-100, with higher scores indicating stronger market resonance. This analysis helps identify which product features and characteristics are most important to consumers in different markets, enabling targeted product development and marketing strategies.
 
@@ -54,51 +54,98 @@ Value for Money: 35.0
 ## WRI Insights
 
 ### Attribute Insights
+Overall Comfort:
+- Insight: Spanish riders prioritize all-day comfort above all else, expecting upright riding positions, plush seating, and relaxed ergonomics. The R1300RT's advanced rider triangle and improved seating position directly address these expectations.
+- Recommendation: Continue prioritizing ergonomic refinements and offer comfort-enhancing accessories like adjustable seats and back support options to maintain segment leadership.
 
-**Overall Comfort**:
-- Insight: Highest priority attribute with near-perfect resonance. Spanish riders consider comfort non-negotiable for long-distance touring, expecting upright, all-day riding positions and plush seating.
-- Recommendation: Continue prioritizing ergonomic design with adjustable seat heights, spacious legroom, and back support. Monitor post-launch feedback for Spain's specific climate conditions.
+Wind Protection:
+- Insight: Effective weather protection is non-negotiable for Spanish touring riders who face varied conditions from Mediterranean heat to Pyrenean cold. The R1300RT's aerodynamic flaps and revised fairing show BMW understands this critical need.
+- Recommendation: Highlight the new aerodynamic innovations in marketing and offer optional taller touring screens for different rider heights to maximize protection effectiveness.
 
-**Wind Protection**:
-- Insight: Top-tier attribute reflecting the importance of effective weather shielding. The R1300RT's revised fairing and aerodynamic flaps are positively received.
-- Recommendation: Ensure windshield adjustability accommodates varying rider heights. Highlight innovative flaps in marketing as comfort innovation. Consider taller touring screen options.
+Seat Height & Ergonomics:
+- Insight: The adaptive ride height feature (Dynamic ESA) that lowers the bike when stopping directly addresses Spanish riders' concerns about managing heavy touring bikes, especially important for varied rider heights.
+- Recommendation: Actively promote the adaptive height technology as a key differentiator and ensure dealers demonstrate this feature during test rides to convert concerned prospects.
 
-**Engine Performance**:
-- Insight: The 145 CV boxer engine generates overwhelmingly positive sentiment. Riders expect effortless power for mountain passes and highway overtaking "sin despeinarse" (without breaking a sweat).
-- Recommendation: Emphasize improved power without increased fuel consumption. Ensure smooth throttle response and maintain engine mode versatility (Rain/Road/Dynamic).
+Engine Performance:
+- Insight: The 145 CV boxer engine generates strong positive sentiment, with riders expecting effortless power for mountain passes and highway overtaking while maintaining BMW's characteristic smoothness.
+- Recommendation: Emphasize the increased power without increased fuel consumption and ensure throttle mapping provides smooth, predictable power delivery across all riding modes.
 
-**Technology & Features**:
-- Insight: High resonance despite some reliability concerns. Features like Adaptive Cruise Control and ASA generate excitement among tech-savvy riders but also complexity fears.
-- Recommendation: Prioritize user experience and seamless integration. Provide comprehensive dealer training and customer education on practical benefits of each feature.
+Technology & Features:
+- Insight: Spanish riders show high interest in advanced features like Adaptive Cruise Control and ASA, but concerns about complexity and reliability persist among traditionalists.
+- Recommendation: Implement comprehensive dealer training programs and customer education initiatives to demonstrate practical benefits and user-friendliness of new technologies.
 
-**Design & Aesthetics**:
-- Insight: Most polarizing attribute with 50% negative sentiment. Radical departure from classic RT aesthetic has alienated loyal enthusiasts who compare it unfavorably to adventure bikes.
-- Recommendation: Offer classic color liveries and aesthetic accessory packages. Organize showroom events for physical interaction. Consider mid-cycle refresh if sales impact significant.
+Innovation & Future-proofing:
+- Insight: Being first-to-market with technologies like ASA positions BMW as the segment innovator, appealing to tech-savvy riders while raising concerns among reliability-focused traditionalists.
+- Recommendation: Balance innovation messaging with reliability assurances, highlighting extensive testing and quality control measures for new technologies.
 
-**Value for Money**:
-- Insight: Lowest resonance score despite medium consumer importance. €24,680 base price considered "infumable" (unpalatable) with reliance on financing for accessibility.
-- Recommendation: Articulate compelling value proposition highlighting comprehensive standard features. Leverage BMW Select financing and consider including maintenance packages or accessories in launch editions.
+Brand Image & Reputation:
+- Insight: BMW's touring heritage remains strong in Spain, though some perceive the brand as drifting toward over-techification at the expense of traditional touring values.
+- Recommendation: Reinforce connection to RT heritage while positioning technology as enhancing rather than replacing traditional touring excellence.
 
-**Reliability & Durability**:
-- Insight: Major trust deficit with 30/100 social sentiment despite 90/100 consumer importance. Fears that extensive technology will compromise long-term reliability.
-- Recommendation: Communicate rigorous testing protocols and quality measures. Offer extended warranties or service packages. Share success stories of high-mileage, trouble-free ownership.
+Safety Features:
+- Insight: Comprehensive safety electronics are increasingly expected in premium tourers, with Spanish riders valuing features like ABS Pro and collision warning for varied riding conditions.
+- Recommendation: Continue safety innovation leadership and clearly communicate how each feature enhances real-world riding scenarios, especially for two-up touring.
+
+Handling & Stability:
+- Insight: The R1300RT's lighter, more agile character appeals to Spanish riders who value capability on twisty mountain roads without sacrificing high-speed stability.
+- Recommendation: Maintain focus on agile handling as a key differentiator versus heavier competitors while ensuring loaded stability meets touring expectations.
+
+Engine Character & Sound:
+- Insight: The distinctive boxer engine character remains a strong emotional connection point, with riders praising the characteristic "grunt" and refined power delivery.
+- Recommendation: Preserve the boxer's unique character in future developments while continuing refinement for smoothness and reduced vibration.
+
+Range & Fuel Efficiency:
+- Insight: The 400+ km range meets Spanish touring needs well, with maintained fuel consumption despite increased power being particularly appreciated given fuel costs.
+- Recommendation: Continue optimizing efficiency and highlight practical range benefits for popular Spanish touring routes in marketing materials.
+
+Dealer & Service Network:
+- Insight: BMW's extensive Spanish dealer network and financing options like BMW Select are valued, though not primary purchase drivers for this premium segment.
+- Recommendation: Strengthen dealer service quality and consider touring-specific service packages to enhance ownership experience and loyalty.
+
+Passenger Comfort:
+- Insight: While improved with more legroom, passenger accommodations remain slightly sport-oriented compared to Gold Wing, affecting two-up touring appeal.
+- Recommendation: Develop optional passenger comfort packages including armrests and enhanced backrests to better compete for couples touring market.
+
+Luggage Capacity:
+- Insight: The new angular panniers generate mixed reactions, with practical capacity concerns despite aesthetic preferences varying among riders.
+- Recommendation: Ensure panniers accommodate common items like full-face helmets and consider including top case in promotional packages.
+
+Resale Value:
+- Insight: High initial price creates implicit concerns about depreciation, though BMW's premium positioning generally supports strong residual values.
+- Recommendation: Communicate historical RT resale strength and consider guaranteed buyback programs to alleviate long-term value concerns.
+
+Weight Management:
+- Insight: Despite innovative solutions like adaptive ride height, the bike's weight remains a concern for some riders, particularly with full options installed.
+- Recommendation: Emphasize weight-mitigating technologies and low center of gravity benefits while exploring further weight reduction opportunities.
+
+Low-Speed Maneuverability:
+- Insight: Lack of reverse gear compared to Gold Wing is noted, though adaptive ride height partially compensates for low-speed handling concerns.
+- Recommendation: Consider adding reverse assist option similar to K1600 and heavily promote existing low-speed handling aids.
+
+Reliability & Durability:
+- Insight: Despite high consumer priority, this attribute suffers from strong negative sentiment due to fears about electronic complexity compromising traditional BMW durability.
+- Recommendation: Implement extended warranty programs and communicate rigorous testing protocols to rebuild confidence in long-term reliability.
+
+Design & Aesthetics:
+- Insight: The radical styling departure has created the strongest negative reaction, with many loyalists feeling BMW has abandoned classic RT elegance for excessive sportiness.
+- Recommendation: Offer heritage-inspired color schemes and consider aesthetic options that nod to traditional RT design while maintaining modern functionality.
+
+Value for Money:
+- Insight: The €24,680 base price is seen as "infumable" (unpalatable) by many, with riders questioning whether features justify the premium over competitors or previous models.
+- Recommendation: Develop compelling value propositions including maintenance packages and emphasize total ownership experience benefits versus initial purchase price.
 
 ### Strategic Recommendations
-
-Short Term:
-- Launch comprehensive dealer education program on technology features, especially ASA and radar systems
-- Develop classic aesthetic accessory packages to address design concerns
-- Create compelling financing packages with maintenance included for first 3 years
-
-Long Term:
-- Monitor reliability data closely and address any issues transparently to rebuild trust
-- Consider development of lighter, more accessible touring model using F900 platform
-- Position for future electric touring development leveraging BMW EV expertise
+- Reinforce leadership in core comfort and protection through continued ergonomic refinement and weather management innovation
+- Implement comprehensive technology education programs to convert feature skeptics into advocates
+- Address design backlash through heritage-inspired options while allowing time for market acceptance
+- Build reliability confidence through extended warranties and transparent communication about quality measures
+- Articulate clear value propositions that justify premium pricing through total ownership benefits
+- Leverage financing programs like BMW Select to improve accessibility while maintaining premium positioning
 
 Priorities:
-- Reinforce leadership in core comfort and protection attributes
-- Address design backlash through customization options and marketing
-- Build value perception and reliability trust through comprehensive ownership packages
-
-Methodology Notes:
-WRI calculation weighted 40% Social Listening, 30% Sales Data, 20% Consumer Reviews, 10% Expert Analysis to prioritize real-time market feedback and actual performance over traditional metrics. This approach is critical for controversial launches where initial perception significantly influences trajectory.
+- Maintain comfort and protection excellence as non-negotiable baseline expectations
+- Balance innovation with reliability assurance to address traditionalist concerns
+- Develop design solutions that bridge modern functionality with classic RT heritage
+- Create comprehensive dealer training on new technologies to ensure proper customer education
+- Establish clear value communication that emphasizes quality-of-life benefits over price
+- Monitor early adopter feedback closely to address any emerging reliability issues quickly

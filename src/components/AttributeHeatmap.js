@@ -30,44 +30,43 @@ const AttributeCommentary = ({ attribute, selectedMarket, onClose }) => {
   const theme = useTheme();
   
   // Get attribute-specific insights from attributeResonance attributeAnalysis
-  const insights = attributeResonance[selectedMarket]?.attributeAnalysis[attribute];
+  const insights = attributeResonance[selectedMarket.toLowerCase()]?.attributeAnalysis[attribute];
   
-  // If no specific insights found, create a default insight using the scores
-  const createDefaultInsight = () => {
-    const scores = Object.values(marketData.scores[attribute]);
-    const avgScore = scores.reduce((a, b) => a + b, 0) / scores.length;
-    const marketScore = marketData.scores[attribute][selectedMarket.toLowerCase()];
-    const deviation = marketScore - avgScore;
-    
-    const getDeviationStrength = (dev) => {
-      const absDev = Math.abs(dev);
-      if (absDev >= 15) return 'significantly';
-      if (absDev >= 8) return 'moderately';
-      if (absDev >= 4) return 'slightly';
-      return 'marginally';
-    };
-
-    const getDeviationPhrase = (dev) => {
-      if (dev > 0) return `${getDeviationStrength(dev)} above`;
-      if (dev < 0) return `${getDeviationStrength(dev)} below`;
-      return 'in line with';
-    };
-
-    return {
-      score: marketScore,
-      insight: `${attribute} in ${selectedMarket} shows ${marketScore >= 75 ? 'strong' : marketScore >= 50 ? 'moderate' : 'developing'} market resonance. The market's WRI score of ${marketScore.toFixed(1)} is ${getDeviationPhrase(deviation)} the European average of ${avgScore.toFixed(1)}.`,
-      recommendation: `Consider the overall market context and align strategies with core market needs.`
-    };
-  };
-
-  const displayInsights = insights || createDefaultInsight();
-
-  // Normalize insights structure
-  const normalizedInsights = {
-    score: displayInsights.score,
-    insight: displayInsights.insight || '',
-    recommendation: displayInsights.recommendation || ''
-  };
+  // If no insights found, show a message
+  if (!insights) {
+    return (
+      <Fade in timeout={300}>
+        <Paper 
+          sx={{ 
+            p: 3, 
+            mt: 3,
+            position: 'relative',
+            backgroundColor: theme.palette.background.default
+          }}
+          elevation={3}
+        >
+          <IconButton
+            onClick={onClose}
+            sx={{
+              position: 'absolute',
+              right: 8,
+              top: 8
+            }}
+          >
+            <CloseIcon />
+          </IconButton>
+          
+          <Typography variant="h6" gutterBottom className="bmw-motorrad-bold" sx={{ mb: 3 }}>
+            {attribute} Analysis for {selectedMarket}
+          </Typography>
+          
+          <Typography variant="body1" className="bmw-motorrad-regular">
+            No specific insights available for this attribute in the selected market.
+          </Typography>
+        </Paper>
+      </Fade>
+    );
+  }
 
   return (
     <Fade in timeout={300}>
@@ -114,7 +113,7 @@ const AttributeCommentary = ({ attribute, selectedMarket, onClose }) => {
                 WRI Score
               </Typography>
               <Typography variant="h4" className="bmw-motorrad-bold" color="primary.dark" sx={{ mb: 1 }}>
-                {normalizedInsights.score?.toFixed(1)}
+                {insights.score?.toFixed(1)}
                 <Typography component="span" variant="h6" color="text.secondary" sx={{ ml: 1 }}>
                   / 100
                 </Typography>
@@ -123,7 +122,7 @@ const AttributeCommentary = ({ attribute, selectedMarket, onClose }) => {
                 {(() => {
                   const scores = Object.values(marketData.scores[attribute]);
                   const avgScore = scores.reduce((a, b) => a + b, 0) / scores.length;
-                  const deviation = normalizedInsights.score - avgScore;
+                  const deviation = insights.score - avgScore;
                   const sign = deviation > 0 ? '+' : '';
                   return `${sign}${deviation.toFixed(1)} vs. regional average of ${avgScore.toFixed(1)}`;
                 })()}
@@ -153,7 +152,7 @@ const AttributeCommentary = ({ attribute, selectedMarket, onClose }) => {
                 Market Insight
               </Typography>
               <Typography variant="body2" className="bmw-motorrad-regular" sx={{ mb: 2 }}>
-                {normalizedInsights.insight}
+                {insights.insight}
               </Typography>
 
               <Typography 
@@ -164,7 +163,7 @@ const AttributeCommentary = ({ attribute, selectedMarket, onClose }) => {
                 Strategic Recommendation
               </Typography>
               <Typography variant="body2" className="bmw-motorrad-regular">
-                {normalizedInsights.recommendation}
+                {insights.recommendation}
               </Typography>
             </Card>
           </Grid>

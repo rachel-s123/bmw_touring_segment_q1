@@ -4,28 +4,48 @@ export const marketSources = {
     "sources": {
       "": [
         {
-          "name": "Le Repaire des Motards",
-          "description": "French motorcycle industry news, sales data, and market analysis",
-          "type": "News"
-        },
-        {
           "name": "Auto Plus",
-          "description": "Automotive and motorcycle news coverage with product launches and reviews",
+          "description": "Nouvelle BMW R 1300 RT article and motorcycle news coverage",
           "type": "News"
         },
         {
           "name": "Moto Magazine",
-          "description": "Leading French motorcycle publication with expert reviews and industry news",
+          "description": "BMW R 1300 RT 2025 reviews and competitor analyses",
+          "type": "Review"
+        },
+        {
+          "name": "Le Repaire des Motards",
+          "description": "French motorcycle market sales data and industry news",
           "type": "News"
         },
         {
           "name": "Le Point",
-          "description": "Major French news outlet with dedicated motorcycle section",
-          "type": "News"
+          "description": "Yamaha FJR 1300 Ultimate Edition review and analysis",
+          "type": "Review"
         },
         {
           "name": "Le Figaro",
-          "description": "National newspaper with automotive/motorcycle coverage",
+          "description": "Honda Gold Wing coverage and touring motorcycle features",
+          "type": "News"
+        },
+        {
+          "name": "Reddit France",
+          "description": "French motorcycle community discussions and user experiences",
+          "type": "Forum"
+        },
+        {
+          "name": "Honda 7eme Avenue",
+          "description": "Honda dealer blog with Gold Wing sales records",
+          "type": "Other"
+        },
+        {
+          "name": "Moto-Station Maxitest",
+          "description": "User reviews and long-term ownership reports",
+          "type": "Review"
+        },
+        {
+          "name": "Moto-Net.com",
+          "description": "Technical specifications and motorcycle news",
           "type": "News"
         },
         {
@@ -44,78 +64,18 @@ export const marketSources = {
           "type": "Review"
         },
         {
-          "name": "Le Lefûté.fr",
-          "description": "BMW R 1300 RT feature articles",
-          "type": "Other"
-        },
-        {
-          "name": "AcidMoto.ch",
-          "description": "Yamaha factory closure news and industry updates",
-          "type": "News"
-        },
-        {
-          "name": "Motomag.com",
-          "description": "Touring motorcycle comparisons and market analysis",
-          "type": "Review"
-        },
-        {
-          "name": "BMW Motorrad France",
-          "description": "Official product announcements and specifications",
-          "type": "Press Release"
-        },
-        {
-          "name": "BMW Motorrad Belux Facebook",
-          "description": "Official BMW Motorrad social media",
-          "type": "Social Media"
-        },
-        {
-          "name": "Honda News France",
-          "description": "Official Honda press releases and market position",
-          "type": "Press Release"
-        },
-        {
-          "name": "Moto-Station Maxitest",
-          "description": "Crowdsourced owner reviews and long-term reliability reports",
-          "type": "Review"
+          "name": "Facebook BMW Motorrad Groups",
+          "description": "BMW dealer posts and community discussions",
+          "type": "Forum"
         },
         {
           "name": "YouTube French Moto Channels",
-          "description": "MotorLive, Moto Magazine video reviews with user comments",
+          "description": "Moto Magazine channel and MotorLive reviews",
           "type": "Review"
         },
         {
-          "name": "Moto-Net",
-          "description": "Technical specifications and model comparisons",
-          "type": "Product Information"
-        },
-        {
-          "name": "Reddit r/motorcycle (French threads)",
-          "description": "Community discussions and user experiences",
-          "type": "Forum"
-        },
-        {
-          "name": "Facebook Groups",
-          "description": "French touring motorcycle communities and BMW/Honda owner groups",
-          "type": "Other"
-        },
-        {
-          "name": "Le Repaire des Motards Forums",
-          "description": "Extensive touring motorcycle discussions and owner experiences",
-          "type": "Other"
-        },
-        {
-          "name": "BMW and Gold Wing Club Forums",
-          "description": "Dedicated enthusiast communities",
-          "type": "Other"
-        },
-        {
-          "name": "Moto-Station Forums",
-          "description": "Motorcycle owner forums and technical discussions",
-          "type": "Forum"
-        },
-        {
-          "name": "French Police Motorcycle Forums",
-          "description": "Professional rider experiences with touring bikes",
+          "name": "Le Lefûté.fr",
+          "description": "BMW R 1300 RT feature articles",
           "type": "Other"
         },
         {
@@ -129,94 +89,144 @@ export const marketSources = {
           "type": "Forum"
         },
         {
-          "name": "Honda France",
-          "description": "Gold Wing sales records and model updates",
-          "type": "Other"
+          "name": "Motoplanète",
+          "description": "Honda Gold Wing DCT 2024 specifications and features",
+          "type": "Product Information"
         },
         {
-          "name": "Motoplanete",
-          "description": "Detailed product profiles with features and pricing",
-          "type": "Other"
+          "name": "AcidMoto.ch",
+          "description": "Yamaha factory closure news and industry updates",
+          "type": "News"
+        },
+        {
+          "name": "Honda News France",
+          "description": "Official Honda press releases and market position",
+          "type": "Press Release"
+        },
+        {
+          "name": "Motomag.com",
+          "description": "Touring motorcycle comparisons and market analysis",
+          "type": "Review"
+        },
+        {
+          "name": "BMW Motorrad Belux Facebook",
+          "description": "Official BMW Motorrad social media",
+          "type": "Social Media"
+        },
+        {
+          "name": "Facebook Gold Wing Groups",
+          "description": "Gold Wing owner community discussions",
+          "type": "Forum"
+        },
+        {
+          "name": "Moto-Station Forums",
+          "description": "Motorcycle owner forums and technical discussions",
+          "type": "Forum"
         },
         {
           "name": "Leboncoin",
           "description": "Used motorcycle classifieds with user feedback",
           "type": "Other"
+        },
+        {
+          "name": "French Police Motorcycle Forums",
+          "description": "Professional rider experiences with touring bikes",
+          "type": "Other"
         }
       ]
     }
   },
-  "bmw_touring___spain": {
+  "bmw_motorrad_touring_segment___spain": {
     "sources": {
       "": [
         {
-          "name": "SoyMotero.net",
-          "description": "Industry news and model previews",
-          "type": "News"
-        },
-        {
-          "name": "Todocircuito.com",
-          "description": "Breaking news on new model launches",
-          "type": "News"
-        },
-        {
-          "name": "FormulaMoto.es",
-          "description": "Sales rankings and market analysis",
-          "type": "Review"
-        },
-        {
-          "name": "Motociclismo/Motorbike Magazine",
-          "description": "Top 25 motorcycles sales rankings and market analysis",
-          "type": "Review"
-        },
-        {
-          "name": "BMW Motorrad España",
-          "description": "Official announcements and pricing information",
-          "type": "Press Release"
-        },
-        {
-          "name": "BMW Motorrad España Facebook",
-          "description": "Official brand page with consumer engagement",
-          "type": "Press Release"
-        },
-        {
-          "name": "Super7Moto.com",
-          "description": "Official press releases and specifications",
-          "type": "Press Release"
-        },
-        {
-          "name": "YouTube - Fernando Magdaleno",
-          "description": "Expert analysis of touring segment trends",
-          "type": "Review"
-        },
-        {
-          "name": "YouTube - 1000PS en Español",
-          "description": "Technical reviews focusing on features vs. cost analysis",
-          "type": "Review"
-        },
-        {
-          "name": "Motofichas.com",
-          "description": "Technical reviews and specifications for touring motorcycles",
-          "type": "Review"
-        },
-        {
-          "name": "BMWMotos.com",
-          "description": "Dedicated BMW rider community providing authentic owner opinions and discussions",
-          "type": "Forum"
-        },
-        {
-          "name": "Reddit r/motorcycle (Spanish threads)",
-          "description": "Community discussions and user experiences",
-          "type": "Forum"
-        },
-        {
-          "name": "ANESDOR",
-          "description": "Spanish motorcycle industry association providing registration data and market statistics",
+          "name": "BMWMotos.com Forum – \"Nueva R1300RT\" Thread",
+          "description": "Authentic owner/rider comments on the BMW R 1300 RT launch",
           "type": "Other"
         },
         {
-          "name": "Komobi Blog",
-          "description": "Travel motorcycle recommendations and market insights",
+          "name": "BMWMotos.com Forum – \"Honda Goldwing 2018–2025\" Thread",
+          "description": "Discussions including a poll on Gold Wing updates and comparisons",
+          "type": "Other"
+        },
+        {
+          "name": "BMW Motorrad España – Official Announcement (Facebook/X)",
+          "description": "Launch post introducing the BMW R1300RT with user engagement",
+          "type": "Other"
+        },
+        {
+          "name": "YouTube – Fernando Magdaleno",
+          "description": "\"BMW R 1300 RT: Sport Touring has KILLED TOURING\"",
+          "type": "Other"
+        },
+        {
+          "name": "YouTube – 1000PS en Español",
+          "description": "\"Nuevas BMW R 1300 RT y RS – Más tecnología… a mayor precio\"",
+          "type": "Other"
+        },
+        {
+          "name": "Super7Moto.com (Prensa BMW Motorrad)",
+          "description": "\"Las nuevas BMW R 1300 RT y BMW 1300 RS ya tienen precio en España\"",
+          "type": "Other"
+        },
+        {
+          "name": "Motorbike Magazine (motorbikemag.es)",
+          "description": "\"Top 25 motos más vendidas en España en 2024\"",
+          "type": "Other"
+        },
+        {
+          "name": "ANESDOR (anesdor.com)",
+          "description": "\"El sector de la moto... creció un 10% en 2024\"",
+          "type": "Other"
+        },
+        {
+          "name": "FormulaMoto.es",
+          "description": "\"Ranking de motos nuevas por marcas hasta febrero 2025\"",
+          "type": "Other"
+        },
+        {
+          "name": "Motofichas.com",
+          "description": "\"BMW R 1300 RT 2025 – Precio, ficha técnica, opiniones\"",
+          "type": "Other"
+        },
+        {
+          "name": "SoyMotero.net",
+          "description": "\"Entre tanta trail, ... habrá BMW R 1300 RT\"",
+          "type": "Other"
+        },
+        {
+          "name": "SoyMotero.net",
+          "description": "\"La nueva BMW R 1300 RT llega con flaps aerodinámicos...\"",
+          "type": "Other"
+        },
+        {
+          "name": "Todocircuito.com",
+          "description": "\"Revolución total: BMW cambia hasta el último tornillo de su R1300RT 2025\"",
+          "type": "Other"
+        },
+        {
+          "name": "Press (International references via Bing)",
+          "description": "Honda Gold Wing 2025 50th anniversary edition information",
+          "type": "Other"
+        },
+        {
+          "name": "Komobi/Blog",
+          "description": "\"Las 3 mejores motos para viajar por España\"",
+          "type": "Other"
+        },
+        {
+          "name": "BMW Motorrad",
+          "description": "R 1300 RT product page",
+          "type": "Other"
+        },
+        {
+          "name": "BMW Press",
+          "description": "\"BMW Motorrad logra en 2024 el mejor resultado de ventas en toda su historia\"",
+          "type": "Other"
+        },
+        {
+          "name": "Twitter/X",
+          "description": "#MakeLifeARide hashtag search",
           "type": "Other"
         }
       ]

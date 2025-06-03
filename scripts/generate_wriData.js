@@ -12,52 +12,124 @@ function parseMarketMarkdown(mdPath) {
   const marketMatch = content.match(/^# WRI Report: (.+)$/m);
   const market = marketMatch ? marketMatch[1].trim() : path.basename(mdPath, '.md');
   
-  // Parse scores
+  // Parse scores and insights
   const scores = {};
+  const attributeInsights = {};
   let inScores = false;
+  let inInsights = false;
   let inRecommendations = false;
+  let inPriorities = false;
+  let currentAttribute = null;
   const recommendations = [];
-  let currentSection = '';
+  const priorities = [];
   
   for (const line of lines) {
+    const trimmedLine = line.trim();
+    
     // Parse scores
-    if (line.trim().startsWith('### Attribute Scores')) {
+    if (trimmedLine.startsWith('### Attribute Scores')) {
       inScores = true;
+      inInsights = false;
+      inRecommendations = false;
+      inPriorities = false;
       continue;
     }
+    
+    // Parse attribute insights
+    if (trimmedLine.startsWith('### Attribute Insights')) {
+      inScores = false;
+      inInsights = true;
+      inRecommendations = false;
+      inPriorities = false;
+      continue;
+    }
+    
+    // Parse strategic recommendations
+    if (trimmedLine.startsWith('### Strategic Recommendations')) {
+      inScores = false;
+      inInsights = false;
+      inRecommendations = true;
+      inPriorities = false;
+      continue;
+    }
+    
+    // Parse priorities
+    if (trimmedLine.startsWith('Priorities:')) {
+      inScores = false;
+      inInsights = false;
+      inRecommendations = false;
+      inPriorities = true;
+      continue;
+    }
+    
     if (inScores) {
-      if (!line.trim() || line.startsWith('#') || line.startsWith('---') || line.startsWith('##')) {
+      if (!trimmedLine || trimmedLine.startsWith('#') || trimmedLine.startsWith('---') || trimmedLine.startsWith('##')) {
         inScores = false;
       } else {
-        const match = line.match(/^([\w .&\-()]+):\s*([\d.]+)$/);
+        const match = trimmedLine.match(/^([\w .&\-()]+):\s*([\d.]+)$/);
         if (match) {
           scores[match[1].trim()] = parseFloat(match[2]);
         }
       }
     }
     
-    // Parse recommendations
-    if (line.trim().startsWith('### Strategic Recommendations')) {
-      inRecommendations = true;
-      continue;
-    }
-    if (inRecommendations) {
-      if (!line.trim() || line.startsWith('#') || line.startsWith('---') || line.startsWith('##')) {
-        inRecommendations = false;
+    if (inInsights) {
+      if (!trimmedLine || trimmedLine.startsWith('#') || trimmedLine.startsWith('---') || trimmedLine.startsWith('##')) {
+        inInsights = false;
       } else {
-        if (line.trim().startsWith('Short Term:') || line.trim().startsWith('Long Term:') || line.trim().startsWith('Priorities:')) {
-          currentSection = line.trim().replace(':', '');
-        } else if (line.trim().startsWith('-')) {
-          recommendations.push({
-            title: currentSection,
-            details: line.trim().substring(1).trim()
-          });
+        // Check for new attribute
+        if (trimmedLine.endsWith(':')) {
+          currentAttribute = trimmedLine.slice(0, -1).trim();
+          attributeInsights[currentAttribute] = {
+            insight: '',
+            recommendation: ''
+          };
+        }
+        // Parse insight and recommendation
+        else if (currentAttribute) {
+          if (trimmedLine.startsWith('- Insight:')) {
+            attributeInsights[currentAttribute].insight = trimmedLine.replace('- Insight:', '').trim();
+          } else if (trimmedLine.startsWith('- Recommendation:')) {
+            attributeInsights[currentAttribute].recommendation = trimmedLine.replace('- Recommendation:', '').trim();
+          }
+        }
+      }
+    }
+    
+    if (inRecommendations) {
+      if (!trimmedLine || trimmedLine.startsWith('#') || trimmedLine.startsWith('---') || trimmedLine.startsWith('##')) {
+        inRecommendations = false;
+      } else if (trimmedLine.startsWith('-')) {
+        recommendations.push({
+          details: trimmedLine.substring(1).trim()
+        });
+      }
+    }
+    
+    // Parse priorities
+    if (inPriorities) {
+      if (!trimmedLine || trimmedLine.startsWith('#') || trimmedLine.startsWith('---') || trimmedLine.startsWith('##')) {
+        inPriorities = false;
+      } else if (trimmedLine.startsWith('-')) {
+        // Only add if it's not a template text or insight/recommendation
+        const priority = trimmedLine.substring(1).trim();
+        if (!priority.startsWith('**') && 
+            !priority.startsWith('Insight:') && 
+            !priority.startsWith('Recommendation:') &&
+            priority !== '--') {
+          priorities.push(priority);
         }
       }
     }
   }
   
-  return { market, scores, recommendations };
+  return { 
+    market, 
+    scores, 
+    attributeInsights,
+    recommendations,
+    priorities
+  };
 }
 
 // Main function to process all markets
@@ -74,10 +146,23 @@ function processMarkets() {
   // First pass: collect all data
   const marketScores = {};
   files.forEach(file => {
-    const { market, scores, recommendations } = parseMarketMarkdown(path.join(marketMdDir, file));
+    const { 
+      market, 
+      scores, 
+      attributeInsights,
+      recommendations,
+      priorities 
+    } = parseMarketMarkdown(path.join(marketMdDir, file));
+    
     marketData.markets.push(market);
     marketScores[market.toLowerCase()] = scores;
-    marketData.insights[market.toLowerCase()] = recommendations;
+    
+    // Store insights and recommendations
+    marketData.insights[market.toLowerCase()] = {
+      attributeInsights,
+      recommendations,
+      priorities
+    };
     
     // Collect all attributes
     Object.keys(scores).forEach(attr => marketData.attributes.add(attr));

@@ -21,12 +21,19 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "generate-data": "node scripts/buildData.js",
+    "generate-all": "npm run generate-market-recommendations && npm run generate-executive-summaries && npm run generate-conversation-data && npm run generate-competitor-data && npm run generate-wri-data && npm run generate-attribute-resonance && npm run generate-market-intro",
     "generate-market-recommendations": "node scripts/generate_marketRecommendations.js",
     "generate-executive-summaries": "node scripts/generate_executiveSummaries.js",
     "generate-conversation-data": "node scripts/generate_conversationData.js",
     "generate-competitor-data": "node scripts/generate_competitorData.js",
-    "generate-wri-data": "node scripts/generate_wriData.js"
+    "generate-wri-data": "node scripts/generate_wriData.js",
+    "generate-attribute-resonance": "node scripts/generate_attributeResonance.js",
+    "generate-market-intro": "node scripts/generate_marketIntro.js",
+    "clean": "rm -rf build && rm -rf node_modules",
+    "reinstall": "npm run clean && npm install",
+    "dev": "npm run generate-all && npm start",
+    "lint": "eslint src/**/*.{js,jsx}",
+    "format": "prettier --write \"src/**/*.{js,jsx,css,md}\""
   },
   "eslintConfig": {
     "extends": [

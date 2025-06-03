@@ -49,7 +49,11 @@ function parseMarketMarkdown(mdPath) {
   const sources = [];
   if (dataSources) {
     dataSources.split('\n').forEach(line => {
-      const match = line.match(/^- \[(.*?)\]: (.*)/);
+      // Accept both '- [Source]: Description' and '- Source: Description'
+      let match = line.match(/^- \[(.*?)\]: (.*)/);
+      if (!match) {
+        match = line.match(/^- ([^\[][^:]*): (.*)/);
+      }
       if (match) {
         const name = match[1].trim();
         const description = match[2].trim();

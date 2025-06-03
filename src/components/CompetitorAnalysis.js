@@ -18,12 +18,12 @@ const ICONS = [
 ];
 
 const SOV_CONTEXT = (market) =>
-  `Share of Voice is based on the proportion of online conversations mentioning each brand in Q1 2025 for ${market}. BMW Motorrad led with 40-50% share, followed by Zero Motorcycles (25-30%), Energica and LiveWire (each ~10% or less).`;
+  `Share of Voice is based on the proportion of online conversations mentioning each brand in 2025 for ${market}.`;
 
 // Custom label for pie slices
-const renderPieLabel = ({ cx, cy, midAngle, outerRadius, percent, name, value }) => {
+const renderPieLabel = ({ cx, cy, midAngle, outerRadius, percent }) => {
   const RADIAN = Math.PI / 180;
-  const radius = outerRadius + 24;
+  const radius = outerRadius + 20;
   const x = cx + radius * Math.cos(-midAngle * RADIAN);
   const y = cy + radius * Math.sin(-midAngle * RADIAN);
   return (
@@ -34,10 +34,10 @@ const renderPieLabel = ({ cx, cy, midAngle, outerRadius, percent, name, value })
       textAnchor={x > cx ? 'start' : 'end'}
       dominantBaseline="central"
       fontWeight="bold"
-      fontSize={15}
+      fontSize={14}
       style={{ fontFamily: 'inherit' }}
     >
-      {name}: {value}%
+      {`${(percent * 100).toFixed(0)}%`}
     </text>
   );
 };
@@ -47,8 +47,22 @@ const CustomLegend = ({ payload }) => (
   <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', mt: 2 }}>
     {payload.map((entry) => (
       <Box key={entry.value} sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
-        <Box sx={{ width: 16, height: 16, borderRadius: '50%', background: entry.color, mr: 1 }} />
-        <Typography variant="body2" fontWeight={entry.value === 'BMW Motorrad' ? 700 : 400} color={entry.value === 'BMW Motorrad' ? 'primary.main' : 'text.primary'}>
+        <Box 
+          sx={{ 
+            width: 16, 
+            height: 16, 
+            borderRadius: '50%', 
+            background: entry.color, 
+            mr: 1,
+            boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
+            border: entry.value === 'BMW Motorrad' ? '2px solid #0066B1' : 'none'
+          }} 
+        />
+        <Typography 
+          variant="body2" 
+          fontWeight={entry.value === 'BMW Motorrad' ? 700 : 400} 
+          color={entry.value === 'BMW Motorrad' ? 'primary.main' : 'text.primary'}
+        >
           {entry.value}
         </Typography>
       </Box>
@@ -108,21 +122,35 @@ const CompetitorAnalysis = ({ selectedMarket }) => {
         <Grid container spacing={2} alignItems="center" justifyContent="center">
           {/* Pie Chart */}
           <Grid item xs={12} md={7}>
-            <Box sx={{ width: '100%', maxWidth: 900, height: 325, mx: 'auto' }}>
+            <Box sx={{ 
+              width: '100%', 
+              maxWidth: 1000, 
+              height: 325,
+              mx: 'auto',
+              position: 'relative',
+              left: '-10%'
+            }}>
               <ResponsiveContainer width="100%" height="100%">
                 <PieChart>
                   <Pie
                     data={data.shareOfVoice}
                     dataKey="value"
                     nameKey="name"
-                    cx="55%"
+                    cx="50%"
                     cy="50%"
-                    outerRadius={70}
+                    outerRadius={100}
+                    innerRadius={50}
                     label={renderPieLabel}
                     isAnimationActive={true}
+                    paddingAngle={2}
                   >
                     {data.shareOfVoice.map((entry, index) => (
-                      <Cell key={`cell-${index}`} fill={competitorColors[entry.name] || '#B0B0B0'} />
+                      <Cell 
+                        key={`cell-${index}`} 
+                        fill={competitorColors[entry.name] || '#B0B0B0'}
+                        stroke="#fff"
+                        strokeWidth={2}
+                      />
                     ))}
                   </Pie>
                   <Tooltip content={<CustomTooltip />} />
@@ -132,7 +160,10 @@ const CompetitorAnalysis = ({ selectedMarket }) => {
           </Grid>
           {/* Legend */}
           <Grid item xs={12} md={5}>
-            <CustomLegend payload={data.shareOfVoice.map((entry) => ({ value: entry.name, color: competitorColors[entry.name] || '#B0B0B0' }))} />
+            <CustomLegend payload={data.shareOfVoice.map((entry) => ({ 
+              value: entry.name, 
+              color: competitorColors[entry.name] || '#B0B0B0' 
+            }))} />
           </Grid>
         </Grid>
       </Paper>
