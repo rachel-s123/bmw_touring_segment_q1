@@ -3,7 +3,7 @@
 ## Understanding the Data
 
 ### Dashboard Scope
-This dashboard provides comprehensive insights into the entire electric motorcycle segment, not just [Brand] brands. All attribute scores and sentiment analysis are derived from conversations and data across the entire segment, offering a holistic view of market dynamics and consumer preferences.
+This dashboard provides comprehensive insights into the entire [Segment] motorcycle segment, not just [Brand] brands. All attribute scores and sentiment analysis are derived from conversations and data across the entire segment, offering a holistic view of market dynamics and consumer preferences.
 
 ### Strategic Applications
 The insights provided in this dashboard can be leveraged to support key business decisions including: targeting specific consumer segments, developing effective messaging strategies, refining market positioning, and making informed strategic decisions about product development and market entry.
@@ -11,7 +11,7 @@ The insights provided in this dashboard can be leveraged to support key business
 ## Dashboard Sections
 
 - **Executive Summary**  
-  High-level overview of market performance, key trends, and strategic implications for [Brand]'s electric motorcycle segment.
+  High-level overview of market performance, key trends, and strategic implications for [Brand]'s [Segment] motorcycle segment.
 
 - **Attribute Resonance**  
   Detailed analysis of how different product attributes and features resonate with consumers, helping inform product strategy and marketing focus.
@@ -20,7 +20,7 @@ The insights provided in this dashboard can be leveraged to support key business
   In-depth analysis of market dynamics, consumer behavior, and competitive landscape specific to each market.
 
 - **Competitor Analysis**  
-  Comprehensive evaluation of competitor positioning, market share, and strategic implications for [Brand]'s electric motorcycle portfolio.
+  Comprehensive evaluation of competitor positioning, market share, and strategic implications for [Brand]'s [Segment] motorcycle portfolio.
 
 ## Methodology
 
