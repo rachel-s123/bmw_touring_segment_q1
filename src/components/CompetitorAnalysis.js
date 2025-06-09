@@ -8,7 +8,7 @@ import WarningIcon from '@mui/icons-material/Warning';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from 'recharts';
-import { getCompetitorData, getCompetitorColors } from '../data/competitorData';
+import { getCompetitorData } from '../data/competitorData';
 
 const ICONS = [
   <TrendingUpIcon color="primary" />, // 0
@@ -84,6 +84,31 @@ const CustomTooltip = ({ active, payload }) => {
   return null;
 };
 
+// Color palette for competitors
+const COMPETITOR_COLORS = {
+  bmw: '#0066B1',  // BMW blue
+  honda: '#E2001A', // Honda red
+  harley: '#000000', // Harley black
+  yamaha: '#003399', // Yamaha blue
+  ducati: '#FF0000', // Ducati red
+  kawasaki: '#00A0DE', // Kawasaki teal
+  suzuki: '#E4002B', // Suzuki red
+  others: '#757575'  // Grey for others
+};
+
+// Function to assign colors to competitors
+const getCompetitorColor = (name) => {
+  const lowerName = name.toLowerCase();
+  if (lowerName.includes('bmw')) return COMPETITOR_COLORS.bmw;
+  if (lowerName.includes('honda')) return COMPETITOR_COLORS.honda;
+  if (lowerName.includes('harley')) return COMPETITOR_COLORS.harley;
+  if (lowerName.includes('yamaha')) return COMPETITOR_COLORS.yamaha;
+  if (lowerName.includes('ducati')) return COMPETITOR_COLORS.ducati;
+  if (lowerName.includes('kawasaki')) return COMPETITOR_COLORS.kawasaki;
+  if (lowerName.includes('suzuki')) return COMPETITOR_COLORS.suzuki;
+  return COMPETITOR_COLORS.others;
+};
+
 const CompetitorAnalysis = ({ selectedMarket }) => {
   const [data, setData] = useState(null);
 
@@ -100,9 +125,6 @@ const CompetitorAnalysis = ({ selectedMarket }) => {
     console.log('No data available');
     return null;
   }
-
-  const competitorColors = getCompetitorColors(selectedMarket);
-  console.log('Using colors:', competitorColors);
 
   return (
     <Box sx={{ p: { xs: 1, md: 3 }, maxWidth: 1200, mx: 'auto' }}>
@@ -147,7 +169,7 @@ const CompetitorAnalysis = ({ selectedMarket }) => {
                     {data.shareOfVoice.map((entry, index) => (
                       <Cell 
                         key={`cell-${index}`} 
-                        fill={competitorColors[entry.name] || '#B0B0B0'}
+                        fill={getCompetitorColor(entry.name)}
                         stroke="#fff"
                         strokeWidth={2}
                       />
@@ -162,7 +184,7 @@ const CompetitorAnalysis = ({ selectedMarket }) => {
           <Grid item xs={12} md={5}>
             <CustomLegend payload={data.shareOfVoice.map((entry) => ({ 
               value: entry.name, 
-              color: competitorColors[entry.name] || '#B0B0B0' 
+              color: getCompetitorColor(entry.name)
             }))} />
           </Grid>
         </Grid>
@@ -178,11 +200,11 @@ const CompetitorAnalysis = ({ selectedMarket }) => {
       <Grid container spacing={3}>
         {Object.entries(data.competitorStrengths).map(([competitor, strengths], idx) => (
           <Grid item xs={12} md={6} key={competitor}>
-            <Card elevation={2} sx={{ borderLeft: `6px solid ${competitorColors[competitor] || '#757575'}` }}>
+            <Card elevation={2} sx={{ borderLeft: `6px solid ${getCompetitorColor(competitor)}` }}>
               <CardContent>
                 <Box display="flex" alignItems="center" mb={1}>
                   <Box mr={1}>{ICONS[idx % ICONS.length]}</Box>
-                  <Typography variant="h6" fontWeight={700} color={competitor === 'BMW Motorrad' ? '#0066B1' : 'text.primary'}>
+                  <Typography variant="h6" fontWeight={700} color={competitor.toLowerCase().includes('bmw') ? '#0066B1' : 'text.primary'}>
                     {competitor}
                   </Typography>
                 </Box>
