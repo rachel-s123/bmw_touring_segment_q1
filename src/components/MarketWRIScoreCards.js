@@ -124,21 +124,21 @@ const MarketScoreCards = ({ selectedMarket }) => {
       <Grid item xs={12} md={4}>
         <Paper sx={{ p: 3, borderRadius: 4, height: '100%' }}>
           <Typography variant="h6" gutterBottom sx={{ fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: 1 }}>
-            <TrendingUpIcon sx={{ color: '#42a5f5' }} />
+            <TrendingUpIcon sx={{ color: '#ef5350' }} />
             Above Average
           </Typography>
           {deviations.positive.map((item) => (
             <Box key={item.attribute} sx={{ my: 2 }}>
               <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                 <Typography>{item.attribute}</Typography>
-                <Typography sx={{ fontWeight: 'bold', color: '#42a5f5' }}>
+                <Typography sx={{ fontWeight: 'bold', color: '#ef5350' }}>
                   +{item.deviation.toFixed(2)}
                 </Typography>
               </Box>
               <ScoreBar 
                 score={item.deviation} 
                 maxScore={10} 
-                color="#42a5f5" 
+                color="#ef5350" 
               />
             </Box>
           ))}
@@ -149,21 +149,21 @@ const MarketScoreCards = ({ selectedMarket }) => {
       <Grid item xs={12} md={4}>
         <Paper sx={{ p: 3, borderRadius: 4, height: '100%' }}>
           <Typography variant="h6" gutterBottom sx={{ fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: 1 }}>
-            <TrendingDownIcon sx={{ color: '#f44336' }} />
+            <TrendingDownIcon sx={{ color: '#42a5f5' }} />
             Below Average
           </Typography>
           {deviations.negative.map((item) => (
             <Box key={item.attribute} sx={{ my: 2 }}>
               <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
                 <Typography>{item.attribute}</Typography>
-                <Typography sx={{ fontWeight: 'bold', color: '#f44336' }}>
+                <Typography sx={{ fontWeight: 'bold', color: '#42a5f5' }}>
                   {item.deviation.toFixed(2)}
                 </Typography>
               </Box>
               <ScoreBar 
                 score={Math.abs(item.deviation)} 
                 maxScore={10} 
-                color="#f44336" 
+                color="#42a5f5" 
               />
             </Box>
           ))}
