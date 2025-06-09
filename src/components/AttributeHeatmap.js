@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import {
   Box,
   Paper,
@@ -18,19 +18,39 @@ import {
   IconButton,
   Fade,
   Divider,
-  Card
+  Card,
+  Chip,
+  FormControl,
+  Select,
+  MenuItem,
+  OutlinedInput
 } from '@mui/material';
 import { marketData } from '../data/wriData';
 import { attributeResonance } from '../data/attributeResonance';
 import InfoIcon from '@mui/icons-material/Info';
 import CloseIcon from '@mui/icons-material/Close';
 
+// Utility function to normalize attribute names for matching
+const normalizeAttributeName = (name) =>
+  name
+    .toLowerCase()
+    .replace(/\b(for|and|of|the|in|on|at|by|to|with|a|an)\b/g, '') // remove small words
+    .replace(/[^a-z0-9]/g, ''); // remove non-alphanumeric
+
 // Commentary component for attribute insights
 const AttributeCommentary = ({ attribute, selectedMarket, onClose }) => {
   const theme = useTheme();
   
-  // Get attribute-specific insights from attributeResonance attributeAnalysis
-  const insights = attributeResonance[selectedMarket.toLowerCase()]?.attributeAnalysis[attribute];
+  // Find the correct key in attributeAnalysis using normalization
+  const analysis = attributeResonance[selectedMarket.toLowerCase()]?.attributeAnalysis;
+  let insights;
+  if (analysis) {
+    const normalizedAttr = normalizeAttributeName(attribute);
+    const foundKey = Object.keys(analysis).find(
+      key => normalizeAttributeName(key) === normalizedAttr
+    );
+    insights = foundKey ? analysis[foundKey] : undefined;
+  }
   
   // If no insights found, show a message
   if (!insights) {
@@ -175,9 +195,15 @@ const AttributeCommentary = ({ attribute, selectedMarket, onClose }) => {
 
 const AttributeHeatmap = ({ selectedMarket }) => {
   const theme = useTheme();
-  const [viewMode, setViewMode] = useState('wri'); // 'wri' or 'deviation'
-  const [sortMode, setSortMode] = useState('alpha'); // 'alpha', 'value'
+  const [viewMode, setViewMode] = useState('wri');
+  const [sortMode, setSortMode] = useState('alpha');
   const [selectedAttribute, setSelectedAttribute] = useState(null);
+  const [selectedMarkets, setSelectedMarkets] = useState([selectedMarket]);
+
+  // Update selected markets when the main market changes
+  useEffect(() => {
+    setSelectedMarkets([selectedMarket]);
+  }, [selectedMarket]);
 
   // Calculate European averages and deviations
   const { averages, allDeviations } = useMemo(() => {
@@ -207,6 +233,16 @@ const AttributeHeatmap = ({ selectedMarket }) => {
 
     return { averages, allDeviations };
   }, [selectedMarket]);
+
+  // Handle market selection
+  const handleMarketChange = (event) => {
+    const {
+      target: { value },
+    } = event;
+    setSelectedMarkets(
+      typeof value === 'string' ? value.split(',') : value,
+    );
+  };
 
   const getDeviationColor = (deviation) => {
     const absDeviation = Math.abs(deviation);
@@ -267,10 +303,10 @@ const AttributeHeatmap = ({ selectedMarket }) => {
     );
   }
 
-  // Order markets to put selected market first
+  // Order markets to put selected market first, then selected comparison markets
   const orderedMarkets = [
     selectedMarket,
-    ...marketData.markets.filter(market => market !== selectedMarket)
+    ...selectedMarkets.filter(market => market !== selectedMarket)
   ];
 
   // Sort attributes based on mode
@@ -302,6 +338,60 @@ const AttributeHeatmap = ({ selectedMarket }) => {
           {viewMode === 'wri' ? 'WRI Scores: comparing across the V2 Region' : 'Market Deviations'}
         </Typography>
         <Stack direction="row" spacing={2}>
+          <FormControl sx={{ minWidth: 200 }}>
+            <Select
+              multiple
+              value={selectedMarkets}
+              onChange={handleMarketChange}
+              input={<OutlinedInput />}
+              renderValue={(selected) => (
+                <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5 }}>
+                  {selected.map((value) => (
+                    <Chip 
+                      key={value} 
+                      label={value}
+                      sx={{ 
+                        fontFamily: 'BMW Motorrad',
+                        backgroundColor: value === selectedMarket ? 
+                          theme.palette.primary.main : 
+                          theme.palette.primary.light,
+                        color: value === selectedMarket ? 
+                          theme.palette.primary.contrastText : 
+                          theme.palette.primary.dark
+                      }}
+                    />
+                  ))}
+                </Box>
+              )}
+              sx={{ 
+                fontFamily: 'BMW Motorrad',
+                '& .MuiSelect-select': {
+                  py: 1
+                }
+              }}
+            >
+              {marketData.markets.map((market) => (
+                <MenuItem 
+                  key={market} 
+                  value={market}
+                  disabled={market === selectedMarket}
+                  sx={{ 
+                    fontFamily: 'BMW Motorrad',
+                    backgroundColor: market === selectedMarket ? 
+                      `${theme.palette.primary.main}15` : 
+                      'inherit',
+                    '&.Mui-disabled': {
+                      opacity: 1,
+                      color: theme.palette.primary.main,
+                      fontWeight: 'bold'
+                    }
+                  }}
+                >
+                  {market}
+                </MenuItem>
+              ))}
+            </Select>
+          </FormControl>
           <ToggleButtonGroup
             value={sortMode}
             exclusive

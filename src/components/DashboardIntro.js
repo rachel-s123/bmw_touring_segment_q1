@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Paper, Typography, Grid, Box, Tabs, Tab, Card, CardContent, Divider, Link } from '@mui/material';
+import React, { useState, useRef, useEffect } from 'react';
+import { Paper, Typography, Grid, Box, Tabs, Tab, Card, CardContent, Divider, Link, IconButton, Button, Slider, Tooltip, Fade } from '@mui/material';
 import AssessmentIcon from '@mui/icons-material/Assessment';
 import InsightsIcon from '@mui/icons-material/Insights';
 import ShowChartIcon from '@mui/icons-material/ShowChart';
@@ -8,8 +8,22 @@ import AnalyticsIcon from '@mui/icons-material/Analytics';
 import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 import InfoIcon from '@mui/icons-material/Info';
 import LightbulbIcon from '@mui/icons-material/Lightbulb';
+import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
+import NavigateNextIcon from '@mui/icons-material/NavigateNext';
+import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
+import ZoomInIcon from '@mui/icons-material/ZoomIn';
+import ZoomOutIcon from '@mui/icons-material/ZoomOut';
+import FullscreenIcon from '@mui/icons-material/Fullscreen';
+import FullscreenExitIcon from '@mui/icons-material/FullscreenExit';
+import DownloadIcon from '@mui/icons-material/Download';
+import { Document, Page, pdfjs } from 'react-pdf';
+import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
+import 'react-pdf/dist/esm/Page/TextLayer.css';
 import { getMarketIntroduction } from '../data/marketIntroductions';
 import { marketSources } from '../data/marketSources';
+
+// Set up the worker for react-pdf
+pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
 
 const TabPanel = ({ children, value, index }) => (
   <Box hidden={value !== index} sx={{ pt: 3 }}>
@@ -20,7 +34,7 @@ const TabPanel = ({ children, value, index }) => (
 const sectionData = [
   {
     title: 'Executive Summary',
-    description: "High-level overview of market performance, key trends, and strategic implications for BMW's electric motorcycle segment.",
+    description: "High-level overview of market performance, key trends, and strategic implications for BMW's touring motorcycle segment.",
     icon: <AssessmentIcon sx={{ fontSize: 40, color: 'primary.main', mb: 1 }} />,
   },
   {
@@ -35,7 +49,7 @@ const sectionData = [
   },
   {
     title: 'Competitor Analysis',
-    description: "Comprehensive evaluation of competitor positioning, market share, and strategic implications for BMW's electric motorcycle portfolio.",
+    description: "Comprehensive evaluation of competitor positioning, market share, and strategic implications for BMW's touring motorcycle portfolio.",
     icon: <GroupsIcon sx={{ fontSize: 40, color: 'info.main', mb: 1 }} />,
   },
 ];
@@ -56,7 +70,7 @@ const methodologyData = [
 const scopeData = [
   {
     title: 'Dashboard Scope',
-    description: 'This dashboard provides comprehensive insights into the entire electric motorcycle segment, not just BMW brands. All attribute scores and sentiment analysis are derived from conversations and data across the entire segment, offering a holistic view of market dynamics and consumer preferences.',
+    description: 'This dashboard provides comprehensive insights into the entire touring motorcycle segment, with a specific focus on the R 1300 RT launch, but not just limited to BMW brands. All attribute scores and sentiment analysis are derived from conversations and data across the entire segment, offering a holistic view of market dynamics and consumer preferences.',
     icon: <InfoIcon sx={{ fontSize: 40, color: 'primary.main', mb: 1 }} />,
   }
 ];
@@ -87,6 +101,12 @@ const SourceItem = ({ source }) => (
 
 const DashboardIntro = ({ selectedMarket }) => {
   const [tabValue, setTabValue] = useState(0);
+  const [numPages, setNumPages] = useState(null);
+  const [pageNumber, setPageNumber] = useState(1);
+  const [scale, setScale] = useState(1.0);
+  const [isFullscreen, setIsFullscreen] = useState(false);
+  const [showControls, setShowControls] = useState(true);
+  const containerRef = useRef(null);
   const marketData = getMarketIntroduction(selectedMarket);
   
   // Updated market key matching logic to handle all formats
@@ -102,8 +122,71 @@ const DashboardIntro = ({ selectedMarket }) => {
   
   const sources = marketKey && marketSources[marketKey]?.sources?.[''] || [];
 
+  // Handle fullscreen changes
+  useEffect(() => {
+    const handleFullscreenChange = () => {
+      setIsFullscreen(!!document.fullscreenElement);
+    };
+
+    document.addEventListener('fullscreenchange', handleFullscreenChange);
+    return () => {
+      document.removeEventListener('fullscreenchange', handleFullscreenChange);
+    };
+  }, []);
+
   const handleTabChange = (event, newValue) => {
     setTabValue(newValue);
+  };
+
+  const onDocumentLoadSuccess = ({ numPages }) => {
+    setNumPages(numPages);
+  };
+
+  const handlePreviousPage = () => {
+    setPageNumber(prev => Math.max(prev - 1, 1));
+  };
+
+  const handleNextPage = () => {
+    setPageNumber(prev => Math.min(prev + 1, numPages));
+  };
+
+  const handleZoomIn = () => {
+    setScale(prev => Math.min(prev + 0.1, 2.0));
+  };
+
+  const handleZoomOut = () => {
+    setScale(prev => Math.max(prev - 0.1, 0.5));
+  };
+
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = `/reports/${selectedMarket.toLowerCase()}_report.pdf`;
+    link.download = `${selectedMarket}_report.pdf`;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
+  const toggleFullscreen = async () => {
+    try {
+      if (!isFullscreen) {
+        await containerRef.current.requestFullscreen();
+      } else {
+        await document.exitFullscreen();
+      }
+    } catch (error) {
+      console.error('Error toggling fullscreen:', error);
+    }
+  };
+
+  const handleMouseMove = () => {
+    setShowControls(true);
+    if (isFullscreen) {
+      const timeout = setTimeout(() => {
+        setShowControls(false);
+      }, 3000);
+      return () => clearTimeout(timeout);
+    }
   };
 
   // Enhanced console logging for debugging
@@ -120,6 +203,7 @@ const DashboardIntro = ({ selectedMarket }) => {
         <Tabs value={tabValue} onChange={handleTabChange}>
           <Tab label="Understanding the Data" />
           <Tab label="Data Sources" />
+          <Tab label="Full Report" />
         </Tabs>
       </Box>
 
@@ -227,6 +311,148 @@ const DashboardIntro = ({ selectedMarket }) => {
             Please select a market to view its data sources.
           </Typography>
         )}
+      </TabPanel>
+
+      <TabPanel value={tabValue} index={2}>
+        <Box 
+          ref={containerRef}
+          onMouseMove={handleMouseMove}
+          sx={{ 
+            display: 'flex', 
+            flexDirection: 'column', 
+            alignItems: 'center', 
+            p: 2,
+            position: isFullscreen ? 'fixed' : 'relative',
+            top: isFullscreen ? 0 : 'auto',
+            left: isFullscreen ? 0 : 'auto',
+            right: isFullscreen ? 0 : 'auto',
+            bottom: isFullscreen ? 0 : 'auto',
+            zIndex: isFullscreen ? 9999 : 'auto',
+            bgcolor: isFullscreen ? 'white' : 'transparent',
+            height: isFullscreen ? '100vh' : 'auto',
+            overflow: isFullscreen ? 'auto' : 'visible'
+          }}
+        >
+          <Card sx={{ 
+            width: '100%', 
+            maxWidth: isFullscreen ? '100%' : 800, 
+            boxShadow: 3, 
+            borderRadius: 2,
+            mb: 2,
+            position: 'relative',
+            overflow: 'visible'
+          }}>
+            <Fade in={showControls}>
+              <Box sx={{ 
+                position: 'sticky',
+                top: 0,
+                left: 0,
+                right: 0,
+                zIndex: 2,
+                bgcolor: 'rgba(255, 255, 255, 0.9)',
+                backdropFilter: 'blur(4px)',
+                borderBottom: '1px solid rgba(0, 0, 0, 0.1)',
+                p: 1
+              }}>
+                <Box sx={{ 
+                  display: 'flex', 
+                  alignItems: 'center', 
+                  justifyContent: 'space-between',
+                  flexWrap: 'wrap',
+                  gap: 1
+                }}>
+                  <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                    <PictureAsPdfIcon sx={{ fontSize: 40, color: 'primary.main', mr: 2 }} />
+                    <Typography variant="h6">Full Market Report</Typography>
+                  </Box>
+                  <Box sx={{ display: 'flex', gap: 1 }}>
+                    <Tooltip title="Download PDF">
+                      <IconButton onClick={handleDownload}>
+                        <DownloadIcon />
+                      </IconButton>
+                    </Tooltip>
+                    <Tooltip title={isFullscreen ? "Exit Fullscreen" : "Enter Fullscreen"}>
+                      <IconButton onClick={toggleFullscreen}>
+                        {isFullscreen ? <FullscreenExitIcon /> : <FullscreenIcon />}
+                      </IconButton>
+                    </Tooltip>
+                  </Box>
+                </Box>
+              </Box>
+            </Fade>
+
+            <CardContent sx={{ pt: isFullscreen ? 8 : 2 }}>
+              <Box sx={{ 
+                display: 'flex', 
+                flexDirection: 'column',
+                gap: 2,
+                mb: 2,
+                bgcolor: '#f5f5f5',
+                p: 2,
+                borderRadius: 1,
+                position: 'relative'
+              }}>
+                <Document
+                  file={`/reports/${selectedMarket.toLowerCase()}_report.pdf`}
+                  onLoadSuccess={onDocumentLoadSuccess}
+                  loading={
+                    <Box sx={{ p: 4, textAlign: 'center' }}>
+                      <Typography>Loading PDF...</Typography>
+                    </Box>
+                  }
+                  error={
+                    <Box sx={{ p: 4, textAlign: 'center' }}>
+                      <Typography color="error">Failed to load PDF. Please try again later.</Typography>
+                    </Box>
+                  }
+                >
+                  {Array.from(new Array(numPages), (el, index) => (
+                    <Page 
+                      key={`page_${index + 1}`}
+                      pageNumber={index + 1}
+                      scale={scale}
+                      width={isFullscreen ? window.innerWidth * 0.8 : 700}
+                      renderTextLayer={true}
+                      renderAnnotationLayer={true}
+                      style={{ marginBottom: '20px' }}
+                    />
+                  ))}
+                </Document>
+              </Box>
+
+              <Fade in={showControls}>
+                <Box sx={{ 
+                  position: 'sticky',
+                  bottom: 0,
+                  left: 0,
+                  right: 0,
+                  display: 'flex', 
+                  justifyContent: 'center', 
+                  alignItems: 'center',
+                  gap: 2,
+                  mt: 2,
+                  bgcolor: 'rgba(255, 255, 255, 0.9)',
+                  backdropFilter: 'blur(4px)',
+                  p: 1,
+                  borderRadius: 1,
+                  zIndex: 2
+                }}>
+                  <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                    <IconButton onClick={handleZoomOut} title="Zoom Out">
+                      <ZoomOutIcon />
+                    </IconButton>
+                    <Typography sx={{ minWidth: 40, textAlign: 'center' }}>
+                      {Math.round(scale * 100)}%
+                    </Typography>
+                    <IconButton onClick={handleZoomIn} title="Zoom In">
+                      <ZoomInIcon />
+                    </IconButton>
+                  </Box>
+                </Box>
+              </Fade>
+            </CardContent>
+          </Card>
+        </Box>
       </TabPanel>
     </Paper>
   );
