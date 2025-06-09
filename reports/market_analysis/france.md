@@ -3,6 +3,7 @@
 # Topics Analysis
 
 ## Theme Data
+*Note: Include percentage distribution data from the long form report for each theme (e.g., "Theme 1: 25%")*
 - Comfort: 35%
 - Technology & Modernization: 20%
 - Handling vs. Weight: 15%

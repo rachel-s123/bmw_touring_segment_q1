@@ -26,32 +26,41 @@ function parseThemeData(content) {
 }
 
 function parseThemeInsights(content) {
-  const themeInsightsMatch = content.match(/## Theme Insights\n([\s\S]*?)(?=#|$)/);
+  const themeInsightsMatch = content.match(/## Theme Insights\n([\s\S]*?)(?=^#|\Z)/m);
   if (!themeInsightsMatch) return {};
 
-  const insights = {};
-  const themeBlocks = themeInsightsMatch[1].split('\n- **').filter(block => block.trim());
+  const themeInsights = {};
+  const themeBlocks = themeInsightsMatch[1].split(/\n?- \*\*/).filter(block => block.trim());
 
   themeBlocks.forEach(block => {
-    const lines = block.split('\n');
-    const theme = lines[0].replace(/\*\*/g, '').trim();
-    const quote = lines.find(line => line.includes('Quote:'))?.split('Quote:')[1].trim().replace(/"/g, '');
-    const explanation = lines.find(line => line.includes('Explanation:'))?.split('Explanation:')[1].trim();
-    const source = lines.find(line => line.includes('Source:'))?.split('Source:')[1].trim();
+    const lines = block.split('\n').map(line => line.trim());
+    const themeName = lines[0].replace(/\*\*|\*/g, '').trim();
+    
+    // Find quote, explanation, and source
+    let quote = '';
+    let explanation = '';
+    let source = '';
 
-    if (theme && quote && explanation && source) {
-      if (!insights[theme]) {
-        insights[theme] = [];
+    for (let i = 1; i < lines.length; i++) {
+      const line = lines[i];
+      if (line.startsWith('- Quote:')) {
+        quote = line.replace('- Quote:', '').trim().replace(/^"|"$/g, '');
+      } else if (line.startsWith('- Explanation:')) {
+        explanation = line.replace('- Explanation:', '').trim();
+      } else if (line.startsWith('- Source:')) {
+        source = line.replace('- Source:', '').trim();
       }
-      insights[theme].push({
-        quote,
-        context: explanation,
-        source
-      });
+    }
+
+    if (quote && explanation && source) {
+      if (!themeInsights[themeName]) {
+        themeInsights[themeName] = [];
+      }
+      themeInsights[themeName].push({ quote, context: explanation, source });
     }
   });
 
-  return insights;
+  return themeInsights;
 }
 
 function parseSentimentData(content) {
@@ -76,11 +85,8 @@ function parseSentimentData(content) {
 }
 
 function parseSentimentInsights(content) {
-  const sentimentSection = content.split('# Sentiment Analysis')[1];
-  if (!sentimentSection) return {};
-
-  const insightsSection = sentimentSection.split('## Sentiment Insights')[1];
-  if (!insightsSection) return {};
+  console.log('Starting sentiment insights parsing...');
+  console.log('Full markdown content preview:', JSON.stringify(content.substring(0, 500)) + '...');
 
   const insights = {
     Positive: [],
@@ -88,34 +94,111 @@ function parseSentimentInsights(content) {
     Negative: []
   };
 
-  const sections = insightsSection.split('###').filter(section => section.trim());
+  // Split content into lines
+  const lines = content.split('\n');
+  let inSentimentAnalysis = false;
+  let inSentimentInsights = false;
+  let currentSentiment = null;
+  let currentQuote = null;
+  let currentExplanation = null;
+  let currentSource = null;
 
-  sections.forEach(section => {
-    const lines = section.split('\n').map(line => line.trim()).filter(line => line);
-    const sentiment = lines[0].replace('Sentiment', '').trim();
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i].trim();
 
-    if (insights[sentiment]) {
-      const quoteBlocks = section.split('- Quote').filter(block => block.trim());
-      
-      quoteBlocks.forEach(block => {
-        const lines = block.split('\n').map(line => line.trim()).filter(line => line);
-        if (lines.length >= 3) {
-          const quote = lines[0].replace(/^[0-9]+:/, '').trim();
-          const explanation = lines.find(line => line.startsWith('- Explanation:'))?.split('Explanation:')[1].trim();
-          const source = lines.find(line => line.startsWith('- Source:'))?.split('Source:')[1].trim();
-
-          if (quote && explanation && source) {
-            insights[sentiment].push({
-              quote,
-              context: explanation,
-              source
-            });
-          }
-        }
-      });
+    // Check for section headers
+    if (line === '# Sentiment Analysis') {
+      inSentimentAnalysis = true;
+      continue;
     }
-  });
 
+    if (inSentimentAnalysis && line === '## Sentiment Insights') {
+      inSentimentInsights = true;
+      continue;
+    }
+
+    if (inSentimentInsights) {
+      // Check for sentiment type headers
+      if (line.startsWith('### ')) {
+        // Save previous quote if exists
+        if (currentQuote && currentExplanation && currentSource) {
+          insights[currentSentiment].push({
+            quote: currentQuote,
+            context: currentExplanation,
+            source: currentSource
+          });
+        }
+
+        // Reset for new sentiment
+        currentQuote = null;
+        currentExplanation = null;
+        currentSource = null;
+
+        // Extract sentiment type
+        const sentimentMatch = line.match(/### (Positive|Neutral|Negative) Sentiment/);
+        if (sentimentMatch) {
+          currentSentiment = sentimentMatch[1];
+          console.log('Found sentiment type:', currentSentiment);
+        }
+        continue;
+      }
+
+      // Check for quote start
+      if (line.startsWith('- Quote ')) {
+        // Save previous quote if exists
+        if (currentQuote && currentExplanation && currentSource) {
+          insights[currentSentiment].push({
+            quote: currentQuote,
+            context: currentExplanation,
+            source: currentSource
+          });
+        }
+
+        // Reset for new quote
+        currentQuote = null;
+        currentExplanation = null;
+        currentSource = null;
+
+        // Extract quote
+        const quoteMatch = line.match(/- Quote \d+:\s*"([^"]*)"/);
+        if (quoteMatch) {
+          currentQuote = quoteMatch[1];
+          console.log('Found quote:', currentQuote);
+        }
+        continue;
+      }
+
+      // Check for explanation
+      if (line.startsWith('- Explanation:')) {
+        currentExplanation = line.replace('- Explanation:', '').trim();
+        console.log('Found explanation:', currentExplanation);
+        continue;
+      }
+
+      // Check for source
+      if (line.startsWith('- Source:')) {
+        currentSource = line.replace('- Source:', '').trim();
+        console.log('Found source:', currentSource);
+        continue;
+      }
+
+      // If we hit a new section, break out
+      if (line.startsWith('## ') || line.startsWith('# ')) {
+        break;
+      }
+    }
+  }
+
+  // Save the last quote if exists
+  if (currentQuote && currentExplanation && currentSource) {
+    insights[currentSentiment].push({
+      quote: currentQuote,
+      context: currentExplanation,
+      source: currentSource
+    });
+  }
+
+  console.log('Final insights object:', JSON.stringify(insights, null, 2));
   return insights;
 }
 

@@ -38,7 +38,7 @@ export const conversationData = {
       }
     ],
     "themeInsights": {
-      "- Pricing & Value": [
+      "Pricing & Value": [
         {
           "quote": "If $23k is too much, then $30k is ridiculous. Pretty bike, though.",
           "context": "Austrian riders are highly price-sensitive, with the R1300RT's base price of €25,890 drawing significant criticism and comparison to competitors offering similar capabilities for thousands less.",
@@ -112,51 +112,51 @@ export const conversationData = {
     "sentimentInsights": {
       "Positive": [
         {
-          "quote": "\"the touring icon… taken to a whole new level…lighter, more dynamic than ever before\"",
+          "quote": "the touring icon… taken to a whole new level…lighter, more dynamic than ever before",
           "context": "Excitement around BMW's R1300RT refresh and improvements over previous generation, particularly regarding design and performance upgrades.",
           "source": "press.bmwgroup.com"
         },
         {
-          "quote": "\"Die neue RT ist ein Quantensprung nach vorne\" (the new RT is a quantum leap forward)",
+          "quote": "Die neue RT ist ein Quantensprung nach vorne",
           "context": "Test riders expressed strong satisfaction with the R1300RT's overall advancement and touring capabilities after hands-on experience.",
           "source": "press.bmwgroup.com"
         },
         {
-          "quote": "\"First bike I'd ever say might look better with a shorter screen… [but] it looks great\"",
+          "quote": "First bike I'd ever say might look better with a shorter screen… [but] it looks great",
           "context": "Generally positive reception of the design updates, with riders appreciating the aesthetic improvements while providing constructive feedback.",
           "source": "reddit.com"
         }
       ],
       "Neutral": [
         {
-          "quote": "\"We rode 500 km/day – the R1300RT was a sofa with speed\"",
+          "quote": "We rode 500 km/day – the R1300RT was a sofa with speed",
           "context": "Factual reporting and sharing of riding experiences without strong emotional sentiment, focusing on practical touring capabilities.",
           "source": "Various touring forums"
         },
         {
-          "quote": "\"like a convertible in calm air behind the fairing\"",
+          "quote": "like a convertible in calm air behind the fairing",
           "context": "Descriptive feedback about wind protection performance based on early test rides, providing practical information for potential buyers.",
           "source": "Test ride reports"
         },
         {
-          "quote": "\"Problem with BMWs… base model you don't get much, everything comes in packs so it adds up like crazy\"",
+          "quote": "Problem with BMWs… base model you don't get much, everything comes in packs so it adds up like crazy",
           "context": "Matter-of-fact observations about BMW's pricing and packaging strategy without overt criticism, just stating the business model reality.",
           "source": "reddit.com"
         }
       ],
       "Negative": [
         {
-          "quote": "\"too much additional technology [with] no benefit\"",
+          "quote": "too much additional technology [with] no benefit",
           "context": "Criticism from traditional riders concerned about the ASA automatic transmission adding complexity without meaningful advantages to the riding experience.",
           "source": "bmw-bike-forum.info"
         },
         {
-          "quote": "\"Mal schauen, ob das Getriebe hält…\" (we'll see if that gearbox holds up…)",
+          "quote": "Mal schauen, ob das Getriebe hält…",
           "context": "Skepticism about BMW's reliability with new technology, referencing past transmission issues and concerns about the durability of innovations.",
           "source": "bmw-bike-forum.info"
         },
         {
-          "quote": "\"Are we just making ugly bikes as engagement bait now, as BMW?\"",
+          "quote": "Are we just making ugly bikes as engagement bait now, as BMW?",
           "context": "Harsh criticism of the design choices, though this represented a minority view compared to generally positive aesthetic reception.",
           "source": "reddit.com"
         }
@@ -199,7 +199,7 @@ export const conversationData = {
       }
     ],
     "themeInsights": {
-      "- Comfort vs. Performance Debate": [
+      "Comfort vs. Performance Debate": [
         {
           "quote": "I felt like I was on a sofa. But it would be hard for me now to trade sport-touring efficacy for cruiser sitting",
           "context": "Riders are split between those who prioritize a plush, relaxed riding position and those who want agile handling and speed. The new R1300RT is positioned to bridge this gap.",
@@ -273,51 +273,51 @@ export const conversationData = {
     "sentimentInsights": {
       "Positive": [
         {
-          "quote": "\"a substantial performance hike\"",
+          "quote": "a substantial performance hike",
           "context": "Riders welcomed the BMW R1300RT's comprehensive update, praising the combination of higher performance and weight reduction.",
           "source": "bennetts.co.uk"
         },
         {
-          "quote": "\"The 1800cc flat six is the best motorcycle engine I have ever experienced\"",
+          "quote": "The 1800cc flat six is the best motorcycle engine I have ever experienced",
           "context": "Gold Wing owners expressed passionate loyalty, highlighting unmatched engine smoothness and comfort.",
           "source": "motorcycleparadise.net"
         },
         {
-          "quote": "\"Design-wise…I think it looks great. It's about time BMW got away from the whale-ish, bulbous look it had for its tourers\"",
+          "quote": "Design-wise…I think it looks great. It's about time BMW got away from the whale-ish, bulbous look it had for its tourers",
           "context": "Many riders appreciated the R1300RT's modernized styling and aerodynamics.",
           "source": "reddit.com"
         }
       ],
       "Neutral": [
         {
-          "quote": "\"Great bike, stone reliable. Plenty fast and handles great\"",
+          "quote": "Great bike, stone reliable. Plenty fast and handles great",
           "context": "Factual discussions about the FJR1300's capabilities, acknowledging its strengths while noting its aging design.",
           "source": "yamahasupertenere.com"
         },
         {
-          "quote": "\"I rode Harleys for 20 years… but braking doesn't compare to the RT\"",
+          "quote": "I rode Harleys for 20 years… but braking doesn't compare to the RT",
           "context": "Objective comparisons between brands without emotional bias, focusing on technical differences.",
           "source": "1200rt.com"
         },
         {
-          "quote": "\"had very little change since 2013\"",
+          "quote": "had very little change since 2013",
           "context": "Matter-of-fact observations about model updates or lack thereof, without strong positive or negative emotions.",
           "source": "yamahasupertenere.com"
         }
       ],
       "Negative": [
         {
-          "quote": "\"finally a touring bike for my yacht\"",
+          "quote": "finally a touring bike for my yacht",
           "context": "Sarcastic reference to the R1300RT's premium price, indicating cost concerns among potential buyers.",
           "source": "reddit.com"
         },
         {
-          "quote": "\"no TFT change, or CarPlay/AA\"",
+          "quote": "no TFT change, or CarPlay/AA",
           "context": "Disappointment that BMW didn't include smartphone mirroring, a feature many touring riders value.",
           "source": "forums.bmwmoa.org"
         },
         {
-          "quote": "\"bites after a few hours\"",
+          "quote": "bites after a few hours",
           "context": "Criticism of seat comfort on longer rides, a crucial factor for touring motorcycles.",
           "source": "zed14.com"
         }
@@ -360,7 +360,7 @@ export const conversationData = {
       }
     ],
     "themeInsights": {
-      "- Comfort is King": [
+      "Comfort is King": [
         {
           "quote": "the two seats look wide and I hope [they're] comfortable",
           "context": "Comfort-related topics were the most prevalent theme, with riders discussing ergonomics, wind protection, and weather amenities extensively. The R1300RT's updates in comfort areas were celebrated.",
@@ -434,51 +434,41 @@ export const conversationData = {
     "sentimentInsights": {
       "Positive": [
         {
-          "quote": "\"updated model… with 1300cc engine and added comfort features is in no way inferior to the K1600\"",
+          "quote": "updated model… with 1300cc engine and added comfort features is in no way inferior to the K1600",
           "context": "BMW riders praised the R1300RT's comfort, advanced technology, and improved performance, noting wide seats and extra heating elements.",
           "source": "bmwpower-bg.net"
         },
         {
-          "quote": "\"a contender to be the most impressive touring bike on the market\"",
+          "quote": "a contender to be the most impressive touring bike on the market",
           "context": "Experts viewed the R1300RT as a new benchmark in the touring segment, highlighting its comprehensive feature set and performance improvements.",
           "source": "bennetts.co.uk"
         },
         {
-          "quote": "\"the new boxer tourer R1300RT\"",
+          "quote": "the new boxer tourer R1300RT",
           "context": "Bulgarian biker communities shared BMW's promotional content with personal excitement, showing strong brand engagement and enthusiasm for the new model.",
           "source": "facebook.com/instagram.com"
         }
       ],
       "Neutral": [
         {
-          "quote": "\"I await further information about the tank volume, the panniers and other details\"",
+          "quote": "I await further information about the tank volume, the panniers and other details",
           "context": "Many users took a \"wait and see\" approach, wanting more details or a test ride before judgment, asking practical questions about specs.",
           "source": "bmwpower-bg.net"
-        },
-        {
-          "quote": "Questions about practical specs were common",
-          "context": "Neutral posts weren't glowing endorsements or critiques, but indicated which topics (range, storage, etc.) riders care about most.",
-          "source": "Various forums"
-        },
-        {
-          "quote": "Comparisons of pros and cons without strong bias",
-          "context": "Some users compared the RT versus others without strong bias, simply weighing options like RT's comfort vs. a GS's versatility.",
-          "source": "Multiple sources"
         }
       ],
       "Negative": [
         {
-          "quote": "\"Looks like they're sticking with that same phone-based shitty GPS…I absolutely hate that thing\"",
+          "quote": "Looks like they're sticking with that same phone-based shitty GPS…I absolutely hate that thing",
           "context": "BMW's navigation system drew criticism from owners who experienced connectivity issues or found the Connected app reliance problematic.",
           "source": "reddit.com"
         },
         {
-          "quote": "\"not everyone will love the styling\"",
+          "quote": "not everyone will love the styling",
           "context": "While many liked the new style, some riders felt the look was too radical or plasticky for their taste, with front-end design being divisive.",
           "source": "bennetts.co.uk"
         },
         {
-          "quote": "\"the bike…is around £28,000, who's buying these?\"",
+          "quote": "the bike…is around £28,000, who's buying these?",
           "context": "High price was the most common complaint, with Bulgarian riders noting it's \"a lot of money for a bike\" given local income levels.",
           "source": "BikeWorld YouTube"
         }
@@ -521,7 +511,7 @@ export const conversationData = {
       }
     ],
     "themeInsights": {
-      "- Styling and Design": [
+      "Styling and Design": [
         {
           "quote": "I don't know what to think… that black tile instead of a light just doesn't fit… it's all so weird… reminds me of a GS… it seems clumsy",
           "context": "BMW's new design language for the R1300RT is polarizing, with the radar sensor placement and large windscreen being focal points of criticism and debate",
@@ -562,20 +552,6 @@ export const conversationData = {
           "context": "BMW RT owners consistently report excellent long-term reliability and durability, justifying the premium investment for serious touring riders",
           "source": "Veteran RT owner on Motorkáři.cz"
         }
-      ],
-      "Price and Cost Concerns": [
-        {
-          "quote": "The price that fell out of the configurator was so high I nearly fainted",
-          "context": "High pricing remains BMW's biggest challenge, with fully loaded R1300RT approaching 800k CZK causing sticker shock among potential buyers",
-          "source": "Czech forum user on Motorkáři.cz"
-        }
-      ],
-      "Handling and Maneuverability": [
-        {
-          "quote": "Why else do police use them? Because of its easy handling",
-          "context": "Despite its size, the RT's reputation for excellent low-speed maneuverability and highway stability makes it the choice for professional use",
-          "source": "Czech forum discussion on Motorkáři.cz"
-        }
       ]
     },
     "sentimentData": [
@@ -595,51 +571,51 @@ export const conversationData = {
     "sentimentInsights": {
       "Positive": [
         {
-          "quote": "\"This promises to be the best BMW tourer in nearly half a century… a contender for the most impressive touring bike on the market\"",
+          "quote": "This promises to be the best BMW tourer in nearly half a century… a contender for the most impressive touring bike on the market",
           "context": "Expert reviewers and BMW enthusiasts praise the comprehensive improvements in performance, technology, and touring capability",
           "source": "Bennetts BikeSocial review"
         },
         {
-          "quote": "\"I was thinking I'd ignore the 1300 RT… but after experiencing the new motor and gearbox on the GS, I'm reconsidering\"",
+          "quote": "I was thinking I'd ignore the 1300 RT… but after experiencing the new motor and gearbox on the GS, I'm reconsidering",
           "context": "BMW's technological improvements, particularly the ASA gearbox, are converting skeptics and existing owners to consider upgrading",
           "source": "Czech RT owner on Motorkáři.cz"
         },
         {
-          "quote": "\"BMW is back to challenging the status quo, this is how you stay on top\"",
+          "quote": "BMW is back to challenging the status quo, this is how you stay on top",
           "context": "BMW's innovation and willingness to modernize the RT platform is appreciated by riders who value technological leadership",
           "source": "Reddit r/Motorrad discussion"
         }
       ],
       "Neutral": [
         {
-          "quote": "\"I think the front plexi is adjustable – I saw a rocker switch on the handlebar in one video… It's been standard on RT since the R1100RT\"",
+          "quote": "I think the front plexi is adjustable – I saw a rocker switch on the handlebar in one video… It's been standard on RT since the R1100RT",
           "context": "Factual discussions and clarifications about features help provide balanced perspective on bike capabilities",
           "source": "Czech forum user on Motorkáři.cz"
         },
         {
-          "quote": "\"Need to see it in person\"",
+          "quote": "Need to see it in person",
           "context": "Many riders are taking a wait-and-see approach, preferring to reserve judgment until they can experience the bike firsthand",
           "source": "Czech forum user on Motorkáři.cz"
         },
         {
-          "quote": "\"The RT will be more controllable during dynamic riding\"",
+          "quote": "The RT will be more controllable during dynamic riding",
           "context": "Technical discussions about chassis improvements reflect pragmatic evaluation of the bike's capabilities",
           "source": "Czech forum discussion on Motorkáři.cz"
         }
       ],
       "Negative": [
         {
-          "quote": "\"From the configurator fell an amount that made me want to faint\"",
+          "quote": "From the configurator fell an amount that made me want to faint",
           "context": "Price shock is the dominant negative sentiment, with fully loaded models approaching 800k CZK causing many to reconsider purchase",
           "source": "Czech forum user on Motorkáři.cz"
         },
         {
-          "quote": "\"That black tile above the headlight doesn't sit right, and the whole thing is kind of strange… reminds me of a GS\"",
+          "quote": "That black tile above the headlight doesn't sit right, and the whole thing is kind of strange… reminds me of a GS",
           "context": "Design criticism focuses on the radar sensor integration and overall aesthetic changes that some find unappealing",
           "source": "Czech forum user on Motorkáři.cz"
         },
         {
-          "quote": "\"I absolutely hate that phone-based shitty GPS\"",
+          "quote": "I absolutely hate that phone-based shitty GPS",
           "context": "BMW's connectivity and navigation system receives criticism for usability and reliability issues",
           "source": "Reddit user with 2021 RT experience"
         }
@@ -682,7 +658,7 @@ export const conversationData = {
       }
     ],
     "themeInsights": {
-      "- Comfort & Ergonomics": [
+      "Comfort & Ergonomics": [
         {
           "quote": "It's super high tech and comfortable, and way more sporty than other touring bikes I've tried",
           "context": "Comfort emerges as the paramount concern for Danish touring riders, with Gold Wing setting the benchmark as \"majestic… quiet, spacious, and comfortable\". BMW RT owners rated comfort only 3/5, indicating room for improvement.",
@@ -756,51 +732,51 @@ export const conversationData = {
     "sentimentInsights": {
       "Positive": [
         {
-          "quote": "\"I ordered the fully loaded R1300RT… now in wait mode\"",
+          "quote": "I ordered the fully loaded R1300RT… now in wait mode",
           "context": "Long-time BMW fans expressed excitement about the R1300RT launch, with many praising performance and tech upgrades. The radar-assisted ACC was seen as innovative and class-leading.",
           "source": "BMW veteran owner, forum discussions"
         },
         {
-          "quote": "\"The most durable, reliable and versatile motorcycle in the past 35+ years… no other bike I'd want for touring with someone\"",
+          "quote": "The most durable, reliable and versatile motorcycle in the past 35+ years… no other bike I'd want for touring with someone",
           "context": "Honda Gold Wing received overwhelmingly positive sentiment (80-85%) with owners praising unparalleled comfort, reliability, and smooth flat-6 engine operation.",
           "source": "Reddit Gold Wing owner testimonial"
         },
         {
-          "quote": "\"Great features and comfort for a very reasonable price\"",
+          "quote": "Great features and comfort for a very reasonable price",
           "context": "Yamaha FJR1300 garnered positive sentiment (70-75%) for its reliability and value proposition, with 94% of Danish owners indicating they would buy Yamaha again.",
           "source": "FJR1300 owner review, satisfaction surveys"
         }
       ],
       "Neutral": [
         {
-          "quote": "\"I hear Gold Wings are great but haven't tried one\"",
+          "quote": "I hear Gold Wings are great but haven't tried one",
           "context": "Neutral comments typically came from non-owners acknowledging reputation without personal experience, representing cautious interest in touring segment.",
           "source": "Forum discussions, prospective buyer comments"
         },
         {
-          "quote": "\"Wait and see tone – reserving judgment until a test ride\"",
+          "quote": "Wait and see tone – reserving judgment until a test ride",
           "context": "Many riders adopted neutral stance on R1300RT, acknowledging BMW's prowess but remaining uncertain about upgrade justification from current bikes.",
           "source": "BMW community discussions, test ride planning"
         },
         {
-          "quote": "\"The FJR1300 just wasn't the bike for me\"",
+          "quote": "The FJR1300 just wasn't the bike for me",
           "context": "Neutral sentiment toward FJR1300 acknowledged its competence while noting it might lack excitement or modern features compared to newer alternatives.",
           "source": "Former FJR owner evaluation"
         }
       ],
       "Negative": [
         {
-          "quote": "\"BMW… you're going to get their half-assed infotainment… If you want modern infotainment get a Harley or Honda\"",
+          "quote": "BMW… you're going to get their half-assed infotainment… If you want modern infotainment get a Harley or Honda",
           "context": "BMW's lack of Apple CarPlay/Android Auto integration generated consistent negative sentiment, with riders frustrated that premium pricing didn't include basic smartphone connectivity.",
           "source": "Reddit R1300RT discussion thread"
         },
         {
-          "quote": "\"If $23k is too much, then $30k is ridiculous\"",
+          "quote": "If $23k is too much, then $30k is ridiculous",
           "context": "BMW pricing drew significant criticism, particularly when essential packages pushed fully-equipped models toward 500,000+ DKK, prompting cost-benefit questioning.",
           "source": "Pricing discussion forums, market analysis"
         },
         {
-          "quote": "\"Never buy the first year of a BMW\"",
+          "quote": "Never buy the first year of a BMW",
           "context": "Some riders expressed caution about BMW's new model reliability, citing historical issues with electronics and final drive problems that persist in community memory.",
           "source": "Risk-averse forum posters, BMW reliability discussions"
         }
@@ -843,9 +819,9 @@ export const conversationData = {
       }
     ],
     "themeInsights": {
-      "- New RT vs The Rest (Competitive Comparisons)": [
+      "New RT vs The Rest (Competitive Comparisons)": [
         {
-          "quote": "RT or GS? debate is common in BMW circles; some pointed out the RT has advantages (lower seat, better wind protection) while the GS handles gravel and stands taller",
+          "quote": "RT or GS?\" debate is common in BMW circles; some pointed out the RT has advantages (lower seat, better wind protection) while the GS handles gravel and stands taller",
           "context": "Finnish riders actively weigh the R1300RT against competitors including the Honda Gold Wing, BMW K1600 GTL, and adventure bikes like the R1300GS or Honda Africa Twin, indicating cross-segment competition where BMW must justify the RT over both direct touring rivals and versatile ADVs",
           "source": "Finnish forums and social media discussions"
         }
@@ -873,7 +849,7 @@ export const conversationData = {
       ],
       "Performance & Handling": [
         {
-          "quote": "goes into corners like a thought and praised its Telelever suspension for stable, confidence-inspiring handling",
+          "quote": "goes into corners like a thought\" and praised its Telelever suspension for stable, confidence-inspiring handling",
           "context": "Riders celebrated the R1300RT's substantial performance hike with 145 hp boxer engine delivering effortless power for passing and two-up riding, with BMW's chassis design recognized as core strength",
           "source": "Finnish commenter and expert reviews"
         }
@@ -883,6 +859,20 @@ export const conversationData = {
           "quote": "for a stock windscreen that's pretty generous – borderline aftermarket size",
           "context": "Comfort features drove positive buzz with wind protection frequently lauded as critical comfort feature, and redesigned seat and ergonomics appreciated by Finnish touring riders who face long distances and harsh weather",
           "source": "Reddit discussions and initial reviews"
+        }
+      ],
+      "Technology & Features": [
+        {
+          "quote": "exactly what you need for your big tour… #R1300RT",
+          "context": "Advanced tech on R1300RT spurred positive sentiment with riders expressing excitement about radar-assisted Adaptive Cruise Control, collision warnings, and semi-automatic transmission making long rides easier and safer",
+          "source": "Instagram social media posts"
+        }
+      ],
+      "Styling & Design": [
+        {
+          "quote": "I think it looks great. It's about time BMW got away from the whale-ish, bulbous look it had for its tourers",
+          "context": "New R1300RT design received mixed reactions with many praising slimmer, more dynamic design and reduced visual weight, though subset found front end odd or too angular",
+          "source": "Reddit user comments"
         }
       ]
     },
@@ -903,51 +893,51 @@ export const conversationData = {
     "sentimentInsights": {
       "Positive": [
         {
-          "quote": "\"The R1300RT's new 145 hp boxer engine delivers a 'substantial performance hike' over the old model\"",
+          "quote": "The R1300RT's new 145 hp boxer engine delivers a 'substantial performance hike' over the old model",
           "context": "BMW R1300RT enthusiasts celebrated improvements in performance with the boxer engine nearly matching K1600 horsepower while being vastly lighter, generating pride for those favoring agility",
           "source": "Bennetts BikeSocial technical review"
         },
         {
-          "quote": "\"BMW lengthened the seats and revised the handlebar for a more active yet comfortable riding position, explicitly aiming to make the RT 'even more capable and comfortable for long-distance touring'\"",
+          "quote": "BMW lengthened the seats and revised the handlebar for a more active yet comfortable riding position, explicitly aiming to make the RT 'even more capable and comfortable for long-distance touring'",
           "context": "BMW R1300RT comfort features drove positive buzz with Finnish touring riders welcoming upgrades including redesigned seat, ergonomics, and extra-large windscreen for weather protection",
           "source": "Rider Magazine preview and initial reviews"
         },
         {
-          "quote": "\"The bike offers a suite of cutting-edge options: radar-assisted Adaptive Cruise Control, collision warnings, and semi-automatic transmission\"",
+          "quote": "The bike offers a suite of cutting-edge options: radar-assisted Adaptive Cruise Control, collision warnings, and semi-automatic transmission",
           "context": "BMW R1300RT advanced technology spurred positive sentiment with riders expressing excitement about features making long rides easier and safer, plus huge TFT display with connectivity seen as plus for tech-savvy riders",
           "source": "Bennetts BikeSocial and industry reviews"
         }
       ],
       "Neutral": [
         {
-          "quote": "\"Honda on huoleton\" (\"Honda is carefree [reliable]\") was stated in a discussion comparing touring bikes",
+          "quote": "Honda on huoleton",
           "context": "General segment discussions weighed practical factors like Honda's reliability advantage without disparaging BMW, indicating matter-of-fact comparison of different manufacturers' strengths",
           "source": "Finnish Suomi24 forums"
         },
         {
-          "quote": "\"It'll likely be 10 years before I upgrade my current RT… I have a long way to go\"",
+          "quote": "It'll likely be 10 years before I upgrade my current RT… I have a long way to go",
           "context": "General touring segment showed contentment with existing bikes and neutral view on immediate adoption, with veteran riders adopting wait-and-see stance on new models and high-mileage expectations",
           "source": "Reddit owner discussions"
         },
         {
-          "quote": "\"BMW's 3-year warranty and reputed durability were noted, but some veteran riders adopt a 'wait and see' stance on new models\"",
+          "quote": "BMW's 3-year warranty and reputed durability were noted, but some veteran riders adopt a 'wait and see' stance on new models",
           "context": "General segment reliability discussions acknowledged BMW improvements while maintaining pragmatic approach to first-year models, focusing on long-term usage and high mileage expectations",
           "source": "Expert analysis and forum discussions"
         }
       ],
       "Negative": [
         {
-          "quote": "\"You cannot buy the base model for $23K… the actual cost is $30–33K\"",
+          "quote": "You cannot buy the base model for $23K… the actual cost is $30–33K",
           "context": "BMW R1300RT pricing came under heavy scrutiny with Finnish riders facing high vehicle taxes and short riding season being especially sensitive to value, leading to preference for low-mileage used alternatives",
           "source": "Rider Magazine reader comments"
         },
         {
-          "quote": "\"the main thing to consider is can you lift it at a red light… to me it's not even a motorcycle anymore\"",
+          "quote": "the main thing to consider is can you lift it at a red light… to me it's not even a motorcycle anymore",
           "context": "General touring segment criticism centered on physical bulk with less experienced or smaller riders expressing anxiety about handling heavy machines, though BMW RT considered more manageable than competitors",
           "source": "Finnish Suomi24 forums discussing Gold Wing"
         },
         {
-          "quote": "\"Twin-cylinder engine might not have the prestige of a four or six in this category\"",
+          "quote": "Twin-cylinder engine might not have the prestige of a four or six in this category",
           "context": "BMW R1300RT engine character received niche criticism from purists lamenting lack of more cylinders, with some veteran riders noting boxer twin's different feel compared to Gold Wing's flat-6 smoothness",
           "source": "Bennetts BikeSocial review"
         }
@@ -989,7 +979,64 @@ export const conversationData = {
         "value": 2
       }
     ],
-    "themeInsights": {},
+    "themeInsights": {
+      "Comfort": [
+        {
+          "quote": "Confort, Confort, Confort",
+          "context": "Comfort is the #1 recurring theme, with riders actively seeking bikes that enable \"avaler les kilomètres sans fatigue\" (devouring kilometers without fatigue)",
+          "source": "French touring motorcycle forums"
+        }
+      ],
+      "Technology & Modernization": [
+        {
+          "quote": "Apple Car Play (une première pour une moto)",
+          "context": "Modern technology is a major positive driver in 2025, with BMW's R1300RT introducing radar-assisted active cruise control and Honda's Gold Wing featuring DCT and Apple CarPlay",
+          "source": "Honda dealer blog"
+        }
+      ],
+      "Handling vs. Weight": [
+        {
+          "quote": "Une fois en mouvement… étonne par une agilité qui la rend accessible à tous les gabarits",
+          "context": "The interplay of weight, center of gravity, and chassis design is often debated, with riders sharing experiences of surprisingly good handling despite mass",
+          "source": "Gold Wing review discussions"
+        }
+      ],
+      "Engine Performance": [
+        {
+          "quote": "145 ch (chevaux) à 7750 tr/min… la RT la plus puissante jamais produite",
+          "context": "French riders value robust, smooth power delivery, especially for two-up riding with luggage",
+          "source": "BMW R1300RT press coverage"
+        }
+      ],
+      "Comparisons & Competition": [
+        {
+          "quote": "la reine des routières",
+          "context": "French riders enjoy friendly debate over which bike is the \"queen\" of touring, with BMW RT and Honda Gold Wing dominating discussions",
+          "source": "Moto Magazine"
+        }
+      ],
+      "Market Evolution (GT to Trails)": [
+        {
+          "quote": "la plupart des concurrentes ont disparu au profit des trails",
+          "context": "Most competitors have disappeared in favor of adventure bikes, leaving only BMW RT, Honda Gold Wing, and Harley in the pure touring class",
+          "source": "MotoMag editor"
+        }
+      ],
+      "Adventure vs. GT Debate": [
+        {
+          "quote": "il ne reste que la RT et la Gold… et les Harley",
+          "context": "Many French riders acknowledge that adventure-touring bikes have overtaken pure GTs in popularity, discussed neutrally as a market trend",
+          "source": "Forum discussions"
+        }
+      ],
+      "Quotes and Anecdotes": [
+        {
+          "quote": "si la Gendarmerie la choisit, c'est que…",
+          "context": "Police anecdotes about the Gendarmerie's adoption of FJR then RT serve as a stamp of approval and quality signal",
+          "source": "Forum discussions"
+        }
+      ]
+    },
     "sentimentData": [
       {
         "name": "Positive Sentiment",
@@ -1007,51 +1054,51 @@ export const conversationData = {
     "sentimentInsights": {
       "Positive": [
         {
-          "quote": "\"Position de conduite reposante, protection intégrale… les plus longs voyages se feront dans le confort pour le pilote comme pour le passager\"",
+          "quote": "Position de conduite reposante, protection intégrale… les plus longs voyages se feront dans le confort pour le pilote comme pour le passager",
           "context": "Exceptional comfort is the foremost source of praise across all brands in the touring segment",
           "source": "Moto Magazine regarding Electra Glide"
         },
         {
-          "quote": "\"dotation technologique impressionnante: ABS Pro, DTC, régulateur, écran TFT 10,25″ avec navigation… radars avant/arrière, phares adaptatifs LED\"",
+          "quote": "dotation technologique impressionnante: ABS Pro, DTC, régulateur, écran TFT 10,25″ avec navigation… radars avant/arrière, phares adaptatifs LED",
           "context": "BMW's R1300RT's advanced technology features generated significant excitement among French riders",
           "source": "BMW R1300RT launch coverage"
         },
         {
-          "quote": "\"un moteur en béton\"",
+          "quote": "un moteur en béton",
           "context": "Reliability and durability, particularly Honda's bulletproof reputation, generates strong positive sentiment",
           "source": "User reviews about Honda and Harley engines"
         }
       ],
       "Neutral": [
         {
-          "quote": "\"la Gold Wing est lourde mais bien équilibrée\"",
+          "quote": "la Gold Wing est lourde mais bien équilibrée",
           "context": "Neutral comments often highlight pros and cons without strong emotion, acknowledging trade-offs",
           "source": "YouTube comment on Gold Wing vs. BMW K1600 video"
         },
         {
-          "quote": "\"Je roule en Tracer 900, j'hésite à passer sur une R1250RT pour le confort\"",
+          "quote": "Je roule en Tracer 900, j'hésite à passer sur une R1250RT pour le confort",
           "context": "Many riders openly weigh the pros (comfort, stability) and cons (cost, bulk) when considering upgrades",
           "source": "Forum discussion"
         },
         {
-          "quote": "\"7 875 € de plus qu'une Triumph Rocket III Touring… à ce point là ?\"",
+          "quote": "7 875 € de plus qu'une Triumph Rocket III Touring… à ce point là ?",
           "context": "Price comparisons are discussed analytically, questioning if premium features justify extra cost",
           "source": "MotoMag comparison"
         }
       ],
       "Negative": [
         {
-          "quote": "\"Si vous avez peur du poids, ce n'est pas le moto qu'il vous faut… il faut être à l'aise et en confiance\"",
+          "quote": "Si vous avez peur du poids, ce n'est pas le moto qu'il vous faut… il faut être à l'aise et en confiance",
           "context": "Weight and low-speed handling are the primary complaints, especially intimidating for newcomers or smaller riders",
           "source": "Experienced rider warning about Gold Wing"
         },
         {
-          "quote": "\"vous le laisserez tomber immédiatement et… aurez du mal à le ramasser\"",
+          "quote": "vous le laisserez tomber immédiatement et… aurez du mal à le ramasser",
           "context": "Hyperbolic warnings highlight the low-speed handling challenge, particularly in city riding",
           "source": "Forum discussion about heavy touring bikes"
         },
         {
-          "quote": "\"Je n'en reviens pas que Yamaha vende toujours la FJR1300 telle quelle en 2024!!!\"",
+          "quote": "Je n'en reviens pas que Yamaha vende toujours la FJR1300 telle quelle en 2024!!!",
           "context": "Frustration with outdated models lacking modern electronics, particularly targeting Yamaha for not innovating",
           "source": "Forum comment about FJR1300"
         }
@@ -1090,7 +1137,7 @@ export const conversationData = {
       }
     ],
     "themeInsights": {
-      "- New Technology & Features": [
+      "New Technology & Features": [
         {
           "quote": "Love the new bikes… Hate the stupid AI [CGI in promo] but the tech on the RT is impressive.",
           "context": "Riders eagerly discussed the R1300RT's radar-guided Adaptive Cruise Control, optional Automated Shift Assistant semi-automatic transmission, and Variable Slipstream Deflectors for airflow control",
@@ -1157,51 +1204,51 @@ export const conversationData = {
     "sentimentInsights": {
       "Positive": [
         {
-          "quote": "\"I like it! But that price though… you do get what you pay for\"",
+          "quote": "I like it! But that price though… you do get what you pay for",
           "context": "BMW R1300RT received strong approval for performance advances, comfort innovations, and technology leadership despite price concerns",
           "source": "Reddit"
         },
         {
-          "quote": "\"I Love the new design, [it's] so unique!\"",
+          "quote": "I Love the new design, [it's] so unique!",
           "context": "BMW's modern styling and innovative features like radar cruise control positioned the R1300RT as \"the new benchmark for touring bikes\"",
           "source": "Reddit"
         },
         {
-          "quote": "\"My next bike if I can fit on the thing\"",
+          "quote": "My next bike if I can fit on the thing",
           "context": "BMW's improved ergonomics and rider triangle addressed previous fit issues, generating enthusiasm among taller riders",
           "source": "Reddit"
         }
       ],
       "Neutral": [
         {
-          "quote": "\"BMW Motorrad Hellas site announcing the R1300RT's price (starting at €24,490 locally)\"",
+          "quote": "BMW Motorrad Hellas site announcing the R1300RT's price (starting at €24,490 locally)",
           "context": "Factual sharing of news, specifications, and pricing information without strong emotional content",
           "source": "2wo.gr"
         },
         {
-          "quote": "\"For 2025, the Goldwing upgrades its audio and rider/passenger connectivity… new speakers and improved phone pairing\"",
+          "quote": "For 2025, the Goldwing upgrades its audio and rider/passenger connectivity… new speakers and improved phone pairing",
           "context": "Neutral reporting and comparison of competitor updates and technical specifications",
           "source": "Car & Driver Greece"
         },
         {
-          "quote": "\"The RT looks good too and the movable aero panels are an interesting addition for a bike like that\"",
+          "quote": "The RT looks good too and the movable aero panels are an interesting addition for a bike like that",
           "context": "Balanced technical discussion of BMW features without strong advocacy or criticism",
           "source": "RevZilla"
         }
       ],
       "Negative": [
         {
-          "quote": "\"Starts to make a Chinese bike a better choice\"",
+          "quote": "Starts to make a Chinese bike a better choice",
           "context": "BMW price sensitivity and styling criticism led some to question value proposition compared to alternatives",
           "source": "1200rt.com"
         },
         {
-          "quote": "\"The engine is meant to be wonderful but I just don't get the styling… apart from the fact I could never afford it, I don't think I'd want one anyway\"",
+          "quote": "The engine is meant to be wonderful but I just don't get the styling… apart from the fact I could never afford it, I don't think I'd want one anyway",
           "context": "BMW styling polarization and affordability concerns among traditional tourer owners who preferred classic RT aesthetics",
           "source": "1200rt.com"
         },
         {
-          "quote": "\"Love the bike, hate the sound\"",
+          "quote": "Love the bike, hate the sound",
           "context": "Some BMW enthusiasts expressed disappointment with sound character changes from previous boxer engine iterations",
           "source": "Reddit"
         }
@@ -1244,44 +1291,44 @@ export const conversationData = {
       }
     ],
     "themeInsights": {
-      "- Comfort is King – Ergonomics & Wind Protection": [
+      "Comfort is King – Ergonomics & Wind Protection": [
         {
-          "quote": "a kényelem miatt váltottam [sport]ról túramotorra (I switched from a sportbike to a tourer because of the comfort)",
+          "quote": "a kényelem miatt váltottam [sport]ról túramotorra\" (\"I switched from a sportbike to a tourer because of the comfort\")",
           "context": "Comfort was the most prevalent theme, with riders obsessing over seat comfort, windshields, riding position, and passenger accommodations. The ability to cover long distances without fatigue is the primary motivation for choosing touring bikes.",
           "source": "Hegylakók forum discussions"
         }
       ],
       "Technology & Innovation": [
         {
-          "quote": "aki télen is szokott motorozni, az most felsóhajt: ez kell (anyone who rides in winter will sigh with relief, I need this [feature])",
+          "quote": "aki télen is szokott motorozni, az most felsóhajt: ez kell\" (\"anyone who rides in winter will sigh with relief, I need this [feature]\")",
           "context": "Riders showed excitement for cutting-edge tech like adaptive cruise control, advanced ABS/traction systems, electronic suspension, and smartphone connectivity. BMW's adoption of radar on the R1300RT drew significant positive comments.",
           "source": "Totalbike.hu reviewer comments"
         }
       ],
       "Performance vs. Practicality": [
         {
-          "quote": "nyomatékát… megyen (torquey… it just goes)",
+          "quote": "nyomatékát… megyen\" (\"torquey… it just goes\")",
           "context": "Many discussions revolved around balancing sporty performance with touring practicality. Riders compared specs but often tempered with real-world needs, noting that adequate power delivery and bike weight are more important than peak horsepower.",
           "source": "Totalbike.hu technical discussions"
         }
       ],
       "Brand Loyalty & Rivalry": [
         {
-          "quote": "ha túrázni akarsz kompromisszumok nélkül: vegyél egy RT-t (if you want to tour with no compromises: get an RT)",
+          "quote": "ha túrázni akarsz kompromisszumok nélkül: vegyél egy RT-t\" (\"if you want to tour with no compromises: get an RT\")",
           "context": "BMW and Honda have the most vocal fanbases in the touring segment, with threads sometimes veering into friendly rivalry. Experienced tourers frequently advise newcomers, creating strong word-of-mouth influence.",
           "source": "Népítélet forum discussions"
         }
       ],
       "Market and Regulatory Buzz": [
         {
-          "quote": "nyolcezerig meg sem állunk (we won't stop until eight thousand [new bikes])",
+          "quote": "nyolcezerig meg sem állunk\" (\"we won't stop until eight thousand [new bikes]\")",
           "context": "Discussions included market trends, Euro 5+ emissions rules, supply issues, and local events. Riders showed awareness of industry context, including the record 2024 sales year and forecasts for 2025.",
           "source": "SportMotor.hu market analysis"
         }
       ],
       "Design & Aesthetics": [
         {
-          "quote": "Az RT megjelenése megosztó (the RT's appearance is divisive)",
+          "quote": "Az RT megjelenése megosztó\" (\"the RT's appearance is divisive\")",
           "context": "The new BMW R1300RT's styling proved highly polarizing, with approximately half of the comments on its launch focusing solely on looks. Design debates generated high engagement both positive and negative.",
           "source": "1000ps.com expert reviews"
         }
@@ -1295,7 +1342,7 @@ export const conversationData = {
       ],
       "Weight & Manageability": [
         {
-          "quote": "aztaqrva, mekkora dög ez (damn, what a beast this is)",
+          "quote": "aztaqrva, mekkora dög ez\" (\"damn, what a beast this is\")",
           "context": "While generally accepted as inherent to big tourers, the weight of these machines (280-400 kg) attracted negative commentary, especially from less experienced riders concerned about low-speed handling and parking lot maneuvers.",
           "source": "Népítélet owner testimonials"
         }
@@ -1318,51 +1365,51 @@ export const conversationData = {
     "sentimentInsights": {
       "Positive": [
         {
-          "quote": "\"ilyen kényelmes gyári ülésekkel még nem is találkoztam\" (\"I've never encountered such comfortable stock seats\")",
+          "quote": "ilyen kényelmes gyári ülésekkel még nem is találkoztam",
           "context": "Riders repeatedly praised the comfort and long-distance capabilities of touring bikes, particularly BMW RT and Honda Gold Wing models for their ergonomic excellence and all-day riding comfort.",
           "source": "Népítélet user reviews"
         },
         {
-          "quote": "\"a fékkarra meg csak rálehelek, és mintha ezer horgonyt dobtam volna ki\" (\"I just breathe on the brake lever and it's like dropping a thousand anchors\")",
+          "quote": "a fékkarra meg csak rálehelek, és mintha ezer horgonyt dobtam volna ki",
           "context": "Strong performance impressions regarding braking power, handling stability, and highway capability contributed to positive perceptions that touring bikes can be both comfortable and capable.",
           "source": "Hegylakók rider testimonials"
         },
         {
-          "quote": "\"még nem romlott el rajta semmi\" (\"nothing has broken on it so far\")",
+          "quote": "még nem romlott el rajta semmi",
           "context": "Build quality and reliability consistently earned praise, with owners citing German precision and dependable operation even after tens of thousands of kilometers, fostering trust in BMW and Honda brands.",
           "source": "Népítélet reliability discussions"
         }
       ],
       "Neutral": [
         {
-          "quote": "\"robogókon kívül… a túraendurók viszik a prímet\" (\"aside from scooters, adventure bikes are leading the sales\")",
+          "quote": "robogókon kívül… a túraendurók viszik a prímet",
           "context": "Factual observations about market trends and competitive positioning, including the rise of adventure-touring bikes as alternatives to traditional touring motorcycles.",
           "source": "SportMotor.hu market analysis"
         },
         {
-          "quote": "\"Európa legnagyobb példányszámban eladott túrasportmotorja\" (\"Europe's best-selling sport-touring motorcycle\")",
+          "quote": "Európa legnagyobb példányszámban eladott túrasportmotorja",
           "context": "Neutral reporting on sales figures and market performance, such as Honda NT1100's success achieving 12,000 units sold in its first couple of years.",
           "source": "Hegylakók market data"
         },
         {
-          "quote": "\"második hazánkban az ezer köbcenti feletti túramotorok között\" (\"second in Hungary among touring bikes over 1000cc\")",
+          "quote": "második hazánkban az ezer köbcenti feletti túramotorok között",
           "context": "Statistical information about market positioning and sales rankings, particularly BMW's performance relative to competitors in the Hungarian market.",
           "source": "SportMotor.hu sales data"
         }
       ],
       "Negative": [
         {
-          "quote": "\"This has to be the ugliest BMW of the modern era\"",
+          "quote": "This has to be the ugliest BMW of the modern era",
           "context": "The new BMW R1300RT's styling proved highly polarizing, with harsh criticism from some riders who disliked the streamlined design compared to previous generations.",
           "source": "K1600 Forum international discussions"
         },
         {
-          "quote": "\"you don't get much in the base model and everything comes in packs so it adds up like crazy\"",
+          "quote": "you don't get much in the base model and everything comes in packs so it adds up like crazy",
           "context": "Frustration over BMW's pricing strategy and expensive optional packages, with riders feeling the base model lacks essential features that should be standard on a premium touring bike.",
           "source": "Reddit r/Motorrad pricing discussions"
         },
         {
-          "quote": "\"Fekete leves… oldaldoboz kapacitás… csökkent\" (\"Here comes the bitter pill: side-case capacity has indeed decreased\")",
+          "quote": "Fekete leves… oldaldoboz kapacitás… csökkent",
           "context": "Specific complaints about the R1300RT's reduced standard pannier capacity (from 35L to 27L), viewed as a step backward in touring functionality requiring expensive optional larger cases.",
           "source": "Totalbike.hu technical analysis"
         }
@@ -1401,7 +1448,7 @@ export const conversationData = {
       }
     ],
     "themeInsights": {
-      "- Comfort & Touring Experience": [
+      "Comfort & Touring Experience": [
         {
           "quote": "500 km as if sitting on the couch at home",
           "context": "Italian riders consistently prioritize comfort as the defining criterion for touring bikes, emphasizing wind protection, seat comfort, and fatigue-free riding",
@@ -1468,51 +1515,51 @@ export const conversationData = {
     "sentimentInsights": {
       "Positive": [
         {
-          "quote": "\"moto semplicemente perfetta per i viaggi\"",
+          "quote": "moto semplicemente perfetta per i viaggi",
           "context": "BMW RT owners express overwhelming satisfaction with touring capabilities and comfort",
           "source": "moto.it (BMW RT owner)"
         },
         {
-          "quote": "\"poltrona a due ruote… ti consente di viaggiare con la massima comodità\"",
+          "quote": "poltrona a due ruote… ti consente di viaggiare con la massima comodità",
           "context": "Honda Gold Wing riders celebrate unparalleled comfort for long-distance touring",
           "source": "moto.it (Gold Wing owner)"
         },
         {
-          "quote": "\"insospettabilmente maneggevole\"",
+          "quote": "insospettabilmente maneggevole",
           "context": "Riders are pleasantly surprised by the RT's agility despite its size",
           "source": "insella.it (BMW RT review)"
         }
       ],
       "Neutral": [
         {
-          "quote": "\"Ho comprato una NT1100 DCT… e la prossima sarà una GoldWing\"",
+          "quote": "Ho comprato una NT1100 DCT… e la prossima sarà una GoldWing",
           "context": "Discussions about upgrade paths from mid-range to premium tourers",
           "source": "quellidellelica.com"
         },
         {
-          "quote": "\"C'ho girato l'Europa. Mai un problema\"",
+          "quote": "C'ho girato l'Europa. Mai un problema",
           "context": "Matter-of-fact statements about reliability and touring experiences",
           "source": "moto.it (Yamaha FJR owner)"
         },
         {
-          "quote": "\"one of the best GT bikes around that offers everything a tourer could desire\"",
+          "quote": "one of the best GT bikes around that offers everything a tourer could desire",
           "context": "Objective assessments of touring bike capabilities",
           "source": "insella.it"
         }
       ],
       "Negative": [
         {
-          "quote": "\"nelle manovre da fermo il peso si sente\"",
+          "quote": "nelle manovre da fermo il peso si sente",
           "context": "Weight management issues during low-speed maneuvers are a common complaint for the segment",
           "source": "insella.it (BMW RT)"
         },
         {
-          "quote": "\"elegante e classica finché vuoi, ma simile ad uno scooter… o ad un camper 3/4 posteriore\"",
+          "quote": "elegante e classica finché vuoi, ma simile ad uno scooter… o ad un camper 3/4 posteriore",
           "context": "Polarizing views on the R1300RT's styling, with some finding it bulky",
           "source": "quellidellelica.com (BMW RT)"
         },
         {
-          "quote": "\"motore troppo rumoroso… nei lunghi viaggi dà fastidio\"",
+          "quote": "motore troppo rumoroso… nei lunghi viaggi dà fastidio",
           "context": "Some RT users complain about engine noise on long trips",
           "source": "moto.it (BMW RT owner)"
         }
@@ -1543,7 +1590,7 @@ export const conversationData = {
       }
     ],
     "themeInsights": {
-      "- Technology & Features": [
+      "Technology & Features": [
         {
           "quote": "The new R1300RT is a completely new bike... I called [the R1250RT] the king of all touring motorcycles.",
           "context": "The R1300RT's advanced technology features including radar-assisted adaptive cruise control, advanced rider aids, and optional semi-automatic transmission are viewed as setting a new benchmark for touring motorcycles. Riders are particularly excited about features like adaptive ride height and collision warning systems.",
@@ -1617,51 +1664,51 @@ export const conversationData = {
     "sentimentInsights": {
       "Positive": [
         {
-          "quote": "\"I was pretty excited to trade up… mainly for the active ride height\"",
+          "quote": "I was pretty excited to trade up… mainly for the active ride height",
           "context": "The adaptive ride height feature that automatically lowers at stops addresses a major pain point for riders, making the heavy touring bike more manageable at traffic lights and parking.",
           "source": "Reddit user"
         },
         {
-          "quote": "\"Heated backrest for the passenger – finally! My wife will approve.\"",
+          "quote": "Heated backrest for the passenger – finally! My wife will approve.",
           "context": "The introduction of heated pillion backrest and seats was met with approval by long-distance two-up riders, showing BMW's attention to passenger comfort.",
           "source": "Facebook comment (translated from Dutch)"
         },
         {
-          "quote": "\"better power-to-weight ratio and more load capacity than the K1600\"",
+          "quote": "better power-to-weight ratio and more load capacity than the K1600",
           "context": "Riders compared the RT's power-to-weight favorably against BMW's own K1600GT, making the six-cylinder seem almost redundant unless one really wants 6-cylinder smoothness.",
           "source": "Bennetts review"
         }
       ],
       "Neutral": [
         {
-          "quote": "\"BMW announced the R1300RT…\"",
+          "quote": "BMW announced the R1300RT…",
           "context": "Many initial posts were factual news-sharing without opinion, simply informing the community about the new model announcement.",
           "source": "Forum posts"
         },
         {
-          "quote": "\"it definitely presents better in person… it's grown on me a lot\"",
+          "quote": "it definitely presents better in person… it's grown on me a lot",
           "context": "Riders who saw the bike at dealer events provided nuanced takes, suggesting initial shock at the styling could soften after seeing the bike up close.",
           "source": "Rider at Barber Motorsports Park"
         },
         {
-          "quote": "\"it's not for me, I'm still a 1250 devotee\"",
+          "quote": "it's not for me, I'm still a 1250 devotee",
           "context": "Some riders acknowledged the improvements while personally preferring to stick with their current models, showing balanced perspective.",
           "source": "Forum user"
         }
       ],
       "Negative": [
         {
-          "quote": "\"the RT looks strange\"",
+          "quote": "the RT looks strange",
           "context": "The styling proved to be the most divisive aspect, with traditionalists finding the new angular aesthetic off-putting compared to previous RT models.",
           "source": "forums.bmwmoa.org"
         },
         {
-          "quote": "\"Even more technology does nothing for me… I'll stick with the old gal\"",
+          "quote": "Even more technology does nothing for me… I'll stick with the old gal",
           "context": "A subset of riders felt the abundance of electronics was \"too much\" and that simpler might be better, reflecting concerns about complexity.",
           "source": "MOA forum skeptic"
         },
         {
-          "quote": "\"It's too cramped for me…36\" inseam… the pegs are just too high\"",
+          "quote": "It's too cramped for me…36",
           "context": "Very tall riders (196 cm/6'5\") found the ergonomics challenging, wishing for lower pegs or more legroom options.",
           "source": "Reddit user"
         }
@@ -1704,7 +1751,7 @@ export const conversationData = {
       }
     ],
     "themeInsights": {
-      "- Technological Innovation & Features": [
+      "Technological Innovation & Features": [
         {
           "quote": "Features like the Adaptive Cruise Control (radar), Automatic Shift Assistant (semi-automatic transmission), and the giant 10.25″ TFT display are frequently discussed. Many see these as elevating the touring experience to luxury-car levels",
           "context": "Riders are highly interested in the R1300RT's new technologies, with features like radar cruise control and semi-automatic transmission generating significant discussion and curiosity about their practical benefits",
@@ -1778,51 +1825,51 @@ export const conversationData = {
     "sentimentInsights": {
       "Positive": [
         {
-          "quote": "\"Overall, it's an evolution to what? …the engine is wonderful but I just don't get the styling… Apart from the fact I could never afford it, I don't think I'd want one anyway.\"",
+          "quote": "Overall, it's an evolution to what? …the engine is wonderful but I just don't get the styling… Apart from the fact I could never afford it, I don't think I'd want one anyway.",
           "context": "Despite some reservations about styling and price, riders acknowledge the engine's excellence and the bike's overall evolution in touring capabilities",
           "source": "BMW RT forum discussions"
         },
         {
-          "quote": "\"Reviewers have even speculated the R1300RT could set 'the new benchmark for touring bikes'\"",
+          "quote": "Reviewers have even speculated the R1300RT could set 'the new benchmark for touring bikes'",
           "context": "Professional reviewers express strong confidence in the R1300RT's potential to lead the touring segment with its advanced features and performance",
           "source": "Bennetts motorcycle review"
         },
         {
-          "quote": "\"I also like the design direction taken here as well as with the new RS. The GS looks good to me too…\"",
+          "quote": "I also like the design direction taken here as well as with the new RS. The GS looks good to me too…",
           "context": "Enthusiasts appreciate BMW's new design language across the entire model range, indicating broader acceptance of the styling evolution",
           "source": "Reddit motorcycle discussions"
         }
       ],
       "Neutral": [
         {
-          "quote": "\"There are so many pre-owned R1250RT and K1600GT… it makes no sense… to entertain this as an option\"",
+          "quote": "There are so many pre-owned R1250RT and K1600GT… it makes no sense… to entertain this as an option",
           "context": "Some riders view the used market as offering better value proposition than the new R1300RT, reflecting pragmatic purchasing considerations",
           "source": "Reddit motorcycle forums"
         },
         {
-          "quote": "\"I'm torn on the active aero… guess it will have to be ridden to be believed\"",
+          "quote": "I'm torn on the active aero… guess it will have to be ridden to be believed",
           "context": "Cautious optimism about new technologies, with riders wanting real-world experience before forming definitive opinions",
           "source": "Reddit technical discussions"
         },
         {
-          "quote": "\"BMW has some really good sport tourers and in my eyes are at the top when it comes to comfort, but these are insanely expensive\"",
+          "quote": "BMW has some really good sport tourers and in my eyes are at the top when it comes to comfort, but these are insanely expensive",
           "context": "Recognition of BMW's segment leadership balanced against concerns about premium pricing in the Norwegian market",
           "source": "Norwegian MCsiden forum"
         }
       ],
       "Negative": [
         {
-          "quote": "\"The front has a visage that only a mother would love…painfully unattractive\"",
+          "quote": "The front has a visage that only a mother would love…painfully unattractive",
           "context": "Strong negative reaction to the R1300RT's new front-end design from longtime BMW RT owners who prefer the previous styling",
           "source": "BMW R1200RT forum"
         },
         {
-          "quote": "\"starting at $23,190 and ballooning quickly to over $30k\"",
+          "quote": "starting at $23,190 and ballooning quickly to over $30k",
           "context": "Significant concern about the R1300RT's high base price and the rapid cost escalation with optional equipment",
           "source": "Reddit pricing discussions"
         },
         {
-          "quote": "\"BMW makes top-tier touring bikes with comfort at the top, but these are grisedyre (pig expensive)\"",
+          "quote": "BMW makes top-tier touring bikes with comfort at the top, but these are grisedyre (pig expensive)",
           "context": "Norwegian riders acknowledge BMW's quality leadership but express frustration with the premium pricing in their market",
           "source": "Norwegian MCsiden forum"
         }
@@ -1865,7 +1912,7 @@ export const conversationData = {
       }
     ],
     "themeInsights": {
-      "- Comfort & Touring Experience": [
+      "Comfort & Touring Experience": [
         {
           "quote": "Pozycję, miękkość kanapy... dobrano tak, żebyśmy odczuwali komfort przez wiele kilometrów",
           "context": "Comfort remains the defining theme of touring bike discussions, with riders obsessing over seating, wind protection, and long-distance ergonomics",
@@ -1939,52 +1986,42 @@ export const conversationData = {
     "sentimentInsights": {
       "Positive": [
         {
-          "quote": "\"sztos\" (awesome masterpiece)",
+          "quote": "sztos",
           "context": "Enthusiasts hailed the BMW R1300RT as a worthy new flagship, celebrating BMW's innovation",
           "source": "forum.vstromclub.pl"
         },
         {
-          "quote": "\"Widać, że beemka nie zasypia gruszek w popiele i cały czas ucieka konkurencji\"",
+          "quote": "Widać, że beemka nie zasypia gruszek w popiele i cały czas ucieka konkurencji",
           "context": "Positive sentiment toward BMW specifically, noting that BMW isn't resting on its laurels and keeps running ahead of the competition",
           "source": "forum.vstromclub.pl"
         },
         {
-          "quote": "\"aksamitnie posłuszny\"",
+          "quote": "aksamitnie posłuszny",
           "context": "Honda Gold Wing received positive mentions for its unmatched comfort and smooth riding experience",
           "source": "motoryzacja.interia.pl"
         }
       ],
       "Neutral": [
         {
-          "quote": "\"RT wygląda... jak jakiś bagger bez kufra centralnego\"",
+          "quote": "RT wygląda... jak jakiś bagger bez kufra centralnego",
           "context": "Some conservative BMW fans needed time to warm up to the new R1300RT design, expressing neutral curiosity about styling changes",
           "source": "forum.vstromclub.pl"
         },
         {
-          "quote": "Technical specification inquiries about transmission type",
-          "context": "Neutral posts were largely informational, sharing specs, news links, or asking technical questions about BMW features",
-          "source": "forum.vstromclub.pl"
-        },
-        {
-          "quote": "\"promises to be…the most impressive touring bike on the market\"",
+          "quote": "promises to be…the most impressive touring bike on the market",
           "context": "Cautious optimism about BMW R1300RT's potential in the touring segment",
           "source": "bennetts.co.uk"
         }
       ],
       "Negative": [
         {
-          "quote": "\"jedynie co będzie zaporowe to cena\"",
+          "quote": "jedynie co będzie zaporowe to cena",
           "context": "Negative sentiment toward BMW specifically, with some riders fearing that the R1300RT's high-tech upgrades will come with a hefty price tag",
           "source": "forum.vstromclub.pl"
         },
         {
-          "quote": "\"powinny być od [Japończyków] bardziej niezawodne. A nie są\"",
+          "quote": "powinny być od [Japończyków] bardziej niezawodne. A nie są",
           "context": "Skepticism about BMW's reliability record specifically, especially compared to Japanese competitors",
-          "source": "forum.vstromclub.pl"
-        },
-        {
-          "quote": "Styling critiques about front fairing resembling Honda NC scooter",
-          "context": "Minor negative sentiment toward BMW's new design language, though these were minor quibbles amid generally favorable reactions",
           "source": "forum.vstromclub.pl"
         }
       ]
@@ -2022,53 +2059,11 @@ export const conversationData = {
       }
     ],
     "themeInsights": {
-      "- Technology and Innovation": [
+      "Technology and Innovation": [
         {
           "quote": "Radar tech comes to the RT",
           "context": "The R1300RT's technology suite, especially Adaptive Cruise Control, dominated discussions as riders see BMW leading in tech among tourers",
-          "source": "RevZilla"
-        }
-      ],
-      "Comfort and Touring Capability": [
-        {
-          "quote": "my boots do get wet on my RT on wet roads… I never complained though because my boots are waterproof",
-          "context": "Comfort remains king in touring conversations, with BMW's efforts to refine aerodynamics, seating, and cargo convenience being dominant positive themes",
-          "source": "Reddit"
-        }
-      ],
-      "Performance and Dynamics": [
-        {
-          "quote": "more dynamic than ever",
-          "context": "Modern touring riders expect multi-role capability - bikes should be enjoyable on twisty roads, not just highway couches",
-          "source": "Motojornal"
-        }
-      ],
-      "Styling and Design": [
-        {
-          "quote": "BMW is literally seeing how ugly they can make a bike that still sells",
-          "context": "Design was polarizing, with initial negative reactions to leaked images softening after official reveal",
-          "source": "Reddit"
-        }
-      ],
-      "Competitor Comparisons": [
-        {
-          "quote": "Gold Wings are engineered to perfection for long distance, but the RT is significantly lighter and still very comfortable",
-          "context": "BMW RT frequently compared against Honda Gold Wing, with RT emerging as the balanced choice",
-          "source": "V1 MOTO"
-        }
-      ],
-      "Market/Availability Concerns": [
-        {
-          "quote": "I hope everyone loves it and upgrades!",
-          "context": "Discussions about wait times, trade-in values for R1250RT, and new model availability in Portugal",
-          "source": "Reddit"
-        }
-      ],
-      "Price and Value": [
-        {
-          "quote": "o preço assusta! (the price is frightening!)",
-          "context": "High price of R1300RT was most frequent negative mentioned, with base price €24.4k positioning it at top end of market",
-          "source": "Instagram (Moto.com.br)"
+          "source": "Rev"
         }
       ]
     },
@@ -2089,51 +2084,51 @@ export const conversationData = {
     "sentimentInsights": {
       "Positive": [
         {
-          "quote": "\"taken the touring icon to a whole new level… lighter, more accessible and more dynamic than ever\"",
+          "quote": "taken the touring icon to a whole new level… lighter, more accessible and more dynamic than ever",
           "context": "Enthusiasm for BMW RT's enhancements in power, technology, and versatility drove positive sentiment",
           "source": "BMW Group Press Release"
         },
         {
-          "quote": "\"I think it looks great…about time BMW got away from the whale-ish look\"",
+          "quote": "I think it looks great…about time BMW got away from the whale-ish look",
           "context": "After official reveal, many riders appreciated the modern, sleeker design of the BMW RT",
           "source": "Reddit"
         },
         {
-          "quote": "\"packs a lot of features and tech, possibly more than any competitor\"",
+          "quote": "packs a lot of features and tech, possibly more than any competitor",
           "context": "BMW RT's cutting-edge features like radar cruise control were seen as game-changers",
           "source": "RevZilla"
         }
       ],
       "Neutral": [
         {
-          "quote": "\"If it's a long-held dream, I'd wait for the test drive. But expect a longer wait time when ordering\"",
+          "quote": "If it's a long-held dream, I'd wait for the test drive. But expect a longer wait time when ordering",
           "context": "Practical discussions about BMW delivery timelines and purchasing decisions",
           "source": "Reddit"
         },
         {
-          "quote": "\"the RT has 143 hp vs 136 hp of the 1250\"",
+          "quote": "the RT has 143 hp vs 136 hp of the 1250",
           "context": "Factual spec comparisons between BMW models without strong sentiment",
           "source": "Forum discussions"
         },
         {
-          "quote": "\"Any word on when test rides will be available?\"",
+          "quote": "Any word on when test rides will be available?",
           "context": "Information-seeking queries about BMW RT availability",
           "source": "Forum discussions"
         }
       ],
       "Negative": [
         {
-          "quote": "\"this has to be the ugliest bike by far from BMW… I would not even test ride [it] if this image is correct\"",
+          "quote": "this has to be the ugliest bike by far from BMW… I would not even test ride [it] if this image is correct",
           "context": "Strong negative reactions to BMW RT's leaked design images from traditionalists",
           "source": "Reddit"
         },
         {
-          "quote": "\"you REALLY have to want a 1300 boxer… to pay > $30k for this new RT\"",
+          "quote": "you REALLY have to want a 1300 boxer… to pay > $30k for this new RT",
           "context": "Price concerns about BMW RT with many finding it expensive relative to alternatives",
           "source": "Reddit"
         },
         {
-          "quote": "\"there's a lot of tech that could go wrong out on a long tour\"",
+          "quote": "there's a lot of tech that could go wrong out on a long tour",
           "context": "Concerns about BMW RT's complexity and potential reliability issues with electronics",
           "source": "Reddit"
         }
@@ -2148,7 +2143,7 @@ export const conversationData = {
       }
     ],
     "themeInsights": {
-      "- Comfort & Ergonomics": [
+      "Comfort & Ergonomics": [
         {
           "quote": "Comfort is king",
           "context": "Riders obsess over wind protection, seat comfort, and long-distance ergonomics. The R1300RT earned massive points for its vast windshield and newly adjustable side trim to channel airflow.",
@@ -2222,51 +2217,51 @@ export const conversationData = {
     "sentimentInsights": {
       "Positive": [
         {
-          "quote": "\"BMW is back to challenging the status quo…this is how you stay on top\"",
+          "quote": "BMW is back to challenging the status quo…this is how you stay on top",
           "context": "Excitement in enthusiast circles about the new R1300RT, reflecting BMW's innovation and market leadership.",
           "source": "Reddit r/Motorrad"
         },
         {
-          "quote": "\"a contender to be the most impressive touring bike on the market, full stop\"",
+          "quote": "a contender to be the most impressive touring bike on the market, full stop",
           "context": "Expert reviewers setting industry-level context for the R1300RT's capabilities and positioning.",
           "source": "Bennetts BikeSocial"
         },
         {
-          "quote": "\"It's basically a luxury car on two wheels, I can ride 500 km and feel fresh\"",
+          "quote": "It's basically a luxury car on two wheels, I can ride 500 km and feel fresh",
           "context": "Gold Wing owners frequently described their bike as the perfect touring machine, citing unmatched comfort.",
           "source": "Gold Wing Romania Riders group"
         }
       ],
       "Neutral": [
         {
-          "quote": "\"noul R1300RT\"",
+          "quote": "noul R1300RT",
           "context": "Informational posts sharing specs or news without strong opinion, such as local dealerships announcing test ride availability.",
           "source": "Motociclism.ro Facebook group"
         },
         {
-          "quote": "\"the weight…low-speed maneuvers take getting used to, like a cruise ship\"",
+          "quote": "the weight…low-speed maneuvers take getting used to, like a cruise ship",
           "context": "Factual observations about the Gold Wing's handling characteristics without positive or negative judgment.",
           "source": "Reddit r/motorcycles"
         },
         {
-          "quote": "\"Yamaha hasn't updated the FJR in years, so it's being overtaken by tech-rich bikes\"",
+          "quote": "Yamaha hasn't updated the FJR in years, so it's being overtaken by tech-rich bikes",
           "context": "Matter-of-fact commentary on the FJR1300's aging technology compared to newer models.",
           "source": "PeMotoare Facebook post"
         }
       ],
       "Negative": [
         {
-          "quote": "\"over $30k with options, you really have to want that 1300 boxer\"",
+          "quote": "over $30k with options, you really have to want that 1300 boxer",
           "context": "Price was the most common gripe about the BMW R1300RT, with many noting cheaper pre-owned alternatives.",
           "source": "Reddit discussion"
         },
         {
-          "quote": "\"Looks like they're sticking with that same phone-based shitty GPS…I have a 2021 RT and I absolutely hate that thing\"",
+          "quote": "Looks like they're sticking with that same phone-based shitty GPS…I have a 2021 RT and I absolutely hate that thing",
           "context": "Current R1250RT owner criticized BMW's TFT navigation system, highlighting frustration with the user interface.",
           "source": "Reddit r/Motorrad"
         },
         {
-          "quote": "\"Harley touring bikes are great… as long as the hotel isn't too far!\"",
+          "quote": "Harley touring bikes are great… as long as the hotel isn't too far!",
           "context": "Skepticism among non-Harley riders about the practicality of H-D tourers for long-distance touring.",
           "source": "Romanian social media"
         }
@@ -2309,7 +2304,7 @@ export const conversationData = {
       }
     ],
     "themeInsights": {
-      "- Performance & Engine": [
+      "Performance & Engine": [
         {
           "quote": "motor je super, převodovka… opravdu super a rychle bych si na to zvyknul",
           "context": "Riders praised the R1300RT's 145 hp boxer engine and its 110 Nm torque boost, with many welcoming the performance hike over the R1250RT",
@@ -2383,51 +2378,51 @@ export const conversationData = {
     "sentimentInsights": {
       "Positive": [
         {
-          "quote": "\"Design-wise…I think it looks great. It's about time BMW got away from the whale-ish/bulbous look it's had for its tourers\"",
+          "quote": "Design-wise…I think it looks great. It's about time BMW got away from the whale-ish/bulbous look it's had for its tourers",
           "context": "BMW R1300RT - Some riders embraced the new design direction as modern and appealing",
           "source": "Reddit.com"
         },
         {
-          "quote": "\"motor je super, převodovka… opravdu super a rychle bych si na to zvyknul\"",
+          "quote": "motor je super, převodovka… opravdu super a rychle bych si na to zvyknul",
           "context": "BMW R1300RT - Veteran RT owner was thrilled with the new engine and semi-automatic transmission",
           "source": "Motorkari.cz"
         },
         {
-          "quote": "\"I dare say I rode the best touring bike of today\"",
+          "quote": "I dare say I rode the best touring bike of today",
           "context": "Harley-Davidson - Local dealership reviewer praised the 2024 Street Glide",
           "source": "harley-davidson-presov.sk"
         }
       ],
       "Neutral": [
         {
-          "quote": "\"Není tak ošklivý, chce to asi vidět naživo a svézt se\"",
+          "quote": "Není tak ošklivý, chce to asi vidět naživo a svézt se",
           "context": "BMW R1300RT - Many riders reserved judgment until they could see and test the bike in person",
           "source": "Motorkari.cz"
         },
         {
-          "quote": "\"rather buy a nearly-new 1250 RT… The 1300, I see one drawback: the non-adjustable windshield…we'll see\"",
+          "quote": "rather buy a nearly-new 1250 RT… The 1300, I see one drawback: the non-adjustable windshield…we'll see",
           "context": "BMW comparison - Riders weighed pros and cons between new and previous generation models",
           "source": "Motorkari.cz"
         },
         {
-          "quote": "\"právom etalónom vo svojej triede\"",
+          "quote": "právom etalónom vo svojej triede",
           "context": "Honda Gold Wing - Recognized as the benchmark in its class for comfort",
           "source": "Automagazin.sk"
         }
       ],
       "Negative": [
         {
-          "quote": "\"hnusný jezdící kanystr\"",
+          "quote": "hnusný jezdící kanystr",
           "context": "BMW R1300RT - Harsh criticism likening the bike to an \"ugly riding jerrycan\"",
           "source": "Motorkari.cz"
         },
         {
-          "quote": "\"Designers: So…how big should the RT windscreen be? BMW: Yes.\"",
+          "quote": "Designers: So…how big should the RT windscreen be? BMW: Yes.",
           "context": "BMW R1300RT - Tongue-in-cheek criticism of the oversized windscreen",
           "source": "Reddit.com"
         },
         {
-          "quote": "\"a touring bike for my yacht\"",
+          "quote": "a touring bike for my yacht",
           "context": "BMW R1300RT - Sarcastic humor about the RT's premium pricing",
           "source": "Reddit.com"
         }
@@ -2470,7 +2465,7 @@ export const conversationData = {
       }
     ],
     "themeInsights": {
-      "- Performance & Engine": [
+      "Performance & Engine": [
         {
           "quote": "the grunt it deserved",
           "context": "Many riders welcomed the boost from 136hp to 143hp, noting it makes two-up riding with luggage easier for overtakes",
@@ -2544,51 +2539,51 @@ export const conversationData = {
     "sentimentInsights": {
       "Positive": [
         {
-          "quote": "\"not just the best BMW tourer… but possibly the best touring bike full stop\"",
+          "quote": "not just the best BMW tourer… but possibly the best touring bike full stop",
           "context": "Expert reviews praised the R1300RT's improvements, particularly performance, technology, and heritage",
           "source": "Bennetts BikeSocial"
         },
         {
-          "quote": "\"With the new R1300RT, we've taken the touring icon to a whole new level… lighter, more accessible and more dynamic than ever\"",
+          "quote": "With the new R1300RT, we've taken the touring icon to a whole new level… lighter, more accessible and more dynamic than ever",
           "context": "BMW's own messaging resonated with fans who trust the brand to deliver quality tourers",
           "source": "BMW PressClub Slovenia"
         },
         {
-          "quote": "\"why do you think the police use them – because of how easy they handle\"",
+          "quote": "why do you think the police use them – because of how easy they handle",
           "context": "Police use of BMW RTs was mentioned as proof of their maneuverability and durability",
           "source": "Motorkari.cz forum"
         }
       ],
       "Neutral": [
         {
-          "quote": "\"When is it coming to Slovenia?\"",
+          "quote": "When is it coming to Slovenia?",
           "context": "Many posts were informational or Q&A about availability without strong emotion",
           "source": "Social media monitoring"
         },
         {
-          "quote": "\"dokler ne preizkusim\"",
+          "quote": "dokler ne preizkusim",
           "context": "Some riders adopted a \"wait and see\" approach, withholding judgment until they try it",
           "source": "Forum discussions"
         },
         {
-          "quote": "\"Není tak ošklivý, chce to asi vidět naživo a svézt se\"",
+          "quote": "Není tak ošklivý, chce to asi vidět naživo a svézt se",
           "context": "Even critics acknowledged they need to see it in person and ride it before final judgment",
           "source": "Motorkari.cz forum"
         }
       ],
       "Negative": [
         {
-          "quote": "\"Z konfigurátoru na mě vypadla taková částka, že bych…😱\"",
+          "quote": "Z konfigurátoru na mě vypadla taková částka, že bych…😱",
           "context": "Riders frequently complained that a nicely equipped R1300RT would cost over €30k, expressing shock at fully-loaded price",
           "source": "Motorkari.cz forum"
         },
         {
-          "quote": "\"Je to celé takové zvláštní, připomíná furt GS… nějak mi to připadá neohrabané\"",
+          "quote": "Je to celé takové zvláštní, připomíná furt GS… nějak mi to připadá neohrabané",
           "context": "The styling/design was the second major source of negativity, with the new angular front being divisive",
           "source": "Motorkari.cz forum"
         },
         {
-          "quote": "\"Zklamání. Sehnat 1250RT, nebo úplně změnit kategorii\"",
+          "quote": "Zklamání. Sehnat 1250RT, nebo úplně změnit kategorii",
           "context": "Some were so disappointed by price and looks they'd rather buy a used 1250RT or change bike category entirely",
           "source": "Motorkari.cz forum"
         }
@@ -2631,7 +2626,7 @@ export const conversationData = {
       }
     ],
     "themeInsights": {
-      "- Design & Styling Debate": [
+      "Design & Styling Debate": [
         {
           "quote": "Es horrible… la última RT rutera y elegante se fue con la R1250RT. Esto es otra cosa…",
           "context": "Many longtime BMW enthusiasts lamented the loss of the classic RT aesthetic, feeling the new design is too sporty and angular",
@@ -2705,51 +2700,51 @@ export const conversationData = {
     "sentimentInsights": {
       "Positive": [
         {
-          "quote": "\"En marcha tiene que ir del copón… el motor este peta… cambios en la amortiguación, altura… Casi nada\"",
+          "quote": "En marcha tiene que ir del copón… el motor este peta… cambios en la amortiguación, altura… Casi nada",
           "context": "Riders praised the modern features, performance, and engineering improvements of the BMW R 1300 RT",
           "source": "BMWMotos.com Forum"
         },
         {
-          "quote": "\"Me encanta, moderna y atractiva, es un paso adelante brutal en estética (para mi gusto)\"",
+          "quote": "Me encanta, moderna y atractiva, es un paso adelante brutal en estética (para mi gusto)",
           "context": "A minority liked the new looks of the BMW R 1300 RT, showing the design did resonate with some",
           "source": "BMWMotos.com Forum"
         },
         {
-          "quote": "\"al modelo anterior lo envía a la prehistoria\"",
+          "quote": "al modelo anterior lo envía a la prehistoria",
           "context": "If the BMW R 1300 RT rides like the new GS, handling and power were expected to be top-notch",
           "source": "BMWMotos.com Forum"
         }
       ],
       "Neutral": [
         {
-          "quote": "\"tengo el corasón partío… las maletas angulosas me gustan más que antes. El frontal, no tanto\"",
+          "quote": "tengo el corasón partío… las maletas angulosas me gustan más que antes. El frontal, no tanto",
           "context": "Mixed sentiments combined excitement for the BMW R 1300 RT's capabilities with reservations about its appearance or cost",
           "source": "BMWMotos.com Forum"
         },
         {
-          "quote": "\"hay que verla cara a cara\"",
+          "quote": "hay que verla cara a cara",
           "context": "Many users suggested initial aesthetic shock may fade once people see the BMW R 1300 RT in person",
           "source": "BMWMotos.com Forum"
         },
         {
-          "quote": "\"Lo mismo me parecía la última Goldwing y cada vez me gusta más\"",
+          "quote": "Lo mismo me parecía la última Goldwing y cada vez me gusta más",
           "context": "Some forum users suggested initial dislike can soften over time, which bodes well for the BMW RT",
           "source": "BMWMotos.com Forum"
         }
       ],
       "Negative": [
         {
-          "quote": "\"Es horrible, sin más… La última RT… elegante… se fue con la R1250RT\"",
+          "quote": "Es horrible, sin más… La última RT… elegante… se fue con la R1250RT",
           "context": "Many BMW loyalists found the new look too sporty or angular, lamenting the loss of the traditional RT identity",
           "source": "BMWMotos.com Forum"
         },
         {
-          "quote": "\"lo mínimo es que entre por los ojos\"",
+          "quote": "lo mínimo es que entre por los ojos",
           "context": "With options the BMW RT could exceed €30–35k, and users felt a bike so expensive should at least look good",
           "source": "BMWMotos.com Forum"
         },
         {
-          "quote": "\"si no se estropea, que esa es otra\"",
+          "quote": "si no se estropea, que esa es otra",
           "context": "Some feared that added technology on the BMW might hurt reliability",
           "source": "BMWMotos.com Forum"
         }
@@ -2792,7 +2787,7 @@ export const conversationData = {
       }
     ],
     "themeInsights": {
-      "- New Features & Technology": [
+      "New Features & Technology": [
         {
           "quote": "a huge range of options includes semi-auto transmission and radar-assisted adaptive cruise",
           "context": "BMW R1300RT's advanced technology features including radar-based Adaptive Cruise Control, blind-spot monitoring, and Dynamic Chassis Adaptation are generating significant excitement among riders",
@@ -2866,51 +2861,51 @@ export const conversationData = {
     "sentimentInsights": {
       "Positive": [
         {
-          "quote": "\"Love the quirkiness of these new designs. BMW is back to challenging the status quo – this is how you stay on top.\"",
+          "quote": "Love the quirkiness of these new designs. BMW is back to challenging the status quo – this is how you stay on top.",
           "context": "Riders appreciate BMW's innovative approach and willingness to push boundaries in design and technology",
           "source": "reddit.com"
         },
         {
-          "quote": "\"I want one!\"",
+          "quote": "I want one!",
           "context": "Simple but powerful expression of aspirational interest in the new R1300RT",
           "source": "reddit.com"
         },
         {
-          "quote": "\"cutting-edge technology with unmatched performance\"",
+          "quote": "cutting-edge technology with unmatched performance",
           "context": "Swedish riders at dealer events praised the combination of advanced features and enhanced performance",
           "source": "instagram.com"
         }
       ],
       "Neutral": [
         {
-          "quote": "\"R1300RT will begin retail sales in June... Full redesign. The bags are now collapsible…16L capacity collapsed, 33L expanded... Adaptive chassis control...\"",
+          "quote": "R1300RT will begin retail sales in June... Full redesign. The bags are now collapsible…16L capacity collapsed, 33L expanded... Adaptive chassis control...",
           "context": "Factual sharing of specifications and features without strong opinion, helping fellow enthusiasts stay informed",
           "source": "reddit.com"
         },
         {
-          "quote": "\"With UK pricing from £18,900 (and easily over £20k+ with options)\"",
+          "quote": "With UK pricing from £18,900 (and easily over £20k+ with options)",
           "context": "Objective price discussions helping riders understand market positioning",
           "source": "bennetts.co.uk"
         },
         {
-          "quote": "\"BMW achieved a very high Share of Voice (SOV) in the touring segment's online chatter – an estimated 50–60%\"",
+          "quote": "BMW achieved a very high Share of Voice (SOV) in the touring segment's online chatter – an estimated 50–60%",
           "context": "Market analysis showing BMW's dominance in touring segment conversations",
           "source": "Market Report"
         }
       ],
       "Negative": [
         {
-          "quote": "\"Looks like they're going to stick with that same phone-based shitty GPS system… I have a 2021 RT and I absolutely hate that thing.\"",
+          "quote": "Looks like they're going to stick with that same phone-based shitty GPS system… I have a 2021 RT and I absolutely hate that thing.",
           "context": "Strong dissatisfaction with BMW's smartphone-based navigation system from current owners",
           "source": "reddit.com"
         },
         {
-          "quote": "\"Easy to push the price through the roof when you start ticking options boxes\"",
+          "quote": "Easy to push the price through the roof when you start ticking options boxes",
           "context": "Criticism of BMW's pricing strategy and expensive add-ons limiting accessibility",
           "source": "bennetts.co.uk"
         },
         {
-          "quote": "\"Optimus Prime… had sex with a Lego set\"",
+          "quote": "Optimus Prime… had sex with a Lego set",
           "context": "Colorful criticism of the R1300RT's angular, boxy design aesthetic",
           "source": "reddit.com"
         }
@@ -2953,7 +2948,7 @@ export const conversationData = {
       }
     ],
     "themeInsights": {
-      "- Comfort and Ergonomics": [
+      "Comfort and Ergonomics": [
         {
           "quote": "It's too cramped for me. I'm 196 cm tall… the pegs are just too high. I wish it had a peg lowering kit",
           "context": "Comfort remains the paramount theme for touring motorcycles, with discussions focusing on seat comfort, wind protection, and passenger accommodations. The R 1300 RT's heated passenger backrest was widely praised for enhancing two-up riding comfort.",
@@ -3027,51 +3022,51 @@ export const conversationData = {
     "sentimentInsights": {
       "Positive": [
         {
-          "quote": "\"Design-wise… I think it looks great. It's about time BMW got away from the whale-ish/bulbous look it's had for its tourers\"",
+          "quote": "Design-wise… I think it looks great. It's about time BMW got away from the whale-ish/bulbous look it's had for its tourers",
           "context": "Much of the positive sentiment centered on the R 1300 RT's advanced features and enhanced performance, with riders welcoming the increase in power and cutting-edge technology.",
           "source": "Reddit"
         },
         {
-          "quote": "\"The movable panels on the side are pretty interesting. The heated passenger backrest, seat and grips are a nice addition\"",
+          "quote": "The movable panels on the side are pretty interesting. The heated passenger backrest, seat and grips are a nice addition",
           "context": "Positive reactions focused on comfort and safety enhancements like active aerodynamics and heating features, with appreciation for BMW's engineering innovations.",
           "source": "BMW MOA Forum"
         },
         {
-          "quote": "\"a big enough step forward over its predecessor to contend with any [tourer]…makes a case that it's still the benchmark\"",
+          "quote": "a big enough step forward over its predecessor to contend with any [tourer]…makes a case that it's still the benchmark",
           "context": "Many positive posts highlighted brand loyalty and the RT's continued benchmark status in touring motorcycles, praising its technological advancement.",
           "source": "Bennetts"
         }
       ],
       "Neutral": [
         {
-          "quote": "\"It looks strange… need to see still pictures or see it in person\"",
+          "quote": "It looks strange… need to see still pictures or see it in person",
           "context": "Many riders reserved judgment on styling until they could see the bike in person, adopting a \"wait and see\" approach to form balanced opinions.",
           "source": "BMW MOA Forum"
         },
         {
-          "quote": "\"I'd actually test ride both to make a reliable decision… then decide which suits you better\"",
+          "quote": "I'd actually test ride both to make a reliable decision… then decide which suits you better",
           "context": "Neutral sentiment often came from pragmatic buyers comparing options without emotional attachment, prioritizing direct experience over speculation.",
           "source": "Reddit"
         },
         {
-          "quote": "\"guess it will have to be ridden to be believed\"",
+          "quote": "guess it will have to be ridden to be believed",
           "context": "Professional test rides published in May began to temper some initial fears by providing positive first impressions, leading to more balanced viewpoints.",
           "source": "Reddit"
         }
       ],
       "Negative": [
         {
-          "quote": "\"...this has to be the ugliest bike by far from BMW and I have owned one or more of every body style of the RT since '96\"",
+          "quote": "...this has to be the ugliest bike by far from BMW and I have owned one or more of every body style of the RT since '96",
           "context": "The polarizing design was a significant point of contention, especially among loyal RT owners who expressed strong disapproval of the new styling.",
           "source": "Reddit"
         },
         {
-          "quote": "\"I'd gladly swap my old RT for a great new 1300, but these new features just creep me out… I'm sure I wouldn't figure out the menu toggling\"",
+          "quote": "I'd gladly swap my old RT for a great new 1300, but these new features just creep me out… I'm sure I wouldn't figure out the menu toggling",
           "context": "The increasing complexity of new technology fueled skepticism, with riders expressing preference for simpler machines and concerns about reliability and usability.",
           "source": "Motor-Talk"
         },
         {
-          "quote": "\"so many pre-owned R1250 RT and K1600 GT [are] available with similar amenities\"",
+          "quote": "so many pre-owned R1250 RT and K1600 GT [are] available with similar amenities",
           "context": "High pricing was a major deterrent, with consumers noting that used alternatives offered similar features for significantly less money.",
           "source": "Reddit"
         }
@@ -3114,7 +3109,7 @@ export const conversationData = {
       }
     ],
     "themeInsights": {
-      "- Comfort & Ergonomics": [
+      "Comfort & Ergonomics": [
         {
           "quote": "The pillion gets more legroom too… seat height is lower, that's handy",
           "context": "The R1300RT's revised ergonomics with lower seat height and improved pillion accommodations sparked significant debate, with some welcoming the changes while others worried about long-haul comfort for the 60+ demographic",
@@ -3188,51 +3183,51 @@ export const conversationData = {
     "sentimentInsights": {
       "Positive": [
         {
-          "quote": "\"The new R1300RT: engineered for all-day comfort, all-weather protection, and agile performance\"",
+          "quote": "The new R1300RT: engineered for all-day comfort, all-weather protection, and agile performance",
           "context": "BMW R1300RT received praise for its comprehensive improvements in technology, comfort, and performance, setting a new benchmark for touring",
           "source": "BMW Press Release via MCN"
         },
         {
-          "quote": "\"offers a riding experience that meets the highest demands… in dynamics, comfort and travel capability\"",
+          "quote": "offers a riding experience that meets the highest demands… in dynamics, comfort and travel capability",
           "context": "The touring community celebrated the R1300RT's blend of sport-touring dynamics with traditional touring comfort",
           "source": "Motorcycle News (MCN)"
         },
         {
-          "quote": "\"pretty excited to trade up from my 1250RT, mainly for the active ride height\"",
+          "quote": "pretty excited to trade up from my 1250RT, mainly for the active ride height",
           "context": "Existing BMW RT owners showed enthusiasm for upgrading, particularly for new features like active ride height adjustment",
           "source": "Reddit r/Motorrad"
         }
       ],
       "Neutral": [
         {
-          "quote": "\"They've tipped the rider forward… is that going to suit the mainly 60-plus age group buying the RT? Hmm, maybe…\"",
+          "quote": "They've tipped the rider forward… is that going to suit the mainly 60-plus age group buying the RT? Hmm, maybe…",
           "context": "Questions arose about whether the sportier riding position would suit the traditional touring demographic",
           "source": "MotoGold UK"
         },
         {
-          "quote": "\"It's got all the latest kit and still a telelever – which is great – but I want to see it in real life\"",
+          "quote": "It's got all the latest kit and still a telelever – which is great – but I want to see it in real life",
           "context": "Many riders adopted a wait-and-see attitude, wanting to test ride before forming strong opinions",
           "source": "UKGSer Forum"
         },
         {
-          "quote": "\"the slow take up [of tourers] is more economics than lack of interest\"",
+          "quote": "the slow take up [of tourers] is more economics than lack of interest",
           "context": "Economic factors and high pricing were acknowledged as barriers to segment growth rather than lack of desire",
           "source": "UKGSer Forum"
         }
       ],
       "Negative": [
         {
-          "quote": "\"Man, the spy shots… look ugly IMO\"",
+          "quote": "Man, the spy shots… look ugly IMO",
           "context": "The R1300RT's angular design drew criticism from traditionalists who preferred the classic RT aesthetic",
           "source": "Reddit r/Motorrad"
         },
         {
-          "quote": "\"electronic and corrosion issues\"",
+          "quote": "electronic and corrosion issues",
           "context": "Past BMW reliability concerns, particularly with electronics and build quality, created skepticism about the new model",
           "source": "MCN Owner Reviews"
         },
         {
-          "quote": "\"too sporty\" or \"KTM-like\"",
+          "quote": "too sporty",
           "context": "Some riders felt the new design direction departed too far from the traditional touring motorcycle appearance",
           "source": "UK Forums"
         }
