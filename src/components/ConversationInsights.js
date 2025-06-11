@@ -23,19 +23,30 @@ const SENTIMENT_ICONS = {
   Neutral: <SentimentNeutralIcon sx={{ color: SENTIMENT_COLORS.Neutral }} />
 };
 
-// Custom label renderer for radar values
-const RadarValueLabel = (props) => {
-  const { cx, cy, payload, value, index } = props;
-  // Calculate angle for each axis
-  const RADIAN = Math.PI / 180;
-  const angle = (360 / props.payload.length) * index - 90;
-  const radius = props.radius || 110; // slightly outside the radar
-  const x = cx + (radius + 22) * Math.cos(angle * RADIAN);
-  const y = cy + (radius + 22) * Math.sin(angle * RADIAN);
+// Custom tick renderer for PolarAngleAxis to wrap or rotate long labels, now with % value
+const AngleAxisTick = (themeData) => (props) => {
+  const { x, y, payload } = props;
+  const label = payload.value;
+  // Find the value for this axis from the themeData array
+  const found = themeData.find((d) => d.subject === label);
+  const value = found ? found.value : null;
+  const labelWithPercent = value !== null ? `${label} (${value}%)` : label;
+  // Split long labels into two lines if needed
+  const words = labelWithPercent.split(' ');
+  let firstLine = labelWithPercent;
+  let secondLine = '';
+  if (labelWithPercent.length > 18 && words.length > 1) {
+    const mid = Math.ceil(words.length / 2);
+    firstLine = words.slice(0, mid).join(' ');
+    secondLine = words.slice(mid).join(' ');
+  }
   return (
-    <text x={x} y={y} textAnchor="middle" dominantBaseline="hanging" fontSize={13} fill="#0066B1">
-      {value}%
-    </text>
+    <g transform={`translate(${x},${y})`}>
+      <text textAnchor="middle" fontSize={13} fill="#666" fontWeight="bold">
+        <tspan x="0" dy="0">{firstLine}</tspan>
+        {secondLine && <tspan x="0" dy="15">{secondLine}</tspan>}
+      </text>
+    </g>
   );
 };
 
@@ -193,7 +204,7 @@ const ConversationInsights = ({ selectedMarket }) => {
         </Box>
         <Grid container spacing={3}>
           <Grid item xs={12} md={6}>
-            <Box sx={{ width: '100%', height: 300, position: 'relative', px: 2 }}>
+            <Box sx={{ width: 600, height: 370, position: 'relative', px: 0, mx: 'auto' }}>
               <Typography 
                 variant="caption" 
                 color="text.secondary" 
@@ -201,17 +212,18 @@ const ConversationInsights = ({ selectedMarket }) => {
               >
                 Click on a theme in the radar chart to view insights
               </Typography>
-              <ResponsiveContainer width="100%" height="100%">
+              <ResponsiveContainer width={550} height={350}>
                 <RadarChart 
                   data={data.themeData}
-                  margin={{ top: 20, right: 30, bottom: 20, left: 30 }}
+                  margin={{ top: 30, right: 60, bottom: 30, left: 60 }}
                 >
                   <PolarGrid />
                   <PolarAngleAxis 
                     dataKey="subject"
                     onClick={(e) => handleThemeClick(e.value)}
                     style={{ cursor: 'pointer' }}
-                    tick={{ fontSize: 12 }}
+                    tick={AngleAxisTick(data.themeData)}
+                    tickLine={false}
                   />
                   <PolarRadiusAxis />
                   <Radar 
@@ -222,13 +234,6 @@ const ConversationInsights = ({ selectedMarket }) => {
                     fillOpacity={0.6}
                     onClick={(e) => handleThemeClick(e.subject)}
                     style={{ cursor: 'pointer' }}
-                    label={(props) => {
-                      // props contains: cx, cy, index, value, payload, radius
-                      // We need to pass the full data array for angle calculation
-                      return (
-                        <RadarValueLabel {...props} payload={data.themeData} />
-                      );
-                    }}
                   />
                 </RadarChart>
               </ResponsiveContainer>

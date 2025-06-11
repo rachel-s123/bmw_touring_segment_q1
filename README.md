@@ -155,3 +155,20 @@ npm run generate-market-introductions
 ## License
 
 This project is proprietary and confidential. All rights reserved.
+
+## Security
+
+### Search Engine Indexing Prevention
+The application is configured to prevent search engine indexing through meta tags in the HTML head. This ensures that the dashboard and its contents remain private and are not discoverable through search engines. The following meta tags are implemented:
+
+```html
+<meta name="robots" content="noindex, nofollow" />
+<meta http-equiv="X-Robots-Tag" content="noindex, nofollow" />
+```
+
+These tags instruct search engines to:
+- Not index the page content
+- Not follow any links on the page
+- Not cache the page
+
+This security measure helps maintain the confidentiality of the dashboard and its data.
