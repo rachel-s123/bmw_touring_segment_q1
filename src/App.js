@@ -22,6 +22,7 @@ import WRIStrategicDirection from './components/WRIStrategicDirection';
 import AttributeResonanceDefinition from './components/AttributeResonanceDefinition';
 import MarketRecommendations from './components/MarketRecommendations';
 import bmwLogo from './assets/bmw-black.jpg';
+import Login from './components/Login';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -46,10 +47,15 @@ function TabPanel(props) {
 function App() {
   const [selectedMarket, setSelectedMarket] = useState('France');
   const [currentTab, setCurrentTab] = useState(0);
+  const [loggedIn, setLoggedIn] = useState(false);
 
   const handleTabChange = (event, newValue) => {
     setCurrentTab(newValue);
   };
+
+  if (!loggedIn) {
+    return <Login onLogin={setLoggedIn} />;
+  }
 
   return (
     <ThemeProvider theme={theme}>
@@ -173,6 +179,25 @@ function App() {
         <TabPanel value={currentTab} index={5}>
           <MarketRecommendations selectedMarket={selectedMarket} />
         </TabPanel>
+
+        <Box
+          component="footer"
+          sx={{
+            mt: 6,
+            py: 3,
+            borderTop: 1,
+            borderColor: 'divider',
+            textAlign: 'center'
+          }}
+        >
+          <Typography
+            variant="body2"
+            color="text.secondary"
+            sx={{ fontFamily: 'BMW Motorrad' }}
+          >
+            © {new Date().getFullYear()} BMW Motorrad. All rights reserved.
+          </Typography>
+        </Box>
       </Container>
     </ThemeProvider>
   );
