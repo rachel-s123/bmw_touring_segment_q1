@@ -10,30 +10,23 @@ import {
   Alert
 } from '@mui/material';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
+import bmwLogo from '../assets/bmw-black.jpg';
 
 const Login = ({ onLogin }) => {
   const theme = useTheme();
-  const [credentials, setCredentials] = useState({
-    username: '',
-    password: ''
-  });
+  const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
   const handleChange = (e) => {
-    const { name, value } = e.target;
-    setCredentials(prev => ({
-      ...prev,
-      [name]: value
-    }));
+    setPassword(e.target.value);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // For demo purposes, hardcoded credentials
-    if (credentials.username === 'bmw' && credentials.password === 'motorrad2024') {
+    if (password === '1234') {
       onLogin(true);
     } else {
-      setError('Invalid credentials. Please try again.');
+      setError('Invalid password. Please try again.');
     }
   };
 
@@ -58,6 +51,11 @@ const Login = ({ onLogin }) => {
             backgroundColor: 'white',
           }}
         >
+          <img
+            src={bmwLogo}
+            alt="BMW Motorrad Logo"
+            style={{ width: '120px', marginBottom: 16, marginTop: 8 }}
+          />
           <Box
             sx={{
               backgroundColor: theme.palette.primary.main,
@@ -73,9 +71,18 @@ const Login = ({ onLogin }) => {
             component="h1" 
             variant="h5" 
             className="bmw-motorrad-bold"
-            sx={{ mb: 3 }}
+            sx={{ mb: 3 , textAlign: 'center'}}
           >
-            BMW Electric Segment Analysis
+            BMW Motorrad 
+            <br />
+            Social Intelligence Dashboard
+          </Typography>
+
+          <Typography
+            variant="subtitle1"
+            sx={{ mb: 3, color: 'text.secondary', textAlign: 'center' }}
+          >
+            AI-powered segment analysis for V2 Region markets
           </Typography>
 
           {error && (
@@ -89,25 +96,12 @@ const Login = ({ onLogin }) => {
               margin="normal"
               required
               fullWidth
-              id="username"
-              label="Username"
-              name="username"
-              autoComplete="username"
-              autoFocus
-              value={credentials.username}
-              onChange={handleChange}
-              sx={{ mb: 2 }}
-            />
-            <TextField
-              margin="normal"
-              required
-              fullWidth
               name="password"
               label="Password"
               type="password"
               id="password"
               autoComplete="current-password"
-              value={credentials.password}
+              value={password}
               onChange={handleChange}
               sx={{ mb: 3 }}
             />
