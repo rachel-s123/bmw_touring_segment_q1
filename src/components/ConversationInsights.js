@@ -56,7 +56,8 @@ const ConversationInsights = ({ selectedMarket }) => {
   const [selectedSentiment, setSelectedSentiment] = useState(null);
 
   useEffect(() => {
-    const marketData = conversationData[selectedMarket?.toLowerCase()];
+    const normalizedMarket = selectedMarket?.toLowerCase().replace(/\s+/g, '_');
+    const marketData = conversationData[normalizedMarket];
     setData(marketData);
     setSelectedTheme(null); // Reset selected theme when market changes
     setSelectedSentiment(null); // Reset selected sentiment when market changes
@@ -67,6 +68,11 @@ const ConversationInsights = ({ selectedMarket }) => {
   }
 
   const handleThemeClick = (theme) => {
+    if (!theme) {
+      console.warn('No theme provided to handleThemeClick');
+      return;
+    }
+    
     // Try both with and without the dash prefix
     const themeWithDash = `- ${theme}`;
     const themeWithoutDash = theme.replace('- ', '');
@@ -232,8 +238,6 @@ const ConversationInsights = ({ selectedMarket }) => {
                     stroke="#0066B1" 
                     fill="#0066B1" 
                     fillOpacity={0.6}
-                    onClick={(e) => handleThemeClick(e.subject)}
-                    style={{ cursor: 'pointer' }}
                   />
                 </RadarChart>
               </ResponsiveContainer>
