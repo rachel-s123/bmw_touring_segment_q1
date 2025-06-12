@@ -49,7 +49,7 @@ const RecommendationCard = ({ title, content, icon: Icon }) => {
 };
 
 const MarketRecommendations = ({ selectedMarket }) => {
-  const normalizedMarket = selectedMarket?.toLowerCase();
+  const normalizedMarket = selectedMarket?.toLowerCase().replace(/\s+/g, '_');
   if (!normalizedMarket || !marketRecommendations[normalizedMarket]) {
     return (
       <Box sx={{ p: 3 }}>
