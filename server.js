@@ -7,7 +7,6 @@ require("dotenv").config();
 const { getSystemMessage, getAIConfig } = require("./ai/system-prompt");
 
 const app = express();
-const PORT = process.env.PORT || 3001;
 
 // Middleware
 app.use(cors());
@@ -149,45 +148,29 @@ app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "build", "index.html"));
 });
 
-app.listen(PORT, () => {
-  console.log(`🚀 Server is running on port ${PORT}`);
-  console.log(`📍 Server URL: http://localhost:${PORT}`);
-  console.log(
-    `🔑 OpenAI API Key configured: ${process.env.OPENAI_API_KEY ? "Yes" : "No"}`
-  );
-  console.log(
-    `📊 Vector Store ID configured: ${process.env.VS_STORE_ID ? "Yes" : "No"}`
-  );
-  console.log(
-    `🎯 Vector Store ID: ${process.env.VS_STORE_ID || "Not configured"}`
-  );
-  console.log(
-    `🤖 AI Model: ${require("./ai/system-prompt").getAIConfig().model}`
-  );
-  console.log(
-    `\n✅ Server ready! Visit http://localhost:${PORT} to use the application`
-  );
-});
+// For local development
+if (process.env.NODE_ENV !== 'production') {
+  const PORT = process.env.PORT || 3001;
+  app.listen(PORT, () => {
+    console.log(`🚀 Server is running on port ${PORT}`);
+    console.log(`📍 Server URL: http://localhost:${PORT}`);
+    console.log(
+      `🔑 OpenAI API Key configured: ${process.env.OPENAI_API_KEY ? "Yes" : "No"}`
+    );
+    console.log(
+      `📊 Vector Store ID configured: ${process.env.VS_STORE_ID ? "Yes" : "No"}`
+    );
+    console.log(
+      `🎯 Vector Store ID: ${process.env.VS_STORE_ID || "Not configured"}`
+    );
+    console.log(
+      `🤖 AI Model: ${require("./ai/system-prompt").getAIConfig().model}`
+    );
+    console.log(
+      `\n✅ Server ready! Visit http://localhost:${PORT} to use the application`
+    );
+  });
+}
 
-// Handle uncaught exceptions
-process.on("uncaughtException", (error) => {
-  console.error("❌ Uncaught Exception:", error);
-  console.log("Server continuing to run...");
-});
-
-// Handle unhandled promise rejections
-process.on("unhandledRejection", (reason, promise) => {
-  console.error("❌ Unhandled Rejection at:", promise, "reason:", reason);
-  console.log("Server continuing to run...");
-});
-
-// Graceful shutdown
-process.on("SIGINT", () => {
-  console.log("\n🛑 Received SIGINT. Graceful shutdown...");
-  process.exit(0);
-});
-
-process.on("SIGTERM", () => {
-  console.log("\n🛑 Received SIGTERM. Graceful shutdown...");
-  process.exit(0);
-});
+// Export the Express API
+module.exports = app;
