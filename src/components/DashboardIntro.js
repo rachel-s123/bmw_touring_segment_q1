@@ -110,16 +110,10 @@ const DashboardIntro = ({ selectedMarket }) => {
   const marketData = getMarketIntroduction(selectedMarket);
   
   // Updated market key matching logic to handle all formats
-  const marketKey = Object.keys(marketSources).find(key => {
-    const normalizedKey = key.toLowerCase()
-      .replace(/bmw_motorrad_touring_segment___/g, '')
-      .replace(/bmw_motorrad_touring___/g, '')
-      .replace(/bmw_touring_segment___/g, '')
-      .replace(/bmw_touring___/g, '');
-    const normalizedMarket = (selectedMarket || '').toLowerCase();
-    return normalizedKey === normalizedMarket;
-  });
-  
+  const normalizedMarket = (selectedMarket || '').toLowerCase().replace(/\s+/g, '_');
+  const marketKey = Object.keys(marketSources).find(key =>
+    key.toLowerCase().endsWith(normalizedMarket)
+  );
   const sources = marketKey && marketSources[marketKey]?.sources?.[''] || [];
 
   // Handle fullscreen changes
