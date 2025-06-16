@@ -1,11 +1,24 @@
 import React from "react";
-import { Fab, Tooltip, Zoom } from "@mui/material";
+import { Fab, Tooltip, Zoom, Typography, Box } from "@mui/material";
 import { SmartToy as AIIcon } from "@mui/icons-material";
 
 const AIFloatingButton = ({ onClick, isOpen }) => {
   return (
     <Zoom in={!isOpen}>
-      <Tooltip title="Open AI Assistant" placement="left">
+      <Tooltip
+        title={
+          <Box sx={{ p: 1 }}>
+            <Typography variant="subtitle2" sx={{ fontWeight: 'bold', mb: 1 }}>
+              BMW Motorrad AI Assistant
+            </Typography>
+            <Typography variant="body2">
+              Access deeper market insights and analysis through our AI-powered assistant. Get detailed information about market performance, trends, and strategic recommendations.
+            </Typography>
+          </Box>
+        }
+        placement="left"
+        arrow
+      >
         <Fab
           color="primary"
           onClick={onClick}

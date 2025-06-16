@@ -30,6 +30,26 @@ const AIChatPanel = ({ isOpen, onClose }) => {
   const messagesEndRef = useRef(null);
   const abortControllerRef = useRef(null);
 
+  // Add initial welcome message when chat panel opens
+  useEffect(() => {
+    if (isOpen && messages.length === 0) {
+      const welcomeMessage = {
+        role: "assistant",
+        content: `# Welcome to the BMW Motorrad AI Assistant
+
+I can help you:
+- Access and analyze the original long-form market reports
+- Provide deeper insights based on the comprehensive market data
+- Answer specific questions about market performance and trends
+- Help navigate and understand the detailed market analysis
+
+To get started, simply type your question about the market data or reports. I'll reference the original market reports to provide detailed answers, and you can ask follow-up questions to explore specific aspects of the market analysis.`,
+        timestamp: new Date(),
+      };
+      setMessages([welcomeMessage]);
+    }
+  }, [isOpen]);
+
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   };
