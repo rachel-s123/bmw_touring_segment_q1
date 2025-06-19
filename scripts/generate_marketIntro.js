@@ -19,7 +19,7 @@ function parseMarketMarkdown(mdPath) {
   const dashboardScopeMatch = mainContent.match(/### Dashboard Scope\n([\s\S]*?)(?=###|$)/);
   const strategicApplicationsMatch = mainContent.match(/### Strategic Applications\n([\s\S]*?)(?=###|$)/);
   const dashboardSectionsMatch = mainContent.match(/## Dashboard Sections\n([\s\S]*?)(?=##|$)/);
-  const methodologyMatch = mainContent.match(/## Methodology\n([\s\S]*?)(?=##|$)/);
+  const methodologyMatch = mainContent.match(/## Methodology\n([\s\S]*?)(?=Sources and related content|$)/);
 
   // Parse dashboard sections
   const sectionsList = dashboardSectionsMatch[1]
@@ -33,17 +33,18 @@ function parseMarketMarkdown(mdPath) {
       };
     });
 
-  // Parse methodology
-  const methodologyList = methodologyMatch[1]
-    .split('\n')
-    .filter(line => line.trim().startsWith('-'))
-    .map(line => {
-      const match = line.match(/\*\*(.*?)\*\*\s*(.*)/);
-      return {
-        title: match[1].trim(),
-        description: match[2].trim()
-      };
-    });
+  // Parse methodology - extract the two separate sections
+  let conversationAnalysis = '';
+  let weightedResonanceIndex = '';
+  
+  if (methodologyMatch) {
+    const methodologyContent = methodologyMatch[1].trim();
+    // Use regex to find the two sections - look for content until next section or end
+    const caMatch = methodologyContent.match(/### Conversation Analysis\n([\s\S]*?)(?=### Weighted Resonance Index|$)/);
+    const wriMatch = methodologyContent.match(/### Weighted Resonance Index\n([\s\S]*?)(?=Sources and related content|$)/);
+    if (caMatch) conversationAnalysis = caMatch[1].trim();
+    if (wriMatch) weightedResonanceIndex = wriMatch[1].trim();
+  }
 
   // Parse data sources (flat list, no section headers)
   const sources = [];
@@ -82,7 +83,10 @@ function parseMarketMarkdown(mdPath) {
     dashboardScope: dashboardScopeMatch[1].trim(),
     strategicApplications: strategicApplicationsMatch[1].trim(),
     sections: sectionsList,
-    methodology: methodologyList,
+    methodology: {
+      conversationAnalysis,
+      weightedResonanceIndex
+    },
     sources: { "": sources }
   };
 }
@@ -102,13 +106,10 @@ function processMarketOverviews() {
     const mdPath = path.join(reportsDir, file);
     const parsedData = parseMarketMarkdown(mdPath);
     const marketKey = parsedData.title.toLowerCase().replace(/[^a-z0-9]/g, '_');
-    
     marketData[marketKey] = {
       title: parsedData.title,
       introduction: `${parsedData.dashboardScope}\n\n${parsedData.strategicApplications}`,
-      methodology: `This dashboard combines two complementary analytical approaches:\n\n${
-        parsedData.methodology.map(m => `1. ${m.title}:\n   - ${m.description}`).join('\n\n')
-      }`,
+      methodology: parsedData.methodology,
       sources: parsedData.sources
     };
   });

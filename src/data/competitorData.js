@@ -1931,7 +1931,7 @@ export const competitorColors = {
 };
 
 export function getCompetitorData(market) {
-  const marketKey = market.toLowerCase().replace(/\s+/g, '_');
+  const marketKey = market.toLowerCase();
   return competitorData[marketKey] || {
     shareOfVoice: [],
     competitorStrengths: {},

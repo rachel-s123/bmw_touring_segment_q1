@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/static/css/main.e8ad773b.css",
-    "main.js": "/static/js/main.87dee50b.js",
+    "main.js": "/static/js/main.094c4598.js",
     "static/js/453.f68ffa3d.chunk.js": "/static/js/453.f68ffa3d.chunk.js",
     "static/media/bmw-black.jpg": "/static/media/bmw-black.69a6f06b2bfd9151ef48.jpg",
     "index.html": "/index.html",
     "main.e8ad773b.css.map": "/static/css/main.e8ad773b.css.map",
-    "main.87dee50b.js.map": "/static/js/main.87dee50b.js.map",
+    "main.094c4598.js.map": "/static/js/main.094c4598.js.map",
     "453.f68ffa3d.chunk.js.map": "/static/js/453.f68ffa3d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e8ad773b.css",
-    "static/js/main.87dee50b.js"
+    "static/js/main.094c4598.js"
   ]
 }

@@ -19,7 +19,7 @@ import DownloadIcon from '@mui/icons-material/Download';
 import { Document, Page, pdfjs } from 'react-pdf';
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 import 'react-pdf/dist/esm/Page/TextLayer.css';
-import { getMarketIntroduction } from '../data/marketIntroductions';
+import { marketIntroductions } from '../data/marketIntroductions';
 import { marketSources } from '../data/marketSources';
 
 // Set up the worker for react-pdf
@@ -52,19 +52,6 @@ const sectionData = [
     description: "Comprehensive evaluation of competitor positioning, market share, and strategic implications for BMW's touring motorcycle portfolio.",
     icon: <GroupsIcon sx={{ fontSize: 40, color: 'info.main', mb: 1 }} />,
   },
-];
-
-const methodologyData = [
-  {
-    title: 'Conversation Analysis',
-    description: 'Monitors volume and sentiment of online discussions, tracks share of voice across competitors, analyzes key themes and consumer concerns, and identifies emerging trends and pain points.',
-    icon: <AnalyticsIcon sx={{ fontSize: 40, color: 'primary.main', mb: 1 }} />,
-  },
-  {
-    title: 'Weighted Resonance Index',
-    description: 'Evaluates 20 key market attributes, weights importance across sales data, social discussions, consumer reviews, and expert analysis, provides quantitative measure of attribute significance, and identifies critical market drivers and barriers.',
-    icon: <TrendingUpIcon sx={{ fontSize: 40, color: 'secondary.main', mb: 1 }} />,
-  }
 ];
 
 const scopeData = [
@@ -107,13 +94,13 @@ const DashboardIntro = ({ selectedMarket }) => {
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [showControls, setShowControls] = useState(true);
   const containerRef = useRef(null);
-  const marketData = getMarketIntroduction(selectedMarket);
   
-  // Updated market key matching logic to handle all formats
+  // Unified normalization and key search for both introductions and sources
   const normalizedMarket = (selectedMarket || '').toLowerCase().replace(/\s+/g, '_');
-  const marketKey = Object.keys(marketSources).find(key =>
+  const marketKey = Object.keys(marketIntroductions).find(key =>
     key.toLowerCase().endsWith(normalizedMarket)
   );
+  const marketData = marketKey ? marketIntroductions[marketKey] : null;
   const sources = marketKey && marketSources[marketKey]?.sources?.[''] || [];
 
   // Handle fullscreen changes
@@ -186,6 +173,8 @@ const DashboardIntro = ({ selectedMarket }) => {
   // Enhanced console logging for debugging
   console.log('DashboardIntro Debug:');
   console.log('- Selected Market:', selectedMarket);
+  console.log('- Market Data:', marketData);
+  console.log('- Market Data Methodology:', marketData?.methodology);
   console.log('- Available Market Keys:', Object.keys(marketSources));
   console.log('- Found Market Key:', marketKey);
   console.log('- Sources Array:', sources);
@@ -270,23 +259,82 @@ const DashboardIntro = ({ selectedMarket }) => {
         >
           Methodology
         </Typography>
-        {/* Methodology Section in two boxes */}
+        {/* Methodology Section - two separate cards */}
         <Grid container spacing={3} sx={{ mb: 4 }}>
-          {methodologyData.map((m, idx) => (
-            <Grid item xs={12} md={6} key={m.title}>
-              <Card sx={{ height: '100%', boxShadow: 2, borderRadius: 2, display: 'flex', flexDirection: 'column', alignItems: 'center', p: 2 }}>
-                <CardContent sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-                  {m.icon}
-                  <Typography variant="subtitle1" sx={{ fontWeight: 600, mb: 1, mt: 1, textAlign: 'center' }}>
-                    {m.title}
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary" sx={{ textAlign: 'center' }}>
-                    {m.description}
-                  </Typography>
-                </CardContent>
-              </Card>
-            </Grid>
-          ))}
+          <Grid item xs={12} md={6}>
+            <Card sx={{ height: '100%', boxShadow: 2, borderRadius: 2, display: 'flex', flexDirection: 'column', alignItems: 'center', p: 2 }}>
+              <CardContent sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                <AnalyticsIcon sx={{ fontSize: 40, color: 'primary.main', mb: 1 }} />
+                <Typography variant="subtitle1" sx={{ fontWeight: 600, mb: 2, mt: 1, textAlign: 'center' }}>
+                  Conversation Analysis
+                </Typography>
+                <Box sx={{ 
+                  textAlign: 'left',
+                  '& strong': {
+                    fontWeight: 600,
+                    color: 'primary.main'
+                  },
+                  '& ul': {
+                    marginLeft: 2,
+                    marginTop: 1,
+                    marginBottom: 1
+                  },
+                  '& li': {
+                    marginBottom: 0.5,
+                    fontSize: '0.875rem'
+                  }
+                }}>
+                  <div dangerouslySetInnerHTML={{
+                    __html: marketData?.methodology?.conversationAnalysis ? 
+                      marketData.methodology.conversationAnalysis
+                        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                        .replace(/^- (.*)/gm, '<li>$1</li>')
+                        .replace(/(<li>.*<\/li>)/s, '<ul>$1</ul>')
+                        .replace(/\n\n/g, '<br><br>')
+                        .replace(/\n/g, '<br>') :
+                      'Conversation analysis methodology not available.'
+                  }} />
+                </Box>
+              </CardContent>
+            </Card>
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <Card sx={{ height: '100%', boxShadow: 2, borderRadius: 2, display: 'flex', flexDirection: 'column', alignItems: 'center', p: 2 }}>
+              <CardContent sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                <TrendingUpIcon sx={{ fontSize: 40, color: 'secondary.main', mb: 1 }} />
+                <Typography variant="subtitle1" sx={{ fontWeight: 600, mb: 2, mt: 1, textAlign: 'center' }}>
+                  Weighted Resonance Index
+                </Typography>
+                <Box sx={{ 
+                  textAlign: 'left',
+                  '& strong': {
+                    fontWeight: 600,
+                    color: 'secondary.main'
+                  },
+                  '& ul': {
+                    marginLeft: 2,
+                    marginTop: 1,
+                    marginBottom: 1
+                  },
+                  '& li': {
+                    marginBottom: 0.5,
+                    fontSize: '0.875rem'
+                  }
+                }}>
+                  <div dangerouslySetInnerHTML={{
+                    __html: marketData?.methodology?.weightedResonanceIndex ? 
+                      marketData.methodology.weightedResonanceIndex
+                        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                        .replace(/^- (.*)/gm, '<li>$1</li>')
+                        .replace(/(<li>.*<\/li>)/s, '<ul>$1</ul>')
+                        .replace(/\n\n/g, '<br><br>')
+                        .replace(/\n/g, '<br>') :
+                      'Weighted Resonance Index methodology not available.'
+                  }} />
+                </Box>
+              </CardContent>
+            </Card>
+          </Grid>
         </Grid>
       </TabPanel>
 
