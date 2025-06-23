@@ -23,7 +23,14 @@ const Login = ({ onLogin }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (password === '1234') {
+    const envPassword = process.env.REACT_APP_LOGIN_PASSWORD;
+
+    if (!envPassword) {
+      setError('Login is not configured. Please contact the administrator.');
+      return;
+    }
+
+    if (password === envPassword) {
       onLogin(true);
     } else {
       setError('Invalid password. Please try again.');
