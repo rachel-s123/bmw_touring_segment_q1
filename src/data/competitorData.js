@@ -66,8 +66,7 @@ export const competitorData = {
       "Honda NT1100": [
         "Significantly less power at 100hp limiting performance for demanding touring scenarios",
         "Simpler equipment and features compared to premium touring motorcycles",
-        "Positioned as \"budget tourer\" rather than luxury touring experience",
-        ""
+        "Positioned as \"budget tourer\" rather than luxury touring experience"
       ]
     },
     "gapsToExploit": [
@@ -157,8 +156,7 @@ export const competitorData = {
       "Yamaha FJR1300": [
         "Discontinued in European market",
         "Outdated technology and electronics",
-        "No significant updates since 2013",
-        ""
+        "No significant updates since 2013"
       ]
     },
     "gapsToExploit": [
@@ -256,8 +254,7 @@ export const competitorData = {
         "Less comfort for long-distance road touring compared to RT",
         "Taller seat height, may be intimidating for some riders",
         "Not as refined for pure on-road touring applications",
-        "Less weather protection and comfort for pillion riders",
-        ""
+        "Less weather protection and comfort for pillion riders"
       ]
     },
     "gapsToExploit": [
@@ -355,8 +352,7 @@ export const competitorData = {
         "Discontinued flagship touring models due to Euro 5 regulations",
         "Limited current touring-specific offerings",
         "No direct R1300RT competitor in current lineup",
-        "Reduced investment in touring segment",
-        ""
+        "Reduced investment in touring segment"
       ]
     },
     "gapsToExploit": [
@@ -446,8 +442,7 @@ export const competitorData = {
       "Yamaha FJR1300": [
         "Dated design and technology lacking modern features like radar or large TFT displays",
         "Uncertain future with potential discontinuation due to Euro5+ compliance issues",
-        "Less luxurious amenities compared to premium competitors",
-        ""
+        "Less luxurious amenities compared to premium competitors"
       ]
     },
     "gapsToExploit": [
@@ -537,8 +532,7 @@ export const competitorData = {
       "Honda NT1100": [
         "Less power at 102 hp and lower prestige as utilitarian rather than flagship approach",
         "Limited extreme comfort and two-up space compared to dedicated tourers",
-        "Chain drive maintenance can be nuisance on long tours versus shaft drive alternatives",
-        ""
+        "Chain drive maintenance can be nuisance on long tours versus shaft drive alternatives"
       ]
     },
     "gapsToExploit": [
@@ -624,8 +618,7 @@ export const competitorData = {
       "Yamaha FJR1300 (Legacy)": [
         "Discontinued due to Euro5 non-compliance, only available used",
         "Technologically dated - \"tableau de bord désuet, absence d'aides au pilotage\"",
-        "No factory GPS or modern electronics compared to current offerings",
-        ""
+        "No factory GPS or modern electronics compared to current offerings"
       ]
     },
     "gapsToExploit": [
@@ -719,8 +712,7 @@ export const competitorData = {
       "Yamaha Tracer 9 GT+": [
         "Cannot match premium tourers in wind protection and two-up spaciousness",
         "Less prestigious brand positioning compared to BMW's touring heritage",
-        "Smaller engine displacement (900cc) limits ultimate touring capability with luggage",
-        ""
+        "Smaller engine displacement (900cc) limits ultimate touring capability with luggage"
       ]
     },
     "gapsToExploit": [
@@ -814,8 +806,7 @@ export const competitorData = {
       "Kawasaki": [
         "Lack of dedicated luxury tourer following 1400GTR discontinuation limiting reach in premium segment",
         "Smaller brand presence in Hungarian touring community compared to established players",
-        "ADV-style positioning may not appeal to traditional touring riders seeking maximum weather protection",
-        ""
+        "ADV-style positioning may not appeal to traditional touring riders seeking maximum weather protection"
       ]
     },
     "gapsToExploit": [
@@ -905,8 +896,7 @@ export const competitorData = {
       "Yamaha FJR1300": [
         "Discontinued due to Euro5 compliance issues",
         "Dated technology lacking modern electronics",
-        "Limited availability as only used models remain",
-        ""
+        "Limited availability as only used models remain"
       ]
     },
     "gapsToExploit": [
@@ -1000,8 +990,7 @@ export const competitorData = {
       "Kawasaki Ninja 1000SX": [
         "Less comfortable for long-distance touring with sportier ergonomics",
         "Minimal weather protection compared to full touring bikes",
-        "Fewer luxury features and touring-specific amenities",
-        ""
+        "Fewer luxury features and touring-specific amenities"
       ]
     },
     "gapsToExploit": []
@@ -1070,8 +1059,7 @@ export const competitorData = {
       "Harley-Davidson Touring": [
         "Very heavy weight (400kg+) and limited handling agility compared to sport-tourers",
         "Limited appeal outside traditional cruiser demographic in Norway",
-        "Restricted dealer network presence in Norwegian market",
-        ""
+        "Restricted dealer network presence in Norwegian market"
       ]
     },
     "gapsToExploit": [
@@ -1161,8 +1149,7 @@ export const competitorData = {
       "Yamaha FJR1300": [
         "Discontinued in EU by 2021 due to emissions regulations",
         "Outdated technology lacking adaptive cruise and modern electronics",
-        "Available only in used market, no longer competing with new models",
-        ""
+        "Available only in used market, no longer competing with new models"
       ]
     },
     "gapsToExploit": [
@@ -1252,8 +1239,7 @@ export const competitorData = {
       "Sport-Touring Models (Kawasaki Ninja 1000SX, Suzuki GSX-S1000GT)": [
         "Less comfort for two-up touring",
         "Fewer luxury features",
-        "Limited weather protection",
-        ""
+        "Limited weather protection"
       ]
     },
     "gapsToExploit": [
@@ -1343,8 +1329,7 @@ export const competitorData = {
       "Yamaha FJR1300": [
         "Outdated technology and no Euro5 model",
         "Aging design language",
-        "Lack of modern rider aids and electronics",
-        ""
+        "Lack of modern rider aids and electronics"
       ]
     },
     "gapsToExploit": [
@@ -1438,8 +1423,7 @@ export const competitorData = {
       "Yamaha FJR1300": [
         "Discontinued in EU market (Euro5 compliance)",
         "Lacks modern gadgets and advanced rider aids",
-        "Less plush passenger comfort than full tourers",
-        ""
+        "Less plush passenger comfort than full tourers"
       ]
     },
     "gapsToExploit": [
@@ -1529,8 +1513,7 @@ export const competitorData = {
       "Honda NT1100": [
         "Less power and prestige, not a \"flagship\" bike",
         "Simpler suspension and build, not as plush at high speeds",
-        "Limited wow-factor, called \"anodyne, but… competent\" in reviews",
-        ""
+        "Limited wow-factor, called \"anodyne, but… competent\" in reviews"
       ]
     },
     "gapsToExploit": [
@@ -1620,8 +1603,7 @@ export const competitorData = {
       "Other Sport-Tourers (Kawasaki Ninja 1000SX, Suzuki GSX-S1000GT)": [
         "Much less comfort and features than an RT",
         "Essentially sportbikes adapted for touring",
-        "Modest sales in Spain",
-        ""
+        "Modest sales in Spain"
       ]
     },
     "gapsToExploit": [
@@ -1711,8 +1693,7 @@ export const competitorData = {
       "Japanese Sport-Tourers (Kawasaki, Suzuki, Yamaha)": [
         "Less touring comfort and weather protection",
         "Limited luggage capacity vs full tourers",
-        "Yamaha FJR1300 discontinued, aging lineup",
-        ""
+        "Yamaha FJR1300 discontinued, aging lineup"
       ]
     },
     "gapsToExploit": [
@@ -1802,8 +1783,7 @@ export const competitorData = {
       "Yamaha FJR1300": [
         "Discontinued in Europe due to Euro5 regulations (no new sales)",
         "Outdated design and technology lacking modern safety aids",
-        "Limited comfort features compared to luxury tourers",
-        ""
+        "Limited comfort features compared to luxury tourers"
       ]
     },
     "gapsToExploit": [
@@ -1893,8 +1873,7 @@ export const competitorData = {
       "Other Tourers (Harley/Indian)": [
         "Extremely heavy (400kg+) and less agile",
         "Very expensive in UK due to tariffs (£35k+)",
-        "Limited market appeal beyond cruiser enthusiasts",
-        ""
+        "Limited market appeal beyond cruiser enthusiasts"
       ]
     },
     "gapsToExploit": [

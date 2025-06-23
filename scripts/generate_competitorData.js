@@ -41,19 +41,21 @@ function parseCompetitorDetails(content) {
     const strengthsMatch = block.match(/\*\*Strengths\*\*\n([\s\S]*?)(?=\*\*|$)/);
     const weaknessesMatch = block.match(/\*\*Weaknesses\*\*\n([\s\S]*?)(?=\*\*|$)/);
 
-    if (strengthsMatch) {
-      strengths[competitor] = strengthsMatch[1]
-        .split('\n')
-        .filter(line => line.trim().startsWith('-'))
-        .map(line => line.replace('-', '').trim());
-    }
+      if (strengthsMatch) {
+        strengths[competitor] = strengthsMatch[1]
+          .split('\n')
+          .filter(line => line.trim().startsWith('-'))
+          .map(line => line.replace('-', '').trim())
+          .filter(text => text.length > 0);
+      }
 
-    if (weaknessesMatch) {
-      weaknesses[competitor] = weaknessesMatch[1]
-        .split('\n')
-        .filter(line => line.trim().startsWith('-'))
-        .map(line => line.replace('-', '').trim());
-    }
+      if (weaknessesMatch) {
+        weaknesses[competitor] = weaknessesMatch[1]
+          .split('\n')
+          .filter(line => line.trim().startsWith('-'))
+          .map(line => line.replace('-', '').trim())
+          .filter(text => text.length > 0);
+      }
   });
 
   return { strengths, weaknesses };
